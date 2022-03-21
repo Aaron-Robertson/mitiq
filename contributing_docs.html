@@ -1,0 +1,657 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contributing to the Documentation &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="An example Jupyter Notebook" href="examples/template.html" />
+    <link rel="prev" title="Contributing to Mitiq" href="contributing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="guide/guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contributing to Mitiq
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Contributing to the Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/template.html">
+   An example Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="release.html">
+   Mitiq Git flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code_of_conduct.html">
+   Contributor Covenant Code of Conduct
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sphinx-extensions-used-to-build-the-docs">
+     Sphinx extensions used to build the docs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-configuration-file">
+     The configuration file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-change-sphinx-features-in-the-conf-py-file">
+     Add/change Sphinx features in the conf.py file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#updating-the-documentation">
+   Updating the Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#including-other-files-in-the-docs">
+     Including other files in the docs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-files-to-the-user-guide">
+     Adding files to the user guide
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-code-examples">
+     Adding code examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automatically-add-information-from-the-api-docs">
+     Automatically add information from the API docs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-documentation-locally">
+     Build the documentation locally
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-the-documentation">
+   Testing the Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#just-the-code-dont-evaluate">
+     Just the code, don’t evaluate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-the-code-with-doctest">
+     Run the code with doctest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ipython-code-blocks">
+     IPython code blocks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#skipping-or-ignoring-a-test">
+     Skipping or ignoring a test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-the-tests">
+     Running the tests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="contributing-to-the-documentation">
+<h1>Contributing to the Documentation<a class="headerlink" href="#contributing-to-the-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is the contributors guide for the documentation of Mitiq,
+the Python toolkit for implementing error mitigation on quantum computers.</p>
+<p><img alt="Python Build" src="https://github.com/unitaryfund/mitiq/workflows/Python%20Build/badge.svg?branch=master" />
+<a class="reference external" href="https://badge.fury.io/py/mitiq"><img alt="PyPI version" src="https://badge.fury.io/py/mitiq.svg" /></a>
+<a class="reference external" href="https://unitary.fund"><img alt="Unitary Fund" src="https://img.shields.io/badge/Supported%20By-UNITARY%20FUND-brightgreen.svg?style=for-the-badge" /></a></p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Our documentation is generated with
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Sphinx</a>.
+The necessary packages can be installed, from the root Mitiq directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -e .
+pip install -r dev_requirements.txt
+</pre></div>
+</div>
+<p>as they are included in the <code class="docutils literal notranslate"><span class="pre">dev_requirements.txt</span></code> file.
+Alternately, you can use the docker image provided in the repo and all requirements for working with the docs are already installed there.</p>
+<div class="section" id="sphinx-extensions-used-to-build-the-docs">
+<h3>Sphinx extensions used to build the docs<a class="headerlink" href="#sphinx-extensions-used-to-build-the-docs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">myst-nb</span></code></a> and <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">myst-parser</span></code></a> allow both markdown and jupyter notebooks to be included and run by the Sphinx build. Also adds support for <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST markdown</a> spec.</p></li>
+<li><p><a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">sphinxcontrib-bibtex</span></code></a> allows to include citations in a <code class="docutils literal notranslate"><span class="pre">.bib</span></code> file.</p></li>
+<li><p><a class="reference external" href="https://pybtex.org/"><code class="docutils literal notranslate"><span class="pre">pybtex</span></code></a> allows to customize how citations are rendered, e.g., APS-style.</p></li>
+<li><p><a class="reference external" href="https://sphinx-copybutton.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">sphinx-copybutton</span></code></a> allows to easily copy-paste code snippets from examples.</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/sphinx-autodoc-typehints/"><code class="docutils literal notranslate"><span class="pre">sphinx-autodoc-typehints</span></code></a> allows to control how annotations are displayed in the API-doc part of the documentation, integrating with  <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html"><code class="docutils literal notranslate"><span class="pre">sphinx-autodoc</span></code></a> and <a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">sphinx-napoleon</span></code></a> which handle specific styling requirements for the API documentation comments.</p></li>
+</ul>
+<p>You can check that Sphinx is installed with <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">--version</span></code>.</p>
+</div>
+<div class="section" id="the-configuration-file">
+<h3>The configuration file<a class="headerlink" href="#the-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>Since the documentation is already created, you need not to generate a
+configuration file from scratch (this is done with <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>).
+Meta-data, extensions and other custom specifications are accounted for
+in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.</p>
+</div>
+<div class="section" id="add-change-sphinx-features-in-the-conf-py-file">
+<h3>Add/change Sphinx features in the conf.py file<a class="headerlink" href="#add-change-sphinx-features-in-the-conf-py-file" title="Permalink to this headline">¶</a></h3>
+<p>To add specific feature to the documentation, Sphinx extensions can be added to the build.
+As and example, to add classes and functions to the API doc, make sure that autodoc
+extension is enabled in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file, and for tests the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> one,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span><span class="s1">&#39;sphinx.ext.doctest&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="updating-the-documentation">
+<h2>Updating the Documentation<a class="headerlink" href="#updating-the-documentation" title="Permalink to this headline">¶</a></h2>
+<p>You need not to modify the <code class="docutils literal notranslate"><span class="pre">docs/build</span></code> folder, as it is automatically generated. You should only modify the <code class="docutils literal notranslate"><span class="pre">docs/source</span></code> files.</p>
+<p>The documentation is divided into:</p>
+<ul class="simple">
+<li><p>a <strong>guide</strong>, whose content needs to be
+written from scratch,</p></li>
+<li><p><strong>examples</strong> which can be either jupyter notebooks or MyST formatted notebooks, and</p></li>
+<li><p>an <strong>API-doc</strong> part, which is (mostly)
+automatically generated.</p></li>
+</ul>
+<p>Information in the docs can be added as markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>/<code class="docutils literal notranslate"><span class="pre">.myst</span></code>) files, since
+the <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> extension supports both basic markdown syntax as well as
+the extended MyST syntax. Just add the file to <code class="docutils literal notranslate"><span class="pre">source</span></code> directory and a TOC somewhere (if you want that).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">.rst</span></code> is supported for any of the files in the docs, but the current migration plan is to move everything to MyST serialization, to make it easier to include Jupyter notebooks and more consistent with documentation in the project root.
+If you want a good intro to MyST and how it compares to <code class="docutils literal notranslate"><span class="pre">.rst</span></code> see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/intro.html#intro-writing">this guide</a>.</p>
+</div>
+<p>The main table of contents (TOC) file for the docs is <code class="docutils literal notranslate"><span class="pre">index.myst</span></code>. It includes <code class="docutils literal notranslate"><span class="pre">guide\guide.myst</span></code> and <code class="docutils literal notranslate"><span class="pre">apidoc.myst</span></code>, among other files. To add a new file to the base TOC, make sure it gets listed in the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{toctree}
+---
+maxdepth: 2 
+caption: Contents
+---
+file.myst
+```
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you use VS Code as your text editor there is a nice extension that does syntax highlighting for MyST: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight">https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight</a></p>
+</div>
+<div class="section" id="including-other-files-in-the-docs">
+<h3>Including other files in the docs<a class="headerlink" href="#including-other-files-in-the-docs" title="Permalink to this headline">¶</a></h3>
+<p>To include <code class="docutils literal notranslate"><span class="pre">.md</span></code> files outside of the documentation <code class="docutils literal notranslate"><span class="pre">source</span></code> directory, you can add a stub <code class="docutils literal notranslate"><span class="pre">*.myst</span></code> file to the toctree inside the <code class="docutils literal notranslate"><span class="pre">docs\source</span></code> directory that contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{include} path/to/file.md
+:relative-docs: docs/
+:relative-images:
+```
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">file.md</span></code> is the one to be added. For more information on including files external to the docs, see the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST docs</a>.</p>
+</div>
+<div class="section" id="adding-files-to-the-user-guide">
+<h3>Adding files to the user guide<a class="headerlink" href="#adding-files-to-the-user-guide" title="Permalink to this headline">¶</a></h3>
+<p>To add information in the guide, it is recommended to add markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) or MyST markdown files (<code class="docutils literal notranslate"><span class="pre">.myst</span></code>) to the <code class="docutils literal notranslate"><span class="pre">docs/guide/</span></code> directory.
+Remember to add any files you add to the <code class="docutils literal notranslate"><span class="pre">docs/guide/</span></code> directory to the guide TOC file <code class="docutils literal notranslate"><span class="pre">docs/source/guide/guide.myst</span></code>.</p>
+</div>
+<div class="section" id="adding-code-examples">
+<h3>Adding code examples<a class="headerlink" href="#adding-code-examples" title="Permalink to this headline">¶</a></h3>
+<p>All code examples, besides explanations on the use of core software package features, live in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory under <code class="docutils literal notranslate"><span class="pre">docs/source</span></code>. You can add regular
+Jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or MyST formatted markdown notebooks (<code class="docutils literal notranslate"><span class="pre">.myst</span></code> or <code class="docutils literal notranslate"><span class="pre">.md</span></code>) which you can think of as notebooks if you could write them in markdown.
+In general MyST formatting will be preferred as it is much easier to diff in version control, but adds one additional step for folks contributing them directly.</p>
+<p>If you have a notebook you want to add, and want to automatically convert it from the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> to the <code class="docutils literal notranslate"><span class="pre">.myst</span></code> file format, you can use a great Python command line tool called <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/index.html">jupytext</a>.
+Not only can <code class="docutils literal notranslate"><span class="pre">jupytext</span></code> convert between the formats on demand, but once you install it, you can configure it to manage <em>both</em> a Jupyter and Markdown version of your file, so you don’t have to remember to do conversions (for more details, see the <code class="docutils literal notranslate"><span class="pre">jupytext</span></code> docs on <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/index.html#paired-notebooks">paired notebooks</a>.
+Using the paired notebooks you can continue your development in the notebooks as normal, and just commit to git the markdown serialized version when you want to add to the docs.
+You can even add this tool as a <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/using-pre-commit.html">git pre-commit hook</a> if you want!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There is a <a class="reference internal" href="examples/template.html"><span class="doc std std-doc">sample markdown formatted notebook in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory</span></a> for you to take a look at as you write your own!</p>
+</div>
+</div>
+<div class="section" id="automatically-add-information-from-the-api-docs">
+<h3>Automatically add information from the API docs<a class="headerlink" href="#automatically-add-information-from-the-api-docs" title="Permalink to this headline">¶</a></h3>
+<p>New modules, classes and functions can be added by listing them
+in the appropriate <code class="docutils literal notranslate"><span class="pre">.md</span> <span class="pre">or</span> </code>*.myst<code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">(such</span> <span class="pre">as</span></code>apidoc.myst` or a child), e.g.,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## New Module
+```{automodule} mitiq.new_module
+   :members:
+</pre></div>
+</div>
+<p>will add all elements of the <code class="docutils literal notranslate"><span class="pre">mitiq.new_module</span></code> module with a subtitle “New Module.”
+You can hand-pick classes and functions to add, to comment them, as well as exclude them.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are adding new features to Mitiq, make sure to add API docs in the
+source code, and to the API page <code class="docutils literal notranslate"><span class="pre">apidoc.rst</span></code>.</p>
+</div>
+</div>
+<div class="section" id="build-the-documentation-locally">
+<h3>Build the documentation locally<a class="headerlink" href="#build-the-documentation-locally" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way to build the docs is to just run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> from the project
+root directory in bash, which by default builds the html docs output.
+You can also use from root <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">pdf</span></code> to generate the PDF version.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to remove previous builds and make the HTML docs fresh, try <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs-clean</span></code>!</p>
+</div>
+<p>If you want to call sphinx directly, you can from bash move to the <code class="docutils literal notranslate"><span class="pre">docs</span></code>
+folder and run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html <span class="nb">source</span> build
+</pre></div>
+</div>
+<p>this generates the <code class="docutils literal notranslate"><span class="pre">docs/build</span></code> folder. This folder is not kept track of in the
+github repository, as <code class="docutils literal notranslate"><span class="pre">docs/build</span></code> is present in the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">html</span></code> and <code class="docutils literal notranslate"><span class="pre">latex</span></code> and <code class="docutils literal notranslate"><span class="pre">pdf</span></code> files will be automatically created in the
+<code class="docutils literal notranslate"><span class="pre">docs/build</span></code> folder.</p>
+</div>
+</div>
+</div>
+<div class="section" id="testing-the-documentation">
+<h2>Testing the Documentation<a class="headerlink" href="#testing-the-documentation" title="Permalink to this headline">¶</a></h2>
+<p>When writing a new code example in the docs, you can use different directives
+to include code blocks.</p>
+<div class="section" id="just-the-code-dont-evaluate">
+<h3>Just the code, don’t evaluate<a class="headerlink" href="#just-the-code-dont-evaluate" title="Permalink to this headline">¶</a></h3>
+<p>If you want to include a code snippet that doesn’t get run (but has syntax
+highlighting), use the <code class="docutils literal notranslate"><span class="pre">code-block</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{code-block} python
+
+   1+1        # simple example
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-the-code-with-doctest">
+<h3>Run the code with doctest<a class="headerlink" href="#run-the-code-with-doctest" title="Permalink to this headline">¶</a></h3>
+<p>In order to make sure that the block is parsed with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>, use the
+<code class="docutils literal notranslate"><span class="pre">testcode</span></code> directive. This can be used in pair with <code class="docutils literal notranslate"><span class="pre">testoutput</span></code>, if something
+is printed, and, eventually <code class="docutils literal notranslate"><span class="pre">testsetup</span></code>, to import modules or set up variables
+in an invisible block. An example is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{testcode} python
+
+   1+1        # simple example
+```
+</pre></div>
+</div>
+<p>with no output and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{testcode} python
+   print(1+1)        # explicitly print
+```
+
+```{testoutput} python
+   2        # match the print message
+```
+</pre></div>
+</div>
+<p>If you have code blocks you want to run, but not be displayed, use the
+<code class="docutils literal notranslate"><span class="pre">testsetup</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{testsetup} python
+   import numpy as np  # this block is not rendered in the html or pdf
+```
+
+```{testcode} python
+   np.array(2)
+```
+
+```{testoutput} python
+   array(2)
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="ipython-code-blocks">
+<h3>IPython code blocks<a class="headerlink" href="#ipython-code-blocks" title="Permalink to this headline">¶</a></h3>
+<p>There is also the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> directive, which allows you to include interactive
+Python blocks. These need to be given this way:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{doctest} python
+   &gt;&gt;&gt; import numpy as np
+   &gt;&gt;&gt; print(np.array(2))
+   array(2)
+```
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice that no space is left between the last input and the output when writing code blocks with interactive inputs and outputs.</p>
+</div>
+</div>
+<div class="section" id="skipping-or-ignoring-a-test">
+<h3>Skipping or ignoring a test<a class="headerlink" href="#skipping-or-ignoring-a-test" title="Permalink to this headline">¶</a></h3>
+<p>In order to skip a test, if this is problematic, one can use the <code class="docutils literal notranslate"><span class="pre">SKIP</span></code> and
+<code class="docutils literal notranslate"><span class="pre">IGNORE</span></code> keywords, adding them as comments next to the relevant line or block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">something_that_raises</span><span class="p">()</span>  <span class="c1">#: doctest: +IGNORE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-tests">
+<h3>Running the tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h3>
+<p>Mitiq uses the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html">extension</a> to run and test code in the docs, which is configured in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file. To execute the tests in bash, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make doctest
+</pre></div>
+</div>
+<p>from the root directory.</p>
+<p>This command tests the code examples in the documentation files, as well as testing the docstrings, since these are imported with the <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> extension.</p>
+<p>One can also use various <code class="docutils literal notranslate"><span class="pre">doctest</span></code> <a class="reference external" href="https://doc.pytest.org/en/latest/how-to/doctest.html#using-doctest-options">features</a> by configuring them in the
+<code class="docutils literal notranslate"><span class="pre">docs/pytest.ini</span></code> file.</p>
+</div>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/nathanshammah/scikit-project/blob/master/5-docs.md">Here</a>
+are some notes on how to build docs.</p>
+<p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">The MyST syntax guide</a> is a
+cheat sheet for the extended Markdown formatting that applies to both Markdown files as well as Markdown in Jupyter notebooks.</p>
+<p><a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/markdown.html">The MyST-NB Notebook guide</a> can help you get you write or convert your notebook content for the docs.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="contributing.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contributing to Mitiq</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="examples/template.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">An example Jupyter Notebook</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

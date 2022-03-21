@@ -1,0 +1,563 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is the theory behind PEC? &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Clifford Data Regression" href="cdr.html" />
+    <link rel="prev" title="What happens when I use PEC?" href="pec-4-low-level.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="core-concepts.html">
+   Core Concepts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="frontends-backends.html">
+     Frontends and Backends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executors.html">
+     Executors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="observables.html">
+     Observables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="zne.html">
+   Zero Noise Extrapolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-1-intro.html">
+     How do I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-2-use-case.html">
+     When should I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-3-options.html">
+     What additional options are available when using ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-4-low-level.html">
+     What happens when I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-5-theory.html">
+     What is the theory behind ZNE?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="pec.html">
+   Probabilistic error cancellation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-1-intro.html">
+     How do I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-2-use-case.html">
+     When should I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-3-options.html">
+     What additional options are available in PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-4-low-level.html">
+     What happens when I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What is the theory behind PEC?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="cdr.html">
+   Clifford Data Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-1-intro.html">
+     How do I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-2-use-case.html">
+     When should I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-3-options.html">
+     What additional options are available in CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-4-low-level.html">
+     What happens when I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-5-theory.html">
+     What is the theory behind CDR?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="error-mitigation.html">
+   About Error Mitigation
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quasi-probability-representations">
+   Quasi-probability representations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error-cancellation">
+   Error cancellation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monte-carlo-estimation">
+   Monte Carlo estimation
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="what-is-the-theory-behind-pec">
+<h1>What is the theory behind PEC?<a class="headerlink" href="#what-is-the-theory-behind-pec" title="Permalink to this headline">¶</a></h1>
+<p>Probabilistic error cancellation (PEC) <span id="id1">[<a class="reference internal" href="../zz_bibliography.html#id32" title="Kristan Temme, Sergey Bravyi, and Jay M. Gambetta. Error mitigation for short-depth quantum circuits. Physical Review Letters, (2017). URL: https://doi.org/10.1103/PhysRevLett.119.180509, doi:10.1103/physrevlett.119.180509.">4</a>, <a class="reference internal" href="../zz_bibliography.html#id30" title="Jinzhao Sun, Xiao Yuan, Takahiro Tsunoda, Vlatko Vedral, Simon C. Benjamin, and Suguru Endo. Mitigating realistic noise in practical noisy intermediate-scale quantum devices. Phys. Rev. Applied, 15:034026, (2021). URL: https://link.aps.org/doi/10.1103/PhysRevApplied.15.034026, doi:10.1103/PhysRevApplied.15.034026.">7</a>, <a class="reference internal" href="../zz_bibliography.html#id29" title="Shuaining Zhang, Yao Lu, Kuan Zhang, Wentao Chen, Ying Li, Jing-Ning Zhang, and Kihwan Kim. Error-mitigated quantum gates exceeding physical fidelities in a trapped-ion system. Nature Communications, (2020). URL: http://dx.doi.org/10.1038/s41467-020-14376-z, doi:10.1038/s41467-020-14376-z.">9</a>]</span>  is a noise-aware error mitigation technique which is
+based on two main ideas:</p>
+<ul class="simple">
+<li><p>The first idea is to express ideal gates as linear combinations of implementable noisy gates.
+These linear combinations are called quasi-probability representations <span id="id2">[<a class="reference internal" href="../zz_bibliography.html#id26" title="Hakop Pashayan, Joel J. Wallman, and Stephen D. Bartlett. Estimating outcome probabilities of quantum circuits using quasiprobabilities. Phys. Rev. Lett., 115:070501, (2015). URL: https://link.aps.org/doi/10.1103/PhysRevLett.115.070501, doi:10.1103/PhysRevLett.115.070501.">10</a>]</span>;</p></li>
+<li><p>The second idea is to probabilistically sample from the previous quasi-probability representations to approximate
+quantum expectation values via a Monte Carlo average.</p></li>
+</ul>
+<p><em><em>Note:</em> In this section we follow the same notation of <span id="id3">[<a class="reference internal" href="../zz_bibliography.html#id19" title="Andrea Mari, Nathan Shammah, and William J. Zeng. Extending quantum probabilistic error cancellation by noise scaling. Phys. Rev. A, 104:052607, (2021). URL: https://link.aps.org/doi/10.1103/PhysRevA.104.052607, doi:10.1103/PhysRevA.104.052607.">1</a>]</span>.</em></p>
+<div class="section" id="quasi-probability-representations">
+<h2>Quasi-probability representations<a class="headerlink" href="#quasi-probability-representations" title="Permalink to this headline">¶</a></h2>
+<p>In PEC, each ideal gate <span class="math notranslate nohighlight">\(\mathcal G_i\)</span> of a circuit of interest
+<span class="math notranslate nohighlight">\(\mathcal U = {\mathcal G}_t \circ  \dots \circ {\mathcal G}_2 \circ {\mathcal G}_1 \)</span>
+is represented as a linear combination of noisy implementable operations <span class="math notranslate nohighlight">\({\mathcal O_{i, \alpha}}\)</span> (i.e., operations that
+can be directly applied with a noisy backend):</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal G_i = \sum_\alpha \eta_{i, \alpha} \mathcal O_{i, \alpha},
+\quad  \eta_{i, \alpha} \in \mathbb R,
+\]</div>
+<p>where the calligraphic symbols (<span class="math notranslate nohighlight">\(\mathcal U\)</span>, <span class="math notranslate nohighlight">\(\mathcal G_i\)</span>, <span class="math notranslate nohighlight">\(\mathcal O_{i, \alpha}\)</span>) stand for super-operators acting
+on the density matrix of the qubits as linear quantum channels.</p>
+<p>The real coefficients <span class="math notranslate nohighlight">\({\eta_{i,\alpha}}\)</span> form a quasi-probability distribution <span id="id4">[<a class="reference internal" href="../zz_bibliography.html#id26" title="Hakop Pashayan, Joel J. Wallman, and Stephen D. Bartlett. Estimating outcome probabilities of quantum circuits using quasiprobabilities. Phys. Rev. Lett., 115:070501, (2015). URL: https://link.aps.org/doi/10.1103/PhysRevLett.115.070501, doi:10.1103/PhysRevLett.115.070501.">10</a>]</span> with respect to the
+index <span class="math notranslate nohighlight">\(\alpha\)</span>. Their sum is normalized but, differently from standard probabilities, they can take negative values:</p>
+<div class="math notranslate nohighlight">
+\[ \sum_\alpha \eta_{i,\alpha}=1,  \qquad  \gamma_i = \sum_\alpha |\eta_{i, \alpha}| \ge 1.\]</div>
+<p>The constant <span class="math notranslate nohighlight">\(\gamma_i\)</span> quantifies the negativity of the quasi-probability distribution which is directly related
+to the error mitigation cost associated to the gate <span class="math notranslate nohighlight">\(\mathcal G_i\)</span>.</p>
+<p><em><strong>Note:</strong> In principle, the gate index “<span class="math notranslate nohighlight">\(i\)</span>” in the noisy operations <span class="math notranslate nohighlight">\(\mathcal O_{i, \alpha}\)</span> could be dropped.
+However, we keep it to explicitly define gate-dependent basis of implementable operations, consistently with
+the  structure of the <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code> class discussed in <a class="reference internal" href="pec-3-options.html"><span class="doc std std-doc">What additional options are
+available in PEC?</span></a>.</em></p>
+</div>
+<div class="section" id="error-cancellation">
+<h2>Error cancellation<a class="headerlink" href="#error-cancellation" title="Permalink to this headline">¶</a></h2>
+<p>The aim of PEC is estimating the ideal expectation value of some observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span> with respect to
+the quantum state prepared by an ideal circuit of interest <span class="math notranslate nohighlight">\(\mathcal U\)</span> acting on some initial  reference
+state <span class="math notranslate nohighlight">\(\rho_0\)</span> (typically <span class="math notranslate nohighlight">\(\rho_0= |0\dots 0 \rangle \langle 0 \dots 0 |\)</span>).</p>
+<p>Replacing each gate <span class="math notranslate nohighlight">\(\mathcal G_i\)</span> with its noisy representation, we can express the ideal expectation
+value as a linear combination of noisy expectation values:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle A \rangle_{\rm ideal}= {\rm tr}[A \mathcal U (\rho_0)] =
+\sum_{\vec{\alpha}} \eta_{\vec{\alpha}} \langle A_{\vec{\alpha}}\rangle_{\rm noisy}
+\]</div>
+<p>where we introduced the multi-index <span class="math notranslate nohighlight">\(\vec{\alpha}=(\alpha_1, \alpha_2, \dots ,\alpha_t)\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_{\vec{\alpha}} := \Pi_{i=1}^t \eta_{i, \alpha_i},
+\quad  \langle A_{\vec{\alpha}}\rangle_{\rm noisy} :=  {\rm tr}[A \Phi_{\vec{\alpha}}(\rho_0)],
+\quad \Phi_{\vec{\alpha}} := \mathcal O_{t, \alpha_t} \circ \dots \circ \mathcal O_{2, \alpha_2} \circ \mathcal O_{1, \alpha_1}.
+\]</div>
+<p>The coefficients <span class="math notranslate nohighlight">\(\{ \eta_{\vec{\alpha}} \}\)</span> form a quasi-probability distribution
+for the global circuit over the noisy circuits. Indeed it is easy to check that, at the level of super-operators,
+we have:</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal U =  \sum_{\vec{\alpha}} \eta_{\vec{\alpha}} \Phi_{\vec{\alpha}}. \]</div>
+<p>The one-norm <span class="math notranslate nohighlight">\(\gamma\)</span> of the global quasi-probability distribution is the product of those of the gates:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{\vec \alpha} \eta_{\vec{\alpha}}=1,  \qquad  \gamma = \sum_{\vec{\alpha}} |\eta_{\vec \alpha}| = \Pi_{i=1}^{t} \gamma_i.
+\]</div>
+<p>All the noisy expectation values <span class="math notranslate nohighlight">\(\langle A_{\vec{\alpha}}\rangle_{\rm noisy}\)</span> can be directly measured with
+a noisy backend since they only require circuits composed of implementable noisy operations.
+In principle, by combining all the noisy expectation values, one could compute the ideal result <span class="math notranslate nohighlight">\(\langle A \rangle_{\rm ideal}\)</span>.
+Unfortunately this approach requires executing a number of circuits which grows exponentially with the circuit depth and
+which is typically unfeasible.</p>
+<p>An important fact at the basis of PEC is that, for weak noise, only a small number of noisy expectation values actually
+contribute to the linear combination because many of the coefficients <span class="math notranslate nohighlight">\(\eta_{\vec \alpha}\)</span> are negligible.
+For this reason, it is more efficient to estimate <span class="math notranslate nohighlight">\(\langle A \rangle_{\rm ideal}\)</span> using an
+<a class="reference external" href="https://en.wikipedia.org/wiki/Importance_sampling">importance-sampling</a> Monte Carlo approach as described in the next section.</p>
+</div>
+<div class="section" id="monte-carlo-estimation">
+<h2>Monte Carlo estimation<a class="headerlink" href="#monte-carlo-estimation" title="Permalink to this headline">¶</a></h2>
+<p>To apply a Monte Carlo estimation, we need to replace quasi-probabilities with positive probabilities.
+This can be achieved as follows:</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal{G_i} = \sum_{\alpha} \eta_{i, \alpha} \mathcal{O}_{i, \alpha}
+= \gamma_i \sum_{\alpha} p_i(\alpha) \, {\rm sgn}(\eta_{i, \alpha})\, \mathcal{O}_{i, \alpha},\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{i}(\alpha)=|\eta_{i, \alpha}|/\gamma_i\)</span> is a valid probability distribution with respect to <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>If for each gate <span class="math notranslate nohighlight">\(\mathcal G_i\)</span> of the circuit we sample a value of <span class="math notranslate nohighlight">\(\alpha\)</span> from <span class="math notranslate nohighlight">\(p_{i}(\alpha)\)</span> and we apply the corresponding noisy operation
+<span class="math notranslate nohighlight">\(\mathcal O_{i, \alpha}\)</span>, we are effectively sampling a noisy circuit <span class="math notranslate nohighlight">\(\Phi_{\vec{\alpha}}\)</span> from the
+global probability distribution <span class="math notranslate nohighlight">\(p(\vec{\alpha})= |\eta_{\vec{\alpha}}| / \gamma\)</span>.</p>
+<p>Therefore, at the level of quantum channels, we have:</p>
+<div class="math notranslate nohighlight">
+\[ \mathcal U = \gamma \mathbb E \left\{  {\rm sgn}(\eta_{i, \vec{\alpha}}) \Phi_{\vec{\alpha}} \right\},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbb E\)</span> is the sample average over many repetitions of the previous probabilistic procedure and
+<span class="math notranslate nohighlight">\({\rm sgn}(\eta_{\vec{ \alpha}}) = \Pi_i {\rm sgn}(\eta_{i, \alpha})\)</span>.
+As a direct consequence, we can express the ideal expectation value as follows:</p>
+<div class="math notranslate nohighlight">
+\[\langle A \rangle_{\text{ideal}} = \gamma\,
+\mathbb E \left\{  {\rm sgn}(\eta_{\vec{\alpha}}) \langle A_{\vec{\alpha}}\rangle_{\rm noisy} \right\}.\]</div>
+<p>By averaging a finite number <span class="math notranslate nohighlight">\(N\)</span> of samples we obtain an unbiased estimate of <span class="math notranslate nohighlight">\(\langle A \rangle_{\text{ideal}}\)</span>.
+Assuming a bounded observable <span class="math notranslate nohighlight">\(|A|\le 1\)</span>, the number of samples <span class="math notranslate nohighlight">\(N\)</span>
+necessary to approximate <span class="math notranslate nohighlight">\(\langle A\rangle_{\text{ideal}}\)</span> within an absolute error <span class="math notranslate nohighlight">\(\delta\)</span>,
+scales as <span id="id5">[<a class="reference internal" href="../zz_bibliography.html#id31" title="Ryuji Takagi. Optimal resource cost for error mitigation. Physical Review Research, (2021). URL: http://dx.doi.org/10.1103/PhysRevResearch.3.033178, doi:10.1103/physrevresearch.3.033178.">8</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[ N \propto \frac{\gamma^2}{\delta^2}. \]</div>
+<p>The term <span class="math notranslate nohighlight">\(\delta^2\)</span> in the denominator is due to the stochastic nature of quantum measurements
+and is present even when directly estimating an expectation value without error mitigation.
+The <span class="math notranslate nohighlight">\(\gamma^2\)</span> factor instead represents the sampling overhead associated to PEC.
+For weak noise and short circuits, <span class="math notranslate nohighlight">\(\gamma\)</span> is typically small and PEC is applicable with a reasonable
+cost.
+On the contrary, if a circuit is too noisy or too deep, the value of <span class="math notranslate nohighlight">\(\gamma\)</span> can be so large that PEC becomes
+unfeasible.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="pec-4-low-level.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">What happens when I use PEC?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cdr.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Clifford Data Regression</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

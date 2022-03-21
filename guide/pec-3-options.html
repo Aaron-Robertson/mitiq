@@ -1,0 +1,1046 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What additional options are available in PEC? &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What happens when I use PEC?" href="pec-4-low-level.html" />
+    <link rel="prev" title="When should I use PEC?" href="pec-2-use-case.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="core-concepts.html">
+   Core Concepts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="frontends-backends.html">
+     Frontends and Backends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executors.html">
+     Executors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="observables.html">
+     Observables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="zne.html">
+   Zero Noise Extrapolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-1-intro.html">
+     How do I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-2-use-case.html">
+     When should I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-3-options.html">
+     What additional options are available when using ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-4-low-level.html">
+     What happens when I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-5-theory.html">
+     What is the theory behind ZNE?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="pec.html">
+   Probabilistic error cancellation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-1-intro.html">
+     How do I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-2-use-case.html">
+     When should I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What additional options are available in PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-4-low-level.html">
+     What happens when I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-5-theory.html">
+     What is the theory behind PEC?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="cdr.html">
+   Clifford Data Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-1-intro.html">
+     How do I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-2-use-case.html">
+     When should I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-3-options.html">
+     What additional options are available in CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-4-low-level.html">
+     What happens when I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-5-theory.html">
+     What is the theory behind CDR?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="error-mitigation.html">
+   About Error Mitigation
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-operationrepresentation-objects">
+   Building
+   <code class="xref py py-class docutils literal notranslate">
+    <span class="pre">
+     OperationRepresentation
+    </span>
+   </code>
+   objects
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-noisyoperation-objects">
+     Defining
+     <code class="xref py py-class docutils literal notranslate">
+      <span class="pre">
+       NoisyOperation
+      </span>
+     </code>
+     objects
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-an-optimal-operationrepresentation">
+     Finding an optimal
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       OperationRepresentation
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manually-defining-an-operationrepresentation">
+     Manually defining an
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       OperationRepresentation
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods-of-the-operationrepresentation-class">
+     Methods of the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       OperationRepresentation
+      </span>
+     </code>
+     class
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimating-expectation-values-with-pec">
+   Estimating expectation values with PEC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-a-circuit-of-interest-and-an-executor">
+     Defining a circuit of interest and an Executor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#options-for-estimating-expectation-values">
+     Options for estimating expectation values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-the-executed-circuits">
+     Analyzing the executed circuits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-data-of-the-pec-process">
+     Analyzing data of the PEC process
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="what-additional-options-are-available-in-pec">
+<h1>What additional options are available in PEC?<a class="headerlink" href="#what-additional-options-are-available-in-pec" title="Permalink to this headline">¶</a></h1>
+<p>The application of probabilistic error cancellation (PEC) with Mitiq requires two main steps:</p>
+<ol class="simple">
+<li><p>Building <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects expressing ideal gates as linear combinations of noisy gates;</p></li>
+<li><p>Estimating expectation values with PEC, making use of the representations obtained in the previous step.</p></li>
+</ol>
+<p>Both steps can be achieved with Mitiq in different ways and with different options.</p>
+<p>In the following code we use Qiskit as a frontend, but the workflow is the same for other frontends.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span> <span class="c1"># Frontend library</span>
+<span class="kn">from</span> <span class="nn">mitiq</span> <span class="kn">import</span> <span class="n">pec</span>  <span class="c1"># Probabilistic error cancellation module</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="building-operationrepresentation-objects">
+<h2>Building <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects<a class="headerlink" href="#building-operationrepresentation-objects" title="Permalink to this headline">¶</a></h2>
+<p>Given the superoperator of an ideal gate <span class="math notranslate nohighlight">\(\mathcal G\)</span>, its quasi-probability representation is:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal G = \sum_\alpha \eta_\alpha \mathcal O_\alpha\]</div>
+<p>where <span class="math notranslate nohighlight">\(\{\eta_\alpha\}\)</span> are real coefficients and <span class="math notranslate nohighlight">\(\{\mathcal  O_\alpha\}\)</span> are the implementable noisy gates,
+i.e., those which can be actually applied by a noisy quantum computer.</p>
+<p>For trace-preserving operations, the coefficients <span class="math notranslate nohighlight">\(\{\eta_\alpha\}\)</span> form a quasi-probability distribution, i.e.:</p>
+<div class="math notranslate nohighlight">
+\[\sum_\alpha \eta_\alpha = 1, \quad  \gamma = \| \eta \|_1= \sum_\alpha   |\eta_\alpha| \ge 1.\]</div>
+<p>The value of <span class="math notranslate nohighlight">\(\gamma\)</span> is related to the negative “volume” of the distribution and quantifies to the sampling
+cost of PEC (see <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">What is the theory behind PEC?</span></a>).</p>
+<div class="section" id="defining-noisyoperation-objects">
+<h3>Defining <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyOperation" title="mitiq.pec.types.types.NoisyOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyOperation</span></code></a> objects<a class="headerlink" href="#defining-noisyoperation-objects" title="Permalink to this headline">¶</a></h3>
+<p>The noisy operations <span class="math notranslate nohighlight">\(\{\mathcal O_\alpha\}\)</span> in the equation above can correspond to single noisy gates.
+However, it is often useful to define a noisy operation as a sequence multiple noisy gates.
+To have this flexibility, we associate to each noisy operation a small <code class="docutils literal notranslate"><span class="pre">QPROGRAM</span></code>,
+i.e., a quantum circuit defined via a supported frontend. For example a basis
+of noisy operations that are useful to represent the Hadamard gate in the presence of depolarizing noise is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basis_circuit_h</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">basis_circuit_h</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">basis_circuit_hx</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">basis_circuit_hx</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">basis_circuit_hx</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">basis_circuit_hy</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">basis_circuit_hy</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">basis_circuit_hy</span><span class="o">.</span><span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">basis_circuit_hz</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">basis_circuit_hz</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">basis_circuit_hz</span><span class="o">.</span><span class="n">z</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">basis_circuits</span> <span class="o">=</span> <span class="p">[</span><span class="n">basis_circuit_h</span><span class="p">,</span> <span class="n">basis_circuit_hx</span><span class="p">,</span> <span class="n">basis_circuit_hy</span><span class="p">,</span> <span class="n">basis_circuit_hz</span><span class="p">]</span> 
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">basis_circuits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌───┐
+q_0: ┤ H ├
+     └───┘
+     ┌───┐┌───┐
+q_0: ┤ H ├┤ X ├
+     └───┘└───┘
+     ┌───┐┌───┐
+q_0: ┤ H ├┤ Y ├
+     └───┘└───┘
+     ┌───┐┌───┐
+q_0: ┤ H ├┤ Z ├
+     └───┘└───┘
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each element of <code class="docutils literal notranslate"><span class="pre">basis_circuits</span></code> describes “how to physically implement” a noisy operation
+<span class="math notranslate nohighlight">\(\mathcal O_\alpha\)</span> on a noisy backend. To completely characterize a noisy operation we can also
+specify the actual (non-unitary) quantum channel associated to it.
+In Mitiq, this can be done using the <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyOperation" title="mitiq.pec.types.types.NoisyOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyOperation</span></code></a> class.</p>
+<p>For example, assuming that each of the previous basis circuits is affected by a final depolarizing
+channel, the following code cell generates the corresponding <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyOperation" title="mitiq.pec.types.types.NoisyOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyOperation</span></code></a> objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq.pec.representations</span> <span class="kn">import</span> <span class="n">local_depolarizing_kraus</span>
+<span class="kn">from</span> <span class="nn">mitiq.pec.channels</span> <span class="kn">import</span> <span class="n">kraus_to_super</span>
+
+<span class="c1"># Compute depolarizing superoperator</span>
+<span class="n">BASE_NOISE</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">depo_super</span> <span class="o">=</span> <span class="n">kraus_to_super</span><span class="p">(</span><span class="n">local_depolarizing_kraus</span><span class="p">(</span><span class="n">BASE_NOISE</span><span class="p">,</span> <span class="n">num_qubits</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Define the superoperator matrix of each noisy operation</span>
+<span class="n">super_matrices</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">depo_super</span> <span class="o">@</span> <span class="n">kraus_to_super</span><span class="p">([</span><span class="n">qiskit</span><span class="o">.</span><span class="n">quantum_info</span><span class="o">.</span><span class="n">Operator</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">])</span> 
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">basis_circuits</span>
+<span class="p">]</span>
+
+<span class="c1"># Define NoisyOperation objects combining circuits with channel matrices</span>
+<span class="n">noisy_operations</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">pec</span><span class="o">.</span><span class="n">NoisyOperation</span><span class="p">(</span><span class="n">circuit</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">channel_matrix</span><span class="o">=</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">basis_circuits</span><span class="p">,</span> <span class="n">super_matrices</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">noisy_operations</span><span class="p">)</span><span class="si">}</span><span class="s2"> NoisyOperation objects defined.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 NoisyOperation objects defined.
+</pre></div>
+</div>
+</div>
+</div>
+<p><em><strong>Note:</strong></em> <em>A <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyOperation" title="mitiq.pec.types.types.NoisyOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyOperation</span></code></a> can also be instantiated with <code class="docutils literal notranslate"><span class="pre">channel_matrix=None</span></code>.
+In this case, however, the quasi-probability distribution must be known to the user
+and cannot be derived by Mitiq with the procedure shown in the next section.</em></p>
+</div>
+<div class="section" id="finding-an-optimal-operationrepresentation">
+<h3>Finding an optimal <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code><a class="headerlink" href="#finding-an-optimal-operationrepresentation" title="Permalink to this headline">¶</a></h3>
+<p>Combining the noisy operations defined above, we obtain a <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyBasis" title="mitiq.pec.types.types.NoisyBasis"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyBasis</span></code></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noisy_basis</span> <span class="o">=</span> <span class="n">pec</span><span class="o">.</span><span class="n">NoisyBasis</span><span class="p">(</span><span class="o">*</span><span class="n">noisy_operations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similar to what we did for <code class="docutils literal notranslate"><span class="pre">basis_circuits</span></code>, we also define the <code class="docutils literal notranslate"><span class="pre">ideal_operation</span></code> that we aim to represent in the
+form of a <code class="docutils literal notranslate"><span class="pre">QPROGRAM</span></code>. Assuming that we aim to represent the Hadamard gate, we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ideal_operation</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ideal_operation</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The ideal operation to expand in the noisy basis is:</span><span class="se">\n</span><span class="si">{</span><span class="n">ideal_operation</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ideal operation to expand in the noisy basis is:
+     ┌───┐
+q_0: ┤ H ├
+     └───┘
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Mitiq function <a class="reference internal" href="../apidoc.html#mitiq.pec.representations.optimal.find_optimal_representation" title="mitiq.pec.representations.optimal.find_optimal_representation"><code class="xref py py-func docutils literal notranslate"><span class="pre">find_optimal_representation()</span></code></a>
+can be used to numerically obtain an  <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> of the <code class="docutils literal notranslate"><span class="pre">ideal_operation</span></code>
+in the basis of the noisy implementable gates (<code class="docutils literal notranslate"><span class="pre">noisy_basis</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq.pec.representations</span> <span class="kn">import</span> <span class="n">find_optimal_representation</span>
+
+<span class="n">h_rep</span> <span class="o">=</span> <span class="n">find_optimal_representation</span><span class="p">(</span><span class="n">ideal_operation</span><span class="p">,</span> <span class="n">noisy_basis</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Optimal representation:</span><span class="se">\n</span><span class="si">{</span><span class="n">h_rep</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimal representation:
+q_0: ───H─── = 1.273*(q_0: ───H───)-0.091*(q_0: ───H───Y───)-0.091*(q_0: ───H───Z───)-0.091*(q_0: ───H───X───)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The representation is optimal in the sense that, among all the possible representations,
+it minimizes the one-norm of the quasi-probability distribution.
+Behind the scenes, <a class="reference internal" href="../apidoc.html#mitiq.pec.representations.optimal.find_optimal_representation" title="mitiq.pec.representations.optimal.find_optimal_representation"><code class="xref py py-func docutils literal notranslate"><span class="pre">find_optimal_representation()</span></code></a> solves the following optimization problem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\gamma^{\rm opt} = \min_{\substack{ \{ \eta_{\alpha} \}  \\ \{ \mathcal O_{ \alpha} \}}}
+\left[ \sum_\alpha |\eta_{\alpha}| \right], \quad \text{ such that} \quad \mathcal G 
+= \sum_\alpha \eta_\alpha \mathcal O_\alpha \, .\end{split}\]</div>
+</div>
+<div class="section" id="manually-defining-an-operationrepresentation">
+<h3>Manually defining an <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code><a class="headerlink" href="#manually-defining-an-operationrepresentation" title="Permalink to this headline">¶</a></h3>
+<p>Instead of solving the previous optimization problem, an <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> can
+also be manually defined. This approach can be applied if the user already knows the quasi-probability
+distribution <span class="math notranslate nohighlight">\({\eta_\alpha}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We assume to know the quasi-distribution</span>
+<span class="n">quasi_dist</span> <span class="o">=</span> <span class="n">h_rep</span><span class="o">.</span><span class="n">coeffs</span>
+
+<span class="c1"># This is just a reordering of noisy_operations to match quasi_dist</span>
+<span class="n">reordered_noisy_operations</span> <span class="o">=</span> <span class="n">h_rep</span><span class="o">.</span><span class="n">noisy_operations</span>
+
+<span class="c1"># Manual definition of the OperationRepresentation</span>
+<span class="n">basis_expansion</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">reordered_noisy_operations</span><span class="p">,</span> <span class="n">quasi_dist</span><span class="p">))</span>
+<span class="n">manual_h_rep</span> <span class="o">=</span> <span class="n">pec</span><span class="o">.</span><span class="n">OperationRepresentation</span><span class="p">(</span>
+    <span class="n">ideal</span><span class="o">=</span><span class="n">ideal_operation</span><span class="p">,</span> <span class="n">basis_expansion</span><span class="o">=</span><span class="n">basis_expansion</span>
+<span class="p">)</span>
+
+<span class="c1"># Test that the manual definition is equivalent to h_rep</span>
+<span class="k">assert</span> <span class="n">manual_h_rep</span> <span class="o">==</span> <span class="n">h_rep</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> <em>For the particular case of depolarizing noise, Mitiq can directly create the
+<a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> of an arbitrary <code class="docutils literal notranslate"><span class="pre">ideal_operation</span></code>, as shown in the next cell.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq.pec.representations.depolarizing</span> <span class="kn">import</span> <span class="n">represent_operation_with_local_depolarizing_noise</span>
+
+<span class="n">depolarizing_h_rep</span> <span class="o">=</span> <span class="n">represent_operation_with_local_depolarizing_noise</span><span class="p">(</span>
+    <span class="n">ideal_operation</span><span class="p">,</span>
+    <span class="n">noise_level</span><span class="o">=</span><span class="n">BASE_NOISE</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">depolarizing_h_rep</span> <span class="o">==</span> <span class="n">h_rep</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="methods-of-the-operationrepresentation-class">
+<h3>Methods of the <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code> class<a class="headerlink" href="#methods-of-the-operationrepresentation-class" title="Permalink to this headline">¶</a></h3>
+<p>The main idea of PEC is to estimate the average with respect to a
+quasi-probability distribution over noisy circuits with a probabilistic Monte-Carlo
+approach.
+This can be obtained rewriting $\mathcal G = \sum_\alpha \eta_\alpha \mathcal O_\alpha $ as:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal G = \gamma \sum_\alpha p(\alpha) \textrm{sign}(\eta_\alpha) \mathcal O_\alpha 
+\quad p(\alpha):= |\eta_\alpha| / \gamma,\]</div>
+<p>where <span class="math notranslate nohighlight">\(p(\alpha)\)</span> is a (positive) well-defined probability distribution.
+If we take a single sample from <span class="math notranslate nohighlight">\(p(\alpha)\)</span>, we obtain a noisy operation <span class="math notranslate nohighlight">\(\mathcal O_\alpha\)</span> that
+should be multiplied by the sign of the associated coefficient <span class="math notranslate nohighlight">\(\eta_\alpha\)</span> and by <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>The method <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation.sample" title="mitiq.pec.types.types.OperationRepresentation.sample"><code class="xref py py-meth docutils literal notranslate"><span class="pre">OperationRepresentation.sample()</span></code></a> can be used for this scope:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noisy_op</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="n">coeff</span> <span class="o">=</span> <span class="n">h_rep</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sampled noisy operation is: </span><span class="si">{</span><span class="n">noisy_op</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The associated coefficient is </span><span class="si">{</span><span class="n">coeff</span><span class="si">:</span><span class="s2">g</span><span class="si">}</span><span class="s2">, whose sign is </span><span class="si">{</span><span class="n">sign</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sampled noisy operation is: q_0: ───H───.
+The associated coefficient is 1.27273, whose sign is 1.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> try re-executing the previous cell to get different samples.</p>
+<p>Other useful methods of <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> are shown in the next cells.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One-norm &quot;gamma&quot; quantifying the mitigation cost</span>
+<span class="n">h_rep</span><span class="o">.</span><span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5454545145454555
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quasi-probability distribution</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h_rep</span><span class="o">.</span><span class="n">coeffs</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">eta</span><span class="p">)</span> <span class="k">for</span> <span class="n">eta</span> <span class="ow">in</span> <span class="n">h_rep</span><span class="o">.</span><span class="n">coeffs</span><span class="p">])</span> <span class="o">==</span> <span class="n">h_rep</span><span class="o">.</span><span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.2727272472727287, -0.09090908909090867, -0.09090908909090867, -0.09090908909090911)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Positive and normalized distribution p(alpha)=|eta_alpha|/gamma</span>
+<span class="n">h_rep</span><span class="o">.</span><span class="n">distribution</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.82352941, 0.05882353, 0.05882353, 0.05882353])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="estimating-expectation-values-with-pec">
+<h2>Estimating expectation values with PEC<a class="headerlink" href="#estimating-expectation-values-with-pec" title="Permalink to this headline">¶</a></h2>
+<p>The second main step of PEC is to make use of the previously defined <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a>s to estimate
+expectation values with respect to a quantum state prepared by a circuit of interest.
+In the previous section we defined the representation of the Hadamard gate.
+So, for simplicity, we consider a circuit that contains only Hadamard gates.</p>
+<div class="section" id="defining-a-circuit-of-interest-and-an-executor">
+<h3>Defining a circuit of interest and an Executor<a class="headerlink" href="#defining-a-circuit-of-interest-and-an-executor" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
+     └───┘└───┘└───┘└───┘
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this case, the list of <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a>s that we need for PEC is simply:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">representations</span> <span class="o">=</span> <span class="p">[</span><span class="n">h_rep</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In general <code class="docutils literal notranslate"><span class="pre">representations</span></code> will contain as many representations as the number of ideal
+gates involved in <code class="docutils literal notranslate"><span class="pre">circuit</span></code>.</p>
+<p><strong>Note:</strong> <em>If a gate is in <code class="docutils literal notranslate"><span class="pre">circuit</span></code> but its <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> is not listed in
+<code class="docutils literal notranslate"><span class="pre">representations</span></code>, Mitiq can still apply PEC. However, any errors associated to
+that gate will not be mitigated. In practice, all the gates without <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a>s
+are treated by Mitiq as if they were noiseless.</em></p>
+<p>The executor must be defined by the user since it depends on the specific frontend and backend
+(see the <a class="reference internal" href="executors.html"><span class="doc std std-doc">Executors</span></a> section).
+Here, for simplicity, we import the basic <a class="reference internal" href="../apidoc.html#mitiq.interface.mitiq_qiskit.qiskit_utils.execute_with_noise" title="mitiq.interface.mitiq_qiskit.qiskit_utils.execute_with_noise"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_noise()</span></code></a> function from the Qiskit utilities of Mitiq.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq</span> <span class="kn">import</span> <span class="n">Executor</span>
+<span class="kn">from</span> <span class="nn">mitiq.interface.mitiq_qiskit</span> <span class="kn">import</span> <span class="n">execute_with_noise</span><span class="p">,</span> <span class="n">initialized_depolarizing_noise</span>
+
+<span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">circuit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns Tr[ρ |0⟩⟨0|] where ρ is the state prepared by the circuit</span>
+<span class="sd">    executed with depolarizing noise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">circuit_copy</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>    
+    <span class="n">noise_model</span> <span class="o">=</span> <span class="n">initialized_depolarizing_noise</span><span class="p">(</span><span class="n">BASE_NOISE</span><span class="p">)</span>
+    <span class="n">projector_on_zero</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">execute_with_noise</span><span class="p">(</span><span class="n">circuit_copy</span><span class="p">,</span> <span class="n">projector_on_zero</span><span class="p">,</span> <span class="n">noise_model</span><span class="p">)</span>
+
+<span class="c1"># Cast the execute function into an Executor class to record the execution histroy</span>
+<span class="n">executor</span> <span class="o">=</span> <span class="n">Executor</span><span class="p">(</span><span class="n">execute</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="options-for-estimating-expectation-values">
+<h3>Options for estimating expectation values<a class="headerlink" href="#options-for-estimating-expectation-values" title="Permalink to this headline">¶</a></h3>
+<p>In the <a class="reference internal" href="pec-1-intro.html"><span class="doc std std-doc">“How do I use PEC?”</span></a> section, we have shown how to apply PEC
+with the minimum amount of options by simply calling the function <a class="reference internal" href="../apidoc.html#mitiq.pec.pec.execute_with_pec" title="mitiq.pec.pec.execute_with_pec"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_pec()</span></code></a>
+with the basic arguments <code class="docutils literal notranslate"><span class="pre">circuit</span></code>, <code class="docutils literal notranslate"><span class="pre">executor</span></code>, and <code class="docutils literal notranslate"><span class="pre">representations</span></code>.</p>
+<p>In the next code-cell, we show additional options that can be used:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pec_value</span><span class="p">,</span> <span class="n">pec_data</span> <span class="o">=</span> <span class="n">pec</span><span class="o">.</span><span class="n">execute_with_pec</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">,</span>
+    <span class="n">executor</span><span class="p">,</span>
+    <span class="n">observable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># In this example the observable is implicit in the executor</span>
+    <span class="n">representations</span><span class="o">=</span><span class="n">representations</span><span class="p">,</span>
+    <span class="n">num_samples</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="c1"># Number of PEC samples</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="c1"># Seed for reproducibility of PEC sampling</span>
+    <span class="n">full_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># Return &quot;pec_data&quot; in addition to &quot;pec_value&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similar to other error mitigation modules, <code class="docutils literal notranslate"><span class="pre">observable</span></code> is an optional argument of
+<a class="reference internal" href="../apidoc.html#mitiq.pec.pec.execute_with_pec" title="mitiq.pec.pec.execute_with_pec"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_pec()</span></code></a>. If <code class="docutils literal notranslate"><span class="pre">observable</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code> the executor must return an expectation value,
+otherwise the executor must return a <code class="docutils literal notranslate"><span class="pre">mitiq.QuantumResult</span></code> from which the expectation value of the input
+<code class="docutils literal notranslate"><span class="pre">observable</span></code> can be computed. See the <a class="reference internal" href="executors.html"><span class="doc std std-doc">Executors</span></a> section for more details.</p>
+<p>Another option that can be used, instead of <code class="docutils literal notranslate"><span class="pre">num_samples</span></code>, is <code class="docutils literal notranslate"><span class="pre">precision</span></code>.
+Its default value is <code class="docutils literal notranslate"><span class="pre">0.03</span></code> and  quantifies the desired estimation accuracy.</p>
+<p>For a bounded observable <span class="math notranslate nohighlight">\(\|A\|\le 1\)</span>, <code class="docutils literal notranslate"><span class="pre">precision</span></code> approximates
+<span class="math notranslate nohighlight">\(|\langle  A \rangle_{ \rm ideal} - \langle  A \rangle_{ \rm PEC}|\)</span> (up to constant factors and up to
+statistical fluctuations).  In practice, <code class="docutils literal notranslate"><span class="pre">precision</span></code> is used by Mitiq to automatically determine <code class="docutils literal notranslate"><span class="pre">num_samples</span></code>,
+according to the formula: <code class="docutils literal notranslate"><span class="pre">num_samples</span></code> = <span class="math notranslate nohighlight">\((\gamma /\)</span> <code class="docutils literal notranslate"><span class="pre">precision</span></code><span class="math notranslate nohighlight">\()^2\)</span>, where <span class="math notranslate nohighlight">\(\gamma\)</span> is the one-norm the circuit
+quasi-probability distribution.
+See <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">“What is the theory behind PEC?”</span></a> for more details on the sampling cost.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Optional Executor re-initialization to clean the history</span>
+<span class="n">executor</span> <span class="o">=</span> <span class="n">Executor</span><span class="p">(</span><span class="n">execute</span><span class="p">)</span>
+
+<span class="n">pec_value</span><span class="p">,</span> <span class="n">pec_data</span> <span class="o">=</span> <span class="n">pec</span><span class="o">.</span><span class="n">execute_with_pec</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">,</span>
+    <span class="n">executor</span><span class="p">,</span>
+    <span class="n">observable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># In this example, the observable is implicit in the executor.</span>
+    <span class="n">representations</span><span class="o">=</span><span class="n">representations</span><span class="p">,</span>
+    <span class="n">precision</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="c1"># The estimation accuracy.</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="c1"># Seed for reproducibility of probabilistic sampling of circuits.</span>
+    <span class="n">full_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># Return pec_data in addition to pec_value</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em><strong>Hint:</strong> The value of <code class="docutils literal notranslate"><span class="pre">precision</span></code> used above is very large, in order to reduce the execution
+time. Try re-executing the previous cell with smaller values of <code class="docutils literal notranslate"><span class="pre">precision</span></code> to improve the result.</em></p>
+</div>
+<div class="section" id="analyzing-the-executed-circuits">
+<h3>Analyzing the executed circuits<a class="headerlink" href="#analyzing-the-executed-circuits" title="Permalink to this headline">¶</a></h3>
+<p>As discussed in the <a class="reference internal" href="executors.html"><span class="doc std std-doc">Executors</span></a> section, we can extract the execution history
+from <code class="docutils literal notranslate"><span class="pre">executor</span></code>. This is a way to see what Mitiq does behind the scenes which is independent from the error
+mitigation technique.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;During the previous PEC process, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">executor</span><span class="o">.</span><span class="n">executed_circuits</span><span class="p">)</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;circuits have been executed.&quot;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The first 5 circuits are:&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">executor</span><span class="o">.</span><span class="n">executed_circuits</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The corresponding noisy expectation values are:&quot;</span><span class="p">)</span>  
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">executor</span><span class="o">.</span><span class="n">quantum_results</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>During the previous PEC process, 130  circuits have been executed.
+The first 5 circuits are:
+     ┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
+     └───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
+     └───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
+     └───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ Z ├┤ H ├┤ Y ├
+     └───┘└───┘└───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
+     └───┘└───┘└───┘└───┘
+The corresponding noisy expectation values are:
+0.7047999999999993
+0.7047999999999993
+0.7047999999999993
+0.6310719999999995
+0.7047999999999993
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analyzing-data-of-the-pec-process">
+<h3>Analyzing data of the PEC process<a class="headerlink" href="#analyzing-data-of-the-pec-process" title="Permalink to this headline">¶</a></h3>
+<p>Beyond the executed circuits, one may be interested in analyzing additional data related to the specifc PEC technique.
+Setting <code class="docutils literal notranslate"><span class="pre">full_output=True</span></code>, this data is returned in <code class="docutils literal notranslate"><span class="pre">pec_data</span></code> as a dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pec_data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;num_samples&#39;, &#39;precision&#39;, &#39;pec_value&#39;, &#39;pec_error&#39;, &#39;unbiased_estimators&#39;, &#39;measured_expectation_values&#39;, &#39;sampled_circuits&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pec_data</span><span class="p">[</span><span class="s2">&quot;num_samples&quot;</span><span class="p">],</span> <span class="s2">&quot;noisy circuits have been sampled and executed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>130 noisy circuits have been sampled and executed.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The unbiased raw results, whose average is equal to <code class="docutils literal notranslate"><span class="pre">pec_value</span></code>, are stored under the <code class="docutils literal notranslate"><span class="pre">unbiased_estimators</span></code> key.
+For example, the first 5 unbiased samples are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pec_data</span><span class="p">[</span><span class="s2">&quot;unbiased_estimators&quot;</span><span class="p">][:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.020599418806923,
+ 4.020599418806923,
+ 4.020599418806923,
+ 3.6000109483900724,
+ 4.020599418806923]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The statistical error <code class="docutils literal notranslate"><span class="pre">pec_error</span></code> corresponds to <code class="docutils literal notranslate"><span class="pre">pec_std</span></code> / <code class="docutils literal notranslate"><span class="pre">sqrt(num_samples)</span></code>, where <code class="docutils literal notranslate"><span class="pre">pec_std</span></code> is
+the standard deviation of the unbiased samples, i.e., the square root of the mean squared deviation of
+<code class="docutils literal notranslate"><span class="pre">unbiased_estimators</span></code> from <code class="docutils literal notranslate"><span class="pre">pec_value</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pec_data</span><span class="p">[</span><span class="s2">&quot;pec_error&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2925838283088833
+</pre></div>
+</div>
+</div>
+</div>
+<p>Instead of the error printed above, one could use more advanced statistical techniques to estimate the
+uncertainty of the PEC result. For example, given the raw samples contained in  <code class="docutils literal notranslate"><span class="pre">pec_data[&quot;unbiased_estimators&quot;]</span></code>,
+one can apply a <a class="reference external" href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">bootstrapping</a> approach. Alternatively,
+a simpler but computationally more expensive approach is to perform multiple PEC estimations of the same expectation
+value and compute the standard deviation of the results.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="pec-2-use-case.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">When should I use PEC?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pec-4-low-level.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What happens when I use PEC?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

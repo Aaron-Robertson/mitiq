@@ -1,0 +1,1289 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changelog &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References" href="zz_bibliography.html" />
+    <link rel="prev" title="Contributor Covenant Code of Conduct" href="code_of_conduct.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="guide/guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-14-0-in-development">
+   Version 0.14.0  (In development…)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-13-0-february-25th-2022">
+   Version 0.13.0  (February 25th, 2022)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#all-changes">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-12-0-january-21st-2022">
+   Version 0.12.0  (January 21st, 2022)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-11-1-november-29th-2021">
+   Version 0.11.1  (November 29th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-11-0-november-3rd-2021">
+   Version 0.11.0  (November 3rd, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-10-0-september-17-2021">
+   Version 0.10.0  (September 17, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-9-3-july-7th-2021">
+   Version 0.9.3  (July 7th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-9-2-june-30th-2021">
+   Version 0.9.2  (June 30th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-9-1-june-24th-2021">
+   Version 0.9.1  (June 24th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-9-0-june-17th-2021">
+   Version 0.9.0 (June 17th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-8-0-may-6th-2021">
+   Version 0.8.0 (May 6th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-7-0-april-7th-2021">
+   Version 0.7.0 (April 7th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-6-0-march-1st-2021">
+   Version 0.6.0 (March 1st, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-5-0-february-8th-2021">
+   Version 0.5.0 (February 8th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id24">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-4-1-january-12th-2021">
+   Version 0.4.1 (January 12th, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id25">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id26">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-4-0-december-6th-2020">
+   Version 0.4.0 (December 6th, 2020)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id27">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id28">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-3-0-october-30th-2020">
+   Version 0.3.0 (October 30th, 2020)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id29">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id30">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-2-0-october-4th-2020">
+   Version 0.2.0 (October 4th, 2020)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#announcements">
+     Announcements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id31">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id32">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-1-0-september-2nd-2020">
+   Version 0.1.0 (September 2nd, 2020)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id33">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id34">
+     All Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-1a2-august-17th-2020">
+   Version 0.1a2 (August 17th, 2020)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-1a1-june-5th-2020">
+   Version 0.1a1 (June 5th, 2020)
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-0-14-0-in-development">
+<h2>Version 0.14.0  (In development…)<a class="headerlink" href="#version-0-14-0-in-development" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="version-0-13-0-february-25th-2022">
+<h2>Version 0.13.0  (February 25th, 2022)<a class="headerlink" href="#version-0-13-0-february-25th-2022" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>Mitiq is now compatible with the latest version (0.13.1) of Cirq! This update was blocked for a long time because of some technical difficulties. So, many thanks to &#64;vtomole for finding a solution to this issue!
+This should solve several dependency conflicts or warnings that you may have got when running <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">mitiq</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">mitiq</span></code>.</p>
+<p>The HTML rendering of all PyQuil examples in our documentation is now fixed. Thanks &#64;astrojuanlu for useful suggestions about readthedocs!</p>
+<p>We also thank &#64;Rahul-Mistri for adding GHZ circuits to our benchmarking module and for making Clifford circuits compatible with the Mitiq CDR technique (instead of raising an error as it happened before this release).</p>
+<p>We discussed and approved the design documents (RFC) for two new error-mitigation techniques: <em>learning-based PEC</em> and <em>digital dynamical decoupling</em>. You can find them at <a class="reference external" href="https://github.com/unitaryfund/mitiq/projects/7">this link</a>. Special thanks go to &#64;Misty-W and &#64;Aaron-Robertson!</p>
+</div>
+<div class="section" id="all-changes">
+<h3>All Changes<a class="headerlink" href="#all-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add pre-executed pyquil notebooks (&#64;andreamari, gh-1142)</p></li>
+<li><p>Fix optimal representation tests and unskip one of them (&#64;andreamari gh-1141)</p></li>
+<li><p>Update amazon-braket-sdk requirement from ~=1.11.1 to ~=1.15.0 (&#64;dependabot, gh-1137, gh-1116, gh-1108, gh-1105)</p></li>
+<li><p>Update black requirement from ~=19.10b0 to ~=22.1 (&#64;dependabot, &#64;crazy4pi314, gh-1110)</p></li>
+<li><p>Bump actions/github-script from 5 to 6 (&#64;dependabot, gh-1129)</p></li>
+<li><p>Update mypy requirement from ~=0.930 to ~=0.931 (&#64;dependabot, gh-1078)</p></li>
+<li><p>docs: add vtomole as a contributor for test, code (&#64;allcontributors, &#64;andreamari, gh-1132)</p></li>
+<li><p>docs: add Rahul-Mistri as a contributor for test, code (&#64;allcontributors, &#64;andreamari, gh-1130)</p></li>
+<li><p>docs: add L-P-B as a contributor for test, code (&#64;allcontributors, gh-1131)</p></li>
+<li><p>Update PR template (&#64;nathanshammah, gh-1117)</p></li>
+<li><p>Remove unused functions from <code class="docutils literal notranslate"><span class="pre">cirq_utils</span></code> and fix non-deterministic tests. (&#64;andreamari gh-1123)</p></li>
+<li><p>Update pennylane requirement from ~=0.20.0 to ~=0.21.0 (&#64;dependabot, gh-1122)</p></li>
+<li><p>Bump cirq version from 0.10.0 to 0.13.0 (&#64;vtomole, gh-988)</p></li>
+<li><p>Can use Clifford Circuits with <code class="docutils literal notranslate"><span class="pre">execute_with_cdr</span></code> (&#64;Rahul-Mistri, gh-1104)</p></li>
+<li><p>Docstring for GHZ-circuits reformatted (&#64;Rahul-Mistri, gh-1101)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-12-0-january-21st-2022">
+<h2>Version 0.12.0  (January 21st, 2022)<a class="headerlink" href="#version-0-12-0-january-21st-2022" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Summary<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This release contains a considerable overhaul of the documentation organization and content:</p>
+<ul class="simple">
+<li><p>The guide is now divided into Core concepts and a new presentation of the quantum errror mitigation techniques (ZNE, PEC and CDR). Each technique contains subsections that explain with code snippets how to use them in Mitiq (gh-1021, gh-1004 gh-1031, gh-1099). Also the API doc has been extended and improved. Many thanks to &#64;purvathakre &#64;Misty-W for their help on rewriting the documentation and reviewing the pull requests.</p></li>
+<li><p>An example on how to use ZNE to improve the calculations of the energy potential landscape of molecular Hydrogen using VQE was added by &#64;andreamari.</p></li>
+</ul>
+<p><strong>New features</strong></p>
+<ul class="simple">
+<li><p>GHZ circuits were added to the benchmark subpackage by &#64;Rahul-Mistri.</p></li>
+<li><p>Airspeed-velocity (asv) has been added to the CI by &#64;rmlarose.</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>All Changes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add core concepts guide page (&#64;crazy4pi314, &#64;nathanshammah, &#64;andreamari, gh-1053)</p></li>
+<li><p>Add cdr-2-use-case.myst (gh-1099) (&#64;andreamari, &#64;nathanshammah)</p></li>
+<li><p>CDR documentation reorg (&#64;nathanshammah, &#64;andreamari, &#64;crazy4pi314, gh-1031)</p></li>
+<li><p>Add molecular Hydrogen example (&#64;andreamari, gh-1087)</p></li>
+<li><p>Update pydata-sphinx-theme requirement from ~=0.7.2 to ~=0.8.0 (&#64;dependabot, gh-1091)</p></li>
+<li><p>Use raw.execute in asv benchmarks and remove GHZ circuits from asv (&#64;rmlarose)</p></li>
+<li><p>Added GHZ circuits to benchmark (&#64;Rahul-Mistri, gh-1089)</p></li>
+<li><p>Update scipy requirement from ~=1.7.2 to ~=1.7.3 (&#64;dependabot
+, gh-1084)</p></li>
+<li><p>PR to trigger CI and fix a broken link (&#64;andreamari, gh-1082)</p></li>
+<li><p>Fix readthedocs by changing a LaTex equation (&#64;andreamari, &#64;nathanshammah, gh-1077)</p></li>
+<li><p>Add asv benchmarking framework (&#64;rmlarose, gh-1047)</p></li>
+<li><p>Update zne-3-options.myst (&#64;andreamari, gh-1075)</p></li>
+<li><p>Update API doc with REM, executors and observables (&#64;nathanshammah, gh-1050)</p></li>
+<li><p>ZNE Guide Reorg (&#64;crazy4pi314, &#64;Misty-W, &#64;purva-thakre, &#64;nathanshammah, &#64;andreamari, gh-1021)</p></li>
+<li><p>Fix broken link on master. (&#64;andreamari, gh-1069)</p></li>
+<li><p>Update mypy requirement from ~=0.910 to ~=0.930 (&#64;dependabot, gh-1065)</p></li>
+<li><p>Docs: add AkashNarayanan as a contributor for infra (&#64;allcontributors, gh-1059)</p></li>
+<li><p>Fixes #1034 release docs update (&#64;crazy4pi314, &#64;nathanshammah, gh-1054)</p></li>
+<li><p>Docs: add DSamuel1 as a contributor for code (&#64;allcontributors, &#64;Misty-W, gh-1056)</p></li>
+<li><p>Docs: add Misty-W as a contributor for code, example (&#64;allcontributors, gh-1055)</p></li>
+<li><p>Docs: update README.md (&#64;allcontributors)</p></li>
+<li><p>Update PEC docs (&#64;andreamari, &#64;nathanshammah, &#64;rmlarose, gh-1004)</p></li>
+<li><p>Revert “Update mypy requirement from ~=0.910 to ~=0.920 (&#64;nathanshammah, gh-1052)</p></li>
+<li><p>Update mypy requirement from ~=0.910 to ~=0.920 (&#64;dependabot, gh-1051)</p></li>
+<li><p>Update pytest-xdist[psutil] requirement from ~=2.4.0 to ~=2.5.0 (&#64;dependabot, gh-1044)</p></li>
+<li><p>Update amazon-braket-sdk requirement from ~=1.11.0 to ~=1.11.1 (&#64;dependabot, gh-1042)</p></li>
+<li><p>Update pennylane requirement from ~=0.19.0 to ~=0.19.1 (&#64;dependabot, gh-1029)</p></li>
+<li><p>Update amazon-braket-sdk requirement from ~=1.9.5 to ~=1.11.0 (&#64;dependabot, gh-1038)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-11-1-november-29th-2021">
+<h2>Version 0.11.1  (November 29th, 2021)<a class="headerlink" href="#version-0-11-1-november-29th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Summary<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>This patch release fixes two bugs:</p>
+<ul class="simple">
+<li><p>Bug: PEC could only be used with <code class="docutils literal notranslate"><span class="pre">cirq.Circuit</span></code>s, not <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code>, due to a missing conversion.</p>
+<ul>
+<li><p>Fix: PEC can now be used with any <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> (gh-1018).</p></li>
+</ul>
+</li>
+<li><p>Bug: CDR classically simulated the wrong circuits when doing regression.</p>
+<ul>
+<li><p>Fix: The correct circuits are now classically simulated (gh-1026).</p></li>
+</ul>
+</li>
+</ul>
+<p>Also fixes a smaller bug where some tools in <code class="docutils literal notranslate"><span class="pre">mitiq.interface.mitiq_qiskit</span></code> modified <code class="docutils literal notranslate"><span class="pre">qiskit.QuantumCircuit</span></code>s when they shouldn’t.</p>
+</div>
+<div class="section" id="id4">
+<h3>All Changes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Update scipy requirement from ~=1.7.1 to ~=1.7.2 (&#64;dependabot, gh-1017)</p></li>
+<li><p>CDR: Run the training circuits on the simulator (&#64;rmlarose and &#64;andreamari, gh-1026).</p></li>
+<li><p>Update scipy requirement from ~=1.7.1 to ~=1.7.2 (&#64;dependabot, gh-1017)</p></li>
+<li><p>Update pydata-sphinx-theme requirement from ~=0.7.1 to ~=0.7.2 (&#64;dependabot, gh-1024)</p></li>
+<li><p>Update qiskit requirement from ~=0.31.0 to ~=0.32.0 (&#64;dependabot, gh-1025)</p></li>
+<li><p>Update pydata-sphinx-theme requirement from ~=0.7.1 to ~=0.7.2 (&#64;dependabot, gh-1024)</p></li>
+<li><p>[Bug fix] Avoid circuit mutation in qiskit executors (&#64;andreamari, gh-1019)</p></li>
+<li><p>[Bug fix] Add back-conversions in execute_with_pec (&#64;andreamari, gh-1018)</p></li>
+<li><p>Increase shots in zne tests with shot_list (&#64;andreamari, gh-1020)</p></li>
+<li><p>Update pennylane requirement from ~=0.18.0 to ~=0.19.0 (&#64;nathanshammah, gh-1022)</p></li>
+<li><p>Add workflow figures and technique descriptions (&#64;nathanshammah, gh-953)</p></li>
+<li><p>Prepare to release 0.11.0 (&#64;rmlarose, gh-1010)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-11-0-november-3rd-2021">
+<h2>Version 0.11.0  (November 3rd, 2021)<a class="headerlink" href="#version-0-11-0-november-3rd-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Summary<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>This release introduces <code class="docutils literal notranslate"><span class="pre">Observable</span></code>s as a major new feature to the Mitiq workflow and a few breaking changes. Support
+for Pennylane has been added by adding <code class="docutils literal notranslate"><span class="pre">pennylane.QuantumTape</span></code>s to <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code>.</p>
+<p><strong>New features</strong></p>
+<ul class="simple">
+<li><p>Specify and use a <code class="docutils literal notranslate"><span class="pre">mitiq.Observable</span></code> in any error-mitigation technique.</p>
+<ul>
+<li><p>This means the <code class="docutils literal notranslate"><span class="pre">executor</span></code> function does not have to return the expectation value as a <code class="docutils literal notranslate"><span class="pre">float</span></code> anymore, but rather
+can return a <code class="docutils literal notranslate"><span class="pre">mitiq.QuantumResult</span></code> - i.e., an object from which the expectation value can be computed provided
+an observable.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">executor</span></code> function can still return a <code class="docutils literal notranslate"><span class="pre">float</span></code>, in which case the <code class="docutils literal notranslate"><span class="pre">Observable</span></code> does not need to be specified
+(and should not be specified).</p></li>
+</ul>
+</li>
+<li><p>All error mitigation techniques can now use batching with the same interface.</p></li>
+<li><p>PEC can be run with only a subset of representations of the gates in a circuit. In other words, if the circuit has
+two gates, <code class="docutils literal notranslate"><span class="pre">H</span></code> and <code class="docutils literal notranslate"><span class="pre">CNOT</span></code>, you can run <code class="docutils literal notranslate"><span class="pre">execute_with_pec</span></code> by only providing an <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code> for, e.g.,
+the <code class="docutils literal notranslate"><span class="pre">CNOT</span></code>.</p>
+<ul>
+<li><p>Before, you had to provide all representations or an error would be raised.</p></li>
+<li><p>Performance of PEC may be better by providing all <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code>s. This change is only with respect to
+usability and not performance.</p></li>
+</ul>
+</li>
+<li><p>Circuits written in <code class="docutils literal notranslate"><span class="pre">Pennylane</span></code> (as <code class="docutils literal notranslate"><span class="pre">QuantumTape</span></code>s) are now recognized and suppported by Mitiq.</p></li>
+</ul>
+<p><strong>Breaking changes</strong></p>
+<ul class="simple">
+<li><p>Signatures of <code class="docutils literal notranslate"><span class="pre">execute_with_xxx</span></code> error-mitigation techniques have changed to include <code class="docutils literal notranslate"><span class="pre">Observable</span></code>s. The default value
+is <code class="docutils literal notranslate"><span class="pre">None</span></code>, meaning that the <code class="docutils literal notranslate"><span class="pre">executor</span></code> should return a <code class="docutils literal notranslate"><span class="pre">float</span></code> as in the old usage, but the additional argument and
+change to keyword-only arguments (see below) may require you to make updates.</p></li>
+<li><p>You must now use provide keywords for technique-specific arguments in error mitigation techniques. Example:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example new usage of providing keyword arguments. Do this.</span>
+<span class="n">execute_with_pec</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">executor</span><span class="p">,</span> <span class="n">observable</span><span class="p">,</span> <span class="n">representations</span><span class="o">=</span><span class="n">representations</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>instead of</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Old usage. Don&#39;t do this. Technique-specific arguments like `representations` are now keyword-only.</span>
+<span class="n">execute_with_pec</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">executor</span><span class="p">,</span> <span class="n">observable</span><span class="p">,</span> <span class="n">representations</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The latter will raise <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">TypeError:</span> <span class="pre">execute_with_pec()</span> <span class="pre">missing</span> <span class="pre">1</span> <span class="pre">required</span> <span class="pre">keyword-only</span> <span class="pre">argument:</span> <span class="pre">'representations'</span></code>.</p>
+<ul class="simple">
+<li><p>The first argument of <code class="docutils literal notranslate"><span class="pre">execute_with_zne</span></code> is now <code class="docutils literal notranslate"><span class="pre">circuit</span></code> instead of <code class="docutils literal notranslate"><span class="pre">qp</span></code> to match signatures of other
+<code class="docutils literal notranslate"><span class="pre">execute_with_xxx</span></code> functions.</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>All Changes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Increase shots in test_zne.py (&#64;andreamari, gh-1011)</p></li>
+<li><p>Refactor <code class="docutils literal notranslate"><span class="pre">qp</span></code> to <code class="docutils literal notranslate"><span class="pre">circuit</span></code> in <code class="docutils literal notranslate"><span class="pre">execute_with_zne</span></code> (&#64;rmlarose, gh-1009)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">Observable</span></code> documentation and <code class="docutils literal notranslate"><span class="pre">Observable.from_pauli_string_collections</span></code> method (&#64;rmlarose, gh-1007)</p></li>
+<li><p>Executor docs (&#64;rmlarose, gh-1008)</p></li>
+<li><p>Bump qiskit to version 0.31 and pin it explicitly in dev requirements (&#64;andreamari, gh-993)</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Executor.evaluate</span></code> for batching in ZNE (&#64;rmlarose, gh-1005)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">Executor.evaluate</span></code> and use for batched execution (&#64;rmlarose, gh-1001)</p></li>
+<li><p>Bump PyQuil (&#64;rmlarose, gh-992)</p></li>
+<li><p>CDR with Observables (&#64;rmlarose, gh-985)</p></li>
+<li><p>Fix bug in OperationRepresentation printing (&#64;andreamari, gh-975)</p></li>
+<li><p>Ignore patch releases in dependabot (&#64;rmlarose, gh-981)</p></li>
+<li><p>Update pydata-sphinx-theme requirement from ~=0.6.3 to ~=0.7.1 (&#64;dependabot, gh-962)</p></li>
+<li><p>Update flake8 requirement from ~=3.9.2 to ~=4.0.1 (&#64;dependabot, gh-982)</p></li>
+<li><p>Add PennyLane to frontend table in the readme (&#64;andreamari, gh-973)</p></li>
+<li><p>Update amazon-braket-sdk requirement from ~=1.9.1 to ~=1.9.5 (&#64;dependabot, gh-970)</p></li>
+<li><p>Update pytest-cov requirement from ~=2.12.1 to ~=3.0.0 (&#64;dependabot, gh-963)</p></li>
+<li><p>Fix pip package resolving problems (&#64;andreamari, gh-976)</p></li>
+<li><p>Add support for pennylane circuits (everybody and their grandmother, gh-836)</p></li>
+<li><p>Keyword only arguments in execute_with_technique functions (&#64;rmlarose, gh-971)</p></li>
+<li><p>Foldability check includes a check for inverse (&#64;purva-thakre, gh-939)</p></li>
+<li><p>Bump actions/github-script from 3 to 5 (&#64;dependabot, gh-969)</p></li>
+<li><p>PEC with Observables &amp; skip operations without known representations (&#64;rmlarose, gh-954)</p></li>
+<li><p>Update qiskit-terra requirement from ~=0.18.2 to ~=0.18.3 (&#64;dependabot, gh-955)</p></li>
+<li><p>Add observable to zne_decorator (&#64;rmlarose, gh-967)</p></li>
+<li><p>Update qiskit-ibmq-provider requirement from ~=0.16.0 to ~=0.17.0 (&#64;dependabot, gh-965)</p></li>
+<li><p>Binder badge workflow (&#64;AkashNarayanan, gh-964)</p></li>
+<li><p>Fix links and typos in vqe-pyquil-demo.myst and pyquil_demo.myst (&#64;Misty-W, gh-959)</p></li>
+<li><p>ZNE with Observables (&#64;rmlarose, gh-948)</p></li>
+<li><p>Add PauliString multiplication (&#64;rmlarose, gh-949)</p></li>
+<li><p>Update amazon-braket-sdk requirement from ~=1.9.0 to ~=1.9.1 (&#64;dependabot, gh-950)</p></li>
+<li><p>Fixing changelog and improving release documentation (&#64;crazy4pi314, gh-946)</p></li>
+<li><p>Update version to 0.11.0dev (&#64;rmlarose, gh-947)</p></li>
+<li><p>Update pytest-xdist[psutil] requirement from ~=2.3.0 to ~=2.4.0 (&#64;dependabot, gh-938)</p></li>
+<li><p>Fix AWS example by fixing a bug in mirror circuits (&#64;andreamari, gh-940)</p></li>
+<li><p>Bump codecov/codecov-action from 2.0.3 to 2.1.0 (&#64;dependabot, gh-922)</p></li>
+<li><p>Improve OperationRepresentation printing (&#64;andreamari, gh-901)</p></li>
+<li><p>Updating release process (&#64;crazy4pi314, gh-936)</p></li>
+</ul>
+<p>Huge thanks to all contributors on this release! &#64;Misty-W, &#64;AkashNarayanan, &#64;purva-thakre, &#64;trbromley, &#64;nathanshammah,
+&#64;crazy4pi314, &#64;andreamari, and &#64;rmlarose.</p>
+</div>
+</div>
+<div class="section" id="version-0-10-0-september-17-2021">
+<h2>Version 0.10.0  (September 17, 2021)<a class="headerlink" href="#version-0-10-0-september-17-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>This release adds a ton of new stuff, both error mitigation tools as well as infrastructure upgrades.
+Some highlights:</p>
+<ul class="simple">
+<li><p>New integration with <a class="reference external" href="https://aws.amazon.com/braket/">AWS Braket</a></p></li>
+<li><p>A new pyQuil example by &#64;Misty-W and lots of pyQuil debugging.</p></li>
+<li><p>Support for mirror circuits by &#64;DSamuel1.</p></li>
+<li><p>Dependabot is now helping us keep our dependencies up to date.</p></li>
+<li><p>Lots of documentation fixes and features like a gallery view of the examples and mybinder.org support.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Observable</span></code> and <code class="docutils literal notranslate"><span class="pre">MeasurementResult</span></code> dataclass.</p></li>
+</ul>
+<p>Thanks to &#64;Misty-W and &#64;DSamuel1 for their great contributions this release! 🎉</p>
+</div>
+<div class="section" id="id8">
+<h3>All Changes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Reduce noise in braket example (&#64;andreamari, gh-933)</p></li>
+<li><p>Add ZNE example on AWS Braket (&#64;rmlarose, gh-929)</p></li>
+<li><p>A few changes / fixes to mirror circuits (&#64;rmlarose, gh-928)</p></li>
+<li><p>Change Binder link from jupyterlab to classic view (&#64;andreamari, gh-925)</p></li>
+<li><p>Dependabot settings patch: one dependancy per line (&#64;rmlarose, gh-921)</p></li>
+<li><p>Dependabot settings (&#64;rmlarose, gh-920)</p></li>
+<li><p>Update sphinxcontrib-bibtex requirement from ~=2.3.0 to ~=2.4.1 (&#64;dependabot, gh-919)</p></li>
+<li><p>Rename Mitiq Examples -&gt; Examples (&#64;nathanshammah, gh-916)</p></li>
+<li><p>Update qiskit-terra requirement from ~=0.18.1 to ~=0.18.2 (&#64;dependabot, gh-912)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">Observable.expectation</span></code> with support for measurement results and density matrices; Refactor <code class="docutils literal notranslate"><span class="pre">Collector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Executor</span></code> (&#64;rmlarose, gh-904)</p></li>
+<li><p>Install mitiq in readthedocs to avoid mitiq.py files (&#64;andreamari, gh-903)</p></li>
+<li><p>Crazy4pi314/example gallery (&#64;crazy4pi314, gh-902)</p></li>
+<li><p>Import mirror circuits (&#64;rmlarose, gh-900)</p></li>
+<li><p>Mirror Circuits Update: Resolves #890 and #891 (&#64;DSamuel1, gh-895)</p></li>
+<li><p>Fix html rendering problems of the PEC example (&#64;andreamari, gh-894)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">qubit_indices</span></code> to <code class="docutils literal notranslate"><span class="pre">MeasurementResult</span></code> (&#64;rmlarose, gh-892)</p></li>
+<li><p>Update mirror circuits docstrings (&#64;rmlarose, gh-889)</p></li>
+<li><p>Update flake8 requirement from ~=3.7.9 to ~=3.9.2 (&#64;dependabot, gh-887)</p></li>
+<li><p>Update pytest-cov requirement from ~=2.11.1 to ~=2.12.1 (&#64;dependabot, gh-885)</p></li>
+<li><p>Update sphinx-copybutton requirement from ~=0.3.0 to ~=0.4.0 (&#64;dependabot, gh-884)</p></li>
+<li><p>Update mypy requirement from ~=0.812 to ~=0.910 (&#64;dependabot, gh-883)</p></li>
+<li><p>Update pytest-xdist[psutil] requirement from ~=2.2.1 to ~=2.3.0 (&#64;dependabot, gh-880)</p></li>
+<li><p>Update sphinxcontrib-bibtex requirement from ~=2.2.0 to ~=2.3.0 (&#64;dependabot, gh-879)</p></li>
+<li><p>Update amazon-braket-sdk requirement from ~=1.5.10 to ~=1.8.0 (&#64;dependabot, gh-878)</p></li>
+<li><p>Bump codecov/codecov-action from 1.3.1 to 2.0.3 (&#64;dependabot, gh-875)</p></li>
+<li><p>Bump actions/stale from 3.0.19 to 4 (&#64;dependabot, gh-874)</p></li>
+<li><p>Updating pinned Scipy version (&#64;crazy4pi314, gh-871)</p></li>
+<li><p>Add some missing package metadata causing problems (&#64;crazy4pi314, gh-870)</p></li>
+<li><p>Fixing syntax for dependabot to make it work correctly (&#64;crazy4pi314, gh-866)</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">MeasurementResult</span></code> a dataclass; Add expectation from measurements (&#64;rmlarose, gh-860)</p></li>
+<li><p>Mirror circuits (&#64;DSamuel1, gh-859)</p></li>
+<li><p>Fix link in README (&#64;andreamari, gh-856)</p></li>
+<li><p>Add step-by-sep tutorial on PEC (&#64;andreamari, gh-854)</p></li>
+<li><p>Adding mitiq survey to readme (&#64;crazy4pi314, gh-853)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">Observable</span></code> (&#64;rmlarose, gh-852)</p></li>
+<li><p>Manual PyPI deployment trigger (&#64;crazy4pi314, gh-851)</p></li>
+<li><p>Make sure stale marking of issues happens (&#64;crazy4pi314, gh-849)</p></li>
+<li><p>Fix invisible output in mitiq codeblocks (&#64;andreamari, gh-847)</p></li>
+<li><p>update references in README (&#64;andreamari, gh-846)</p></li>
+<li><p>Update to latest Qiskit (&#64;rmlarose, gh-845)</p></li>
+<li><p>Set measurement result type and add post-selection (&#64;rmlarose, gh-844)</p></li>
+<li><p>pyQuil parametric compilation example (&#64;Misty-W, gh-843)</p></li>
+<li><p>Add My Binder (&#64;nathanshammah, gh-841)</p></li>
+<li><p>Show output of Mitiq paper code blocks in example on RTD (&#64;nathanshammah, gh-840)</p></li>
+<li><p>Add code blocks from the paper (&#64;nathanshammah, gh-838)</p></li>
+<li><p>Make ZNE (more) usable with PyQuil (&#64;rmlarose, gh-835)</p></li>
+<li><p>Improve PEC efficiency with batched sampling (&#64;andreamari, gh-833)</p></li>
+<li><p>Fix warnings in docs log output during build (&#64;andreamari, gh-832)</p></li>
+<li><p>Update readme and remove research.rst (&#64;rmlarose, gh-831)</p></li>
+<li><p>Add linkcheck to docs build and fix broken links (&#64;rmlarose, gh-827)</p></li>
+<li><p>Initial support for executors which return measurement results: part 1/2 (&#64;rmlarose, gh-826)</p></li>
+<li><p>Adding table of techniques to readme (&#64;crazy4pi314, gh-825)</p></li>
+<li><p>Move example/template notebook to contributing TOC (&#64;rmlarose, gh-814)</p></li>
+<li><p>Fix multiplication order when adding NoisyOperations (&#64;andreamari, gh-811)</p></li>
+<li><p>Better error message for <code class="docutils literal notranslate"><span class="pre">CircuitConversionError</span></code>s (&#64;rmlarose, gh-809)</p></li>
+<li><p>Fix some documentation not being tested &amp; remove global imports in docs config (&#64;rmlarose, gh-804)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-9-3-july-7th-2021">
+<h2>Version 0.9.3  (July 7th, 2021)<a class="headerlink" href="#version-0-9-3-july-7th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>Summary<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>This primary reason for this patch release is to fix a bug interfacing with Qiskit circuits (gh-802).</p>
+</div>
+<div class="section" id="id10">
+<h3>All Changes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>[Docs] Add CDR to README and braket to Overview (&#64;rmlarose, gh-778).</p></li>
+<li><p>Rename parameter calibration function and make it visible (&#64;rmlarose, gh-780).</p></li>
+<li><p>Allow adding qubits when transforming registers in a Qiskit circuit (&#64;rmlarose, gh-803).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-9-2-june-30th-2021">
+<h2>Version 0.9.2  (June 30th, 2021)<a class="headerlink" href="#version-0-9-2-june-30th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Summary<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>This patch release fixes a Braket integration bug (gh-767).
+It also adds an example about Clifford data regression in the documentation.</p>
+</div>
+<div class="section" id="id12">
+<h3>All Changes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Ensure short circuit warning is multi-platform (&#64;andreamari gh-769).</p></li>
+<li><p>Add CDR example to docs + small change to <code class="docutils literal notranslate"><span class="pre">cdr.calculate_observable</span></code> (&#64;rmlarose, gh-750).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-9-1-june-24th-2021">
+<h2>Version 0.9.1  (June 24th, 2021)<a class="headerlink" href="#version-0-9-1-june-24th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Summary<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>This is a patch release to fix two bugs (gh-736, gh-737) related to the integration with optional packages.
+It also fixes other minor problems (see the list of changes below).</p>
+</div>
+<div class="section" id="id14">
+<h3>All Changes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Patch 0.9.0 (&#64;rmlarose, gh-739).</p></li>
+<li><p>Make readthedocs succeed in building the pdf with pdflatex (&#64;andreamari, gh-743).</p></li>
+<li><p>Update energy landscape example in docs (&#64;andreamari, gh-742).</p></li>
+<li><p>Remove old deprecation warnings (&#64;rmlarose, gh-744).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-9-0-june-17th-2021">
+<h2>Version 0.9.0 (June 17th, 2021)<a class="headerlink" href="#version-0-9-0-june-17th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>Summary<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>The main addition introduced in this release is the implementation of a new error mitigation technique: (variable-noise) Clifford data regression (<a class="reference external" href="https://arxiv.org/abs/2005.10189">arXiv:2005.10189</a>, <a class="reference external" href="https://arxiv.org/abs/2011.01157">arXiv:2011.01157</a>). This is structured as
+a Mitiq module called <code class="docutils literal notranslate"><span class="pre">mitiq.cdr</span></code>.</p>
+<p>Another important change is the integration with Amazon Braket, such that Mitiq is now compatible with circuits of type <code class="docutils literal notranslate"><span class="pre">braket.circuits.Circuit</span></code>. Moreover all the existing Mitiq integrations are now organized into unique module called <code class="docutils literal notranslate"><span class="pre">mitiq.interface</span></code>.</p>
+<p>In the context of probabilistic error cancellation, the sub-module <code class="docutils literal notranslate"><span class="pre">mitiq.pec.representations</span></code> has been significantly improved. Now one can easily compute the optimal quasi-probabiliy representation of an ideal gate as a linear combination of <code class="docutils literal notranslate"><span class="pre">NoisyOperation</span></code> objects.</p>
+<p>Thanks to all contributors (&#64;L-P-B, &#64;Aaron-Robertson, &#64;francespoblete, &#64;LaurentAjdnik, &#64;maxtremblay, &#64;andre-a-alves, &#64;paniash, &#64;purva-thakre) and in particular to the participants of <a class="reference external" href="https://unitaryfund.github.io/unitaryhack/">unitaryHACK</a>!</p>
+</div>
+<div class="section" id="id16">
+<h3>All Changes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>New notation NoisyOperation(circuit, channel_matrix) (&#64;andreamari, gh-725).</p></li>
+<li><p>Update docs for transforming Qiskit registers (&#64;rmlarose, gh-724).</p></li>
+<li><p>Remove classical register transformations in Qiskit conversions (&#64;Aaron-Robertson, gh-672).</p></li>
+<li><p>Change return format for <code class="docutils literal notranslate"><span class="pre">execute_with_cdr</span></code> (&#64;rmlarose, gh-722).</p></li>
+<li><p>Organize supported packages in <code class="docutils literal notranslate"><span class="pre">mitiq.interface</span></code> (&#64;rmlarose, gh-706).</p></li>
+<li><p>Change requirements to Cirq 0.10 (&#64;andreamari, gh-717).</p></li>
+<li><p>Make CDR work with any <code class="docutils literal notranslate"><span class="pre">QPROGRAM</span></code> (&#64;rmlarose, gh-718).</p></li>
+<li><p>Clearer return type for extrapolate and remove deprecated method (&#64;rmlarose, gh-714).</p></li>
+<li><p>Update feature request template (&#64;rmlarose, gh-713).</p></li>
+<li><p>CDR part two - Clifford data regression functions to fit training data (&#64;L-P-B gh-677).</p></li>
+<li><p>Consolidate images, update README. (&#64;rmlarose, gh-709).</p></li>
+<li><p>New logo for readme (&#64;crazy4pi314, &#64;francespoblete,  gh-709).</p></li>
+<li><p>Update Guidelines for Release (&#64;nathanshammah, gh-707).</p></li>
+<li><p>Add action to close stale issues/pr #698 (&#64;crazy4pi314, gh-699).</p></li>
+<li><p>Optimal quasi-probability representations (&#64;andreamari, gh-701).</p></li>
+<li><p>Update links to Cirq documentation (&#64;LaurentAjdnik, gh-704).</p></li>
+<li><p>Warning for short programs [unitaryHACK] (&#64;Yash-10, gh-700).</p></li>
+<li><p>Preparing for optimal representations: Helper functions for channel manipulation. (&#64;andreamari, gh-694).</p></li>
+<li><p>[UnitaryHACK] Improve conversion from braket to cirq (&#64;maxtremblay, gh-688).</p></li>
+<li><p>[unitaryHack] Add instructions to solve make docs error for Windows/3.8 users (&#64;andre-a-alves, gh-691).</p></li>
+<li><p>Add link to docs for source installation in README (&#64;paniash, gh-682).</p></li>
+<li><p>Mention Braket in the README (&#64;andreamari, gh-687).</p></li>
+<li><p>[UnitaryHACK] ZNE-PEC uniformity (&#64;andre-a-alves, gh-656).</p></li>
+<li><p>Minor update of parameter noise scaling (&#64;andreamari, gh-684).</p></li>
+<li><p>Add braket support via rudimentary translator (&#64;rmlarose, gh-590).</p></li>
+<li><p>Specify qiskit elements in output of about.py (&#64;purva-thakre, gh-674).</p></li>
+<li><p>Depend only on cirq-core (&#64;rmlarose, gh-673). This was reverted in gh-717.</p></li>
+<li><p>Fix docs build (&#64;rmlarose, gh-671).</p></li>
+<li><p>Fix is_clifford logic for Clifford Data Regression (&#64;L-P-B gh-669).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-8-0-may-6th-2021">
+<h2>Version 0.8.0 (May 6th, 2021)<a class="headerlink" href="#version-0-8-0-may-6th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>Summary<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>This release has the following major components:</p>
+<ul class="simple">
+<li><p>Re-implements local folding functions (<code class="docutils literal notranslate"><span class="pre">zne.scaling.fold_gates_from_left</span></code>, <code class="docutils literal notranslate"><span class="pre">zne.scaling.fold_gates_from_right</span></code> and <code class="docutils literal notranslate"><span class="pre">zne.scaling.fold_gates_at_random</span></code>) to make them more uniform at large scale factors and match how they were defined in <a class="reference external" href="https://arxiv.org/abs/2005.10921">Digital zero-noise extrapolation for quantum error mitigation</a>.</p></li>
+<li><p>Adds a new noise scaling method, <code class="docutils literal notranslate"><span class="pre">zne.scaling.fold_all</span></code>, which locally folds all gates. This can be used, e.g., to “square CNOTs,” a common literature technique, by calling <code class="docutils literal notranslate"><span class="pre">fold_all</span></code> and excluding single-qubit gates.</p></li>
+<li><p>Adds functionality for the training portion of <a class="reference external" href="https://arxiv.org/abs/2005.10189">Clifford data regression</a>, specifically to map an input (pre-compiled) circuit to a set of (near) Clifford circuits which are used as training data for the method. The full CDR technique is still in development and will be complete with the addition of regression methods.</p></li>
+<li><p>Improves the (sampling) performance of PEC (by a lot!) via fewer circuit conversions.</p></li>
+<li><p>Adds <code class="docutils literal notranslate"><span class="pre">PauliString</span></code> object, the first change of several in the generalization of executors. This object is not yet used in any error mitigation pipelines but can be used as a stand-alone.</p></li>
+</ul>
+<p>Additionally, this release</p>
+<ul class="simple">
+<li><p>Fixes some CI components including uploading coverage from master and suppressing nightly Test PyPI uploads on forks.</p></li>
+<li><p>Adds links to GitHub on README and RTD.</p></li>
+</ul>
+<p>Special thanks to all contributors - &#64;purva-thakre, &#64;Aaron-Robertson, &#64;andre-a-alves, &#64;mstechly, &#64;ckissane, &#64;HaoTy, &#64;briancylui, and &#64;L-P-B - for your work on this release!</p>
+</div>
+<div class="section" id="id18">
+<h3>All Changes<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Remove docs/pdf in favor of RTD (&#64;rmlarose, gh-662).</p></li>
+<li><p>Redefine and re-implement local folding functions (&#64;andreamari, gh-649).</p></li>
+<li><p>Move Cirq executors from docs to utilities (&#64;purva-thakre, gh-603).</p></li>
+<li><p>Add functionality for the training portion of Clifford Data Regression (&#64;L-P-B, gh-601).</p></li>
+<li><p>Fix custom factory example in docs (&#64;andreamari, gh-601).</p></li>
+<li><p>Improves PEC sampling speed via fewer conversions (&#64;ckissane, &#64;HaoTy, &#64;briancylui, gh-647).</p></li>
+<li><p>Minor typing fixes (&#64;mstechly, gh-652).</p></li>
+<li><p>Add new <code class="docutils literal notranslate"><span class="pre">fold_all</span></code> scaling method (&#64;rmlarose, gh-648).</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">PauliString</span></code> (&#64;rmlarose, gh-633).</p></li>
+<li><p>Update information about formatting in RTD (&#64;purva-thakre, gh-622).</p></li>
+<li><p>Fix typo in getting started guide (&#64;andre-a-alves, gh-640).</p></li>
+<li><p>Suppress Test PyPI nightly upload on forks (&#64;purva-thakre, gh-597).</p></li>
+<li><p>Add link to GitHub in README and add octocat link to GitHub on RTD (&#64;andre-a-alves, gh-637).</p></li>
+<li><p>Move all benchmark circuit generation to <code class="docutils literal notranslate"><span class="pre">mitiq.benchmarks</span></code>, adding option for converions (&#64;Aaron-Robertson, gh-632).</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">execute_with_shots_and_noise</span></code> in Qiskit utils test (&#64;Aaron-Robertson, gh-621).</p></li>
+<li><p>Install only the Qiskit packages we need (&#64;purva-thakre, gh-614).</p></li>
+<li><p>Update PR template (&#64;rmlarose, gh-634).</p></li>
+<li><p>Add blurb about unitaryHACK (&#64;nathanshammah).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-7-0-april-7th-2021">
+<h2>Version 0.7.0 (April 7th, 2021)<a class="headerlink" href="#version-0-7-0-april-7th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h3>Summary<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>This release focuses on contributions from the community.
+Many thanks &#64;yhindi for adding a method to parametrically scale noise in circuit, to &#64;aaron-robertson and &#64;pchung39 for adding Qiskit executors with depolarizing noise to the utils,
+to &#64;purva-thakre for several bug fixes and improvements. Thanks also to &#64;BobinMathew and &#64;marwahaha for typo corrections.</p>
+</div>
+<div class="section" id="id20">
+<h3>All Changes<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Pin <code class="docutils literal notranslate"><span class="pre">docutils</span></code> version to solve CI issues (&#64;purva-thakre, gh-626)</p></li>
+<li><p>Add qiskit executor example for exact density matrix simulation with depolarizing noise (&#64;aaron-robertson, gh-574)</p></li>
+<li><p>Replace Qiskit utils with Qiskit executors from docs (&#64;pchung39, &#64;aaron-robertson, gh-584)</p></li>
+<li><p>Change custom depolarizing channel in PEC (&#64;purva-thakre, gh-615)</p></li>
+<li><p>Document codecov fetch depth change and increase codecov action version (&#64;grmlarose, gh-618)</p></li>
+<li><p>Fix spelling typo (&#64;marwahaha, gh-616)</p></li>
+<li><p>Add link for MEP (&#64;purva-thakre, gh-610)</p></li>
+<li><p>Correct a typo in the readme (&#64;BobinMathew, gh-609)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">represent_operations_in_circuit_...</span></code> functions for PEC (&#64;andreamari, gh-515)</p></li>
+<li><p>Add qiskit and cirq executor examples gifs to readme (&#64;nathanshammah, gh-587)</p></li>
+<li><p>Move Cirq executors in docs to cirq_utils (&#64;purva-thakre, gh-603)</p></li>
+<li><p>Add parametrized scaling (&#64;yhindyYousef, gh-411)</p></li>
+<li><p>Fix mitiq.about() qiskit version (&#64;aaron-robertson, gh-598)</p></li>
+<li><p>Fix typo in ZNE documentation (&#64;purva-thakre, gh-602)</p></li>
+<li><p>Add minimal section on PEC to documentation (&#64;nathanshammah &#64;andreamari, gh-564)</p></li>
+<li><p>Various improvements to CI and testing (&#64;rmlarose, gh-583)</p></li>
+<li><p>Corrects typo in docs of error mitigation guide (&#64;purva-thakre, gh-585)</p></li>
+<li><p>Remove factory equality and fix bug in <code class="docutils literal notranslate"><span class="pre">PolyExpFactory.extrapolate</span></code> (&#64;rmlarose, gh-580)</p></li>
+<li><p>[Bug Fix] Examples (notebooks) in the online documentation now have output code cells (&#64;Aaron-Robertson, gh-576)</p></li>
+<li><p>Update version to dev (&#64;andreamari, gh-572)</p></li>
+<li><p>Change custom depolarizing channel in PEC test (&#64;purva-thakre, gh-615)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-6-0-march-1st-2021">
+<h2>Version 0.6.0 (March 1st, 2021)<a class="headerlink" href="#version-0-6-0-march-1st-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id21">
+<h3>Summary<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>The automated workflows for builds and releases are improved and PyPI releases are now automated.
+We have more documentation on PEC and have a new tutorial on QAOA with Mitiq, as well as some miscellaneous bug fixes.</p>
+</div>
+<div class="section" id="id22">
+<h3>All Changes<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add minimal section on PEC to documentation (&#64;nathanshammah, gh-564)</p></li>
+<li><p>Improve CI and release/patch workflow and documentation (&#64;crazy4pi314 gh-566).</p></li>
+<li><p>Adding a Mitiq Enhancement Proposal template and process (&#64;crazy4pi314 gh-563).</p></li>
+<li><p>Add to the documentation papers citing Mitiq, close gh-424 (&#64;nathanshammah gh-560).</p></li>
+<li><p>Added a new tutorial where MaxCut is solved with a mitigated QAOA (&#64;andreamari, gh-562).</p></li>
+<li><p>Bumping the version of Qiskit version in <code class="docutils literal notranslate"><span class="pre">dev_requirements</span></code> (&#64;andreamari gh-554)</p></li>
+<li><p>Retain measurement order when folding Qiskit circuits (&#64;rmlarose gh-557)</p></li>
+<li><p>Standardize and touch up docs (&#64;rmlarose gh-553)</p></li>
+<li><p>Adding make doc-clean command (&#64;crazy4pi314 gh-549)</p></li>
+<li><p>Fix and refactor RB circuits function (&#64;rmlarose gh-539)</p></li>
+<li><p>Improve GateOperation simplification in exponents (&#64;rmlarose gh-541)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-5-0-february-8th-2021">
+<h2>Version 0.5.0 (February 8th, 2021)<a class="headerlink" href="#version-0-5-0-february-8th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3>Summary<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<p>The implementation of Probabilistic Error Cancellation is now multi-platform and
+documented in the docs (for the moment only in the <em>Getting Started</em> section).
+A new infrastructure based on <a class="reference external" href="https://myst-parser.readthedocs.io/en/stable/">MyST</a>
+can now be used for writing the documentation and, in particular, for adding new examples
+in the <em>Mitiq Examples</em> section.</p>
+</div>
+<div class="section" id="id24">
+<h3>All Changes<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Adding documentation section for examples, support for Jyupyter notebooks (&#64;crazy4pi314, gh-509).</p></li>
+<li><p>Add minimal documentation for PEC in the Getting Started (&#64;andreamari, gh-532).</p></li>
+<li><p>Optionally return a dictionary with all pec data in execute_with_pec (&#64;andreamari, gh-518).</p></li>
+<li><p>Added local_depolarizing_representations and Choi-based tests (&#64;andreamari, gh-502).</p></li>
+<li><p>Add multi-platform support for PEC (&#64;rmlarose, gh-500).</p></li>
+<li><p>Added new <code class="docutils literal notranslate"><span class="pre">plot_data</span></code> and <code class="docutils literal notranslate"><span class="pre">plot_fit</span></code> methods for factories(&#64;crazy4pi314 &#64;elmandouh, gh-333).</p></li>
+<li><p>Fixes random failure of PEC sampling test(&#64;rmlarose, gh-481).</p></li>
+<li><p>Exact copying of shell commands, update make target for pdf and update development version(&#64;rmlarose, gh-469).</p></li>
+<li><p>Add a new FakeNodesFactory class based on an alternative interpolation method (&#64;elmandouh, gh-444).</p></li>
+<li><p>Add parameter calibration method to find base noise for parameter noise (&#64;yhindy, gh-411).</p></li>
+<li><p>Remove duplication of the reduce method in every (non-adaptive) factory (&#64;elmandouh, gh-470).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-4-1-january-12th-2021">
+<h2>Version 0.4.1 (January 12th, 2021)<a class="headerlink" href="#version-0-4-1-january-12th-2021" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id25">
+<h3>Summary<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>This release fixes a bug in the docs.</p>
+</div>
+<div class="section" id="id26">
+<h3>All Changes<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>[Bug Fix] Ensure code is tested in IBMQ guide and adds a doctest target in Makefile(&#64;rmlarose, gh-488)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-4-0-december-6th-2020">
+<h2>Version 0.4.0 (December 6th, 2020)<a class="headerlink" href="#version-0-4-0-december-6th-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id27">
+<h3>Summary<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<p>This release adds new getter methods for fit errors, extrapolation curves, etc. in ZNE factory objects as well as
+custom types for noisy operations, noisy bases, and decompositions in PEC. It also includes small updates and fixes
+to the documentation, seeding options for PEC sampling functions, and bug fixes for a few non-deterministic test failures.</p>
+</div>
+<div class="section" id="id28">
+<h3>All Changes<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add reference to review paper in docs (&#64;willzeng, gh-423).</p></li>
+<li><p>Add unitary folding API to RTD (&#64;rmlarose, gh-429).</p></li>
+<li><p>Add theory subsection on PEC in docs (&#64;elmandouh, gh-428).</p></li>
+<li><p>Fix small typo in documentation function name (&#64;nathanshammah, gh-435).</p></li>
+<li><p>Seed Qiskit simulator to fix non-deterministic test failure (&#64;rmlarose, gh-425).</p></li>
+<li><p>Fix formatting typo and include hyperlinks to documentation objects (&#64;nathanshammah, gh-438).</p></li>
+<li><p>Remove error in docs testing without tensorflow (&#64;nathanshammah, gh-439).</p></li>
+<li><p>Add seed to PEC functions (&#64;rmlarose, gh-432).</p></li>
+<li><p>Consolidate functions to generate randomized benchmarking circuits in different platforms, and clean up pyquil utils (&#64;rmlarose, gh-426).</p></li>
+<li><p>Add new get methods (for fit errors, extrapolation curve, etc.) to Factory objects (&#64;crazy4pi314, &#64;andreamari, gh-403).</p></li>
+<li><p>Update notebook version in requirements to resolve vulnerability found by security bot.(&#64;nathanshammah, gh-445).</p></li>
+<li><p>Add brief description of noise and error mitigtation to readme (&#64;rmlarose, gh-422).</p></li>
+<li><p>Fix broken links in documentation (&#64;purva-thakre, gh-448).</p></li>
+<li><p>Link to stable RTD instead of latest RTD in readme (&#64;rmlarose, gh-449).</p></li>
+<li><p>Add option to automatically deduce the number of samples in PEC (&#64;andreamari, gh-451).</p></li>
+<li><p>Fix PEC sampling bug (&#64;rmlarose, gh-453).</p></li>
+<li><p>Add types for PEC (&#64;rmlarose, gh-408).</p></li>
+<li><p>Add warning for large samples in PEC (&#64;sid1993, gh-459).</p></li>
+<li><p>Seed a PEC test to avoid non-deterministic failure (&#64;andreamari, gh-460).</p></li>
+<li><p>Update contributing docs (&#64;purva-thakre, gh-465).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-3-0-october-30th-2020">
+<h2>Version 0.3.0 (October 30th, 2020)<a class="headerlink" href="#version-0-3-0-october-30th-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id29">
+<h3>Summary<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<p>Factories now support “batched” executors, meaning that when a backend allows
+for the batch execution of a collection of quantum circuits, factories can now
+leverage that functionality. In addition, the main focus of this release was
+implementing probabilistic error cancellation (PEC), which was introduced in
+<a class="reference external" href="https://arxiv.org/abs/1612.02058">Temme2017</a> as a method for quantum error mitigation. We completed
+a first draft of the major components in the PEC workflow, and in the next
+release plan to demonstrate the full end-to-end operation of the new technique.</p>
+</div>
+<div class="section" id="id30">
+<h3>All Changes<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fix broken links on the website (&#64;erkska, gh-400).</p></li>
+<li><p>Use cirq v0.9.0 instead of cirq-unstable (&#64;karalekas, gh-402).</p></li>
+<li><p>Update mitiq.about() (&#64;rmlarose, gh-399).</p></li>
+<li><p>Refresh the release process documentation (&#64;karalekas, gh-392).</p></li>
+<li><p>Redesign factories, batch runs in BatchedFactory, fix Qiskit utils tests (&#64;rmlarose, &#64;andreamari, gh-381).</p></li>
+<li><p>Add note on batched executors to docs (&#64;rmlarose, gh-405).</p></li>
+<li><p>Added Tensorflow Quantum executor to docs (&#64;k-m-schultz, gh-348).</p></li>
+<li><p>Fix a collection of small build &amp; docs issues (&#64;karalekas, gh-410).</p></li>
+<li><p>Add optimal QPR decomposition for depolarizing noise (&#64;karalekas, gh-371).</p></li>
+<li><p>Add PEC basic implementation assuming a decomposition dictionary is given (&#64;andreamari, gh-373).</p></li>
+<li><p>Make tensorflow requirements optional for docs (&#64;karalekas, gh-417).</p></li>
+</ul>
+<p>Thanks to &#64;erkska and &#64;k-m-schultz for their contributions to this release!</p>
+</div>
+</div>
+<div class="section" id="version-0-2-0-october-4th-2020">
+<h2>Version 0.2.0 (October 4th, 2020)<a class="headerlink" href="#version-0-2-0-october-4th-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="announcements">
+<h3>Announcements<a class="headerlink" href="#announcements" title="Permalink to this headline">¶</a></h3>
+<p>The preprint for Mitiq is live on the arXiv <a class="reference external" href="https://arxiv.org/abs/2009.04417">here</a>!</p>
+</div>
+<div class="section" id="id31">
+<h3>Summary<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p>This release centered on source code reorganization and documentation, as well
+as wrapping up some holdovers from the initial public release. In addition, the
+team began investigating probabilistic error cancellation (PEC), which will be the
+main focus of the following release.</p>
+</div>
+<div class="section" id="id32">
+<h3>All Changes<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Re-organize scaling code into its own module (&#64;rmlarose, gh-338).</p></li>
+<li><p>Add BibTeX snippet for <a class="reference external" href="https://arxiv.org/abs/2009.04417">arXiv citation</a> (&#64;karalekas, gh-351).</p></li>
+<li><p>Fix broken links in PR template (&#64;rmlarose, gh-359).</p></li>
+<li><p>Add limitations of ZNE section to docs (&#64;rmlarose, gh-361).</p></li>
+<li><p>Add static extrapolate method to all factories (&#64;andreamari, gh-352).</p></li>
+<li><p>Removes barriers in conversions from a Qiskit circuit (&#64;rmlarose, gh-362).</p></li>
+<li><p>Add arXiv badge to readme header (&#64;nathanshammah, gh-376).</p></li>
+<li><p>Add note on shot list in factory docs (&#64;rmlarose, gh-375).</p></li>
+<li><p>Spruce up the README a bit (&#64;karalekas, gh-383).</p></li>
+<li><p>Make mypy checking stricter (&#64;karalekas, gh-380).</p></li>
+<li><p>Add pyQuil executor examples and benchmarking circuits (&#64;karalekas, gh-339).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-1-0-september-2nd-2020">
+<h2>Version 0.1.0 (September 2nd, 2020)<a class="headerlink" href="#version-0-1-0-september-2nd-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id33">
+<h3>Summary<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<p>This marks the first public release of Mitiq on a stable version.</p>
+</div>
+<div class="section" id="id34">
+<h3>All Changes<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add static extrapolate method to all factories (&#64;andreamari, gh-352).</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">angle</span></code> module for parameter noise scaling (&#64;yhindy, gh-288).</p></li>
+<li><p>Add to the documentation instructions for maintainers to make a new release (&#64;nathanshammah, gh-332).</p></li>
+<li><p>Add basic compilation facilities, don’t relabel qubits (&#64;karalekas, gh-324).</p></li>
+<li><p>Update readme (&#64;rmlarose, gh-330).</p></li>
+<li><p>Add mypy type checking to CI, resolve existing issues (&#64;karalekas, gh-326).</p></li>
+<li><p>Add readthedocs badge to readme (&#64;nathanshammah, gh-329).</p></li>
+<li><p>Add change log as markdown file (&#64;nathanshammah, gh-328).</p></li>
+<li><p>Add documentation on mitigating the energy landscape for QAOA MaxCut on two qubits (&#64;rmlarose, gh-241).</p></li>
+<li><p>Simplify inverse gates before conversion to QASM (&#64;andreamari, gh-283).</p></li>
+<li><p>Restructure library with <code class="docutils literal notranslate"><span class="pre">zne/</span></code> subpackage, modules renaming (&#64;nathanshammah, gh-298).</p></li>
+<li><p>[Bug Fix] Fix minor problems in executors documentation (&#64;andreamari, gh-292).</p></li>
+<li><p>Add better link to docs and more detailed features (&#64;andreamari, gh-306).</p></li>
+<li><p>[Bug Fix] Fix links and author list in README (&#64;willzeng, gh-302).</p></li>
+<li><p>Add new sections and more explanatory titles to the documentation’s guide (&#64;nathanshammah, gh-285).</p></li>
+<li><p>Store optimal parameters after calling reduce in factories (&#64;rmlarose, gh-318).</p></li>
+<li><p>Run CI on all commits in PRs to master and close #316 (&#64;karalekas, gh-325).</p></li>
+<li><p>Add Unitary Fund logo to the documentation html and close #297 (&#64;nathanshammah, gh-323).</p></li>
+<li><p>Add circuit conversion error + tests (&#64;rmlarose, gh-321).</p></li>
+<li><p>Make test file names unique (&#64;rmlarose, gh-319).</p></li>
+<li><p>Update package version from v. 0.1a2, released, to 0.10dev (&#64;nathanshammah, gh-314).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-0-1a2-august-17th-2020">
+<h2>Version 0.1a2 (August 17th, 2020)<a class="headerlink" href="#version-0-1a2-august-17th-2020" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Initial public release</strong>: on <a class="reference external" href="https://github.com/unitaryfund/mitiq">Github</a> and <a class="reference external" href="https://pypi.org/project/mitiq/0.1a2/">PyPI</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="version-0-1a1-june-5th-2020">
+<h2>Version 0.1a1 (June 5th, 2020)<a class="headerlink" href="#version-0-1a1-june-5th-2020" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Initial release (internal).</strong></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="code_of_conduct.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contributor Covenant Code of Conduct</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="zz_bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

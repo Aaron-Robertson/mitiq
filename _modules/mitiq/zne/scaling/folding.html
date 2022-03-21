@@ -1,0 +1,1006 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mitiq.zne.scaling.folding &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../../index.html">
+  <img src="../../../../_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../guide/guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../../zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <h1>Source code for mitiq.zne.scaling.folding</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 Unitary Fund</span>
+<span class="c1">#</span>
+<span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c1"># (at your option) any later version.</span>
+<span class="c1">#</span>
+<span class="c1"># This program is distributed in the hope that it will be useful,</span>
+<span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c1"># GNU General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># You should have received a copy of the GNU General Public License</span>
+<span class="c1"># along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span>
+
+<span class="sd">&quot;&quot;&quot;Functions for local and global unitary folding on supported circuits.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">FrozenSet</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">cirq</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">InsertStrategy</span><span class="p">,</span> <span class="n">inverse</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">has_unitary</span>
+
+<span class="kn">from</span> <span class="nn">mitiq.interface</span> <span class="kn">import</span> <span class="n">noise_scaling_converter</span>
+<span class="kn">from</span> <span class="nn">mitiq.utils</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">_append_measurements</span><span class="p">,</span>
+    <span class="n">_is_measurement</span><span class="p">,</span>
+    <span class="n">_pop_measurements</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="UnfoldableCircuitError"><a class="viewcode-back" href="../../../../apidoc.html#mitiq.zne.scaling.folding.UnfoldableCircuitError">[docs]</a><span class="k">class</span> <span class="nc">UnfoldableCircuitError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+
+<span class="n">_cirq_gates_to_string_keys</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">H</span><span class="p">:</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">X</span><span class="p">:</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">Y</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">Z</span><span class="p">:</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">T</span><span class="p">:</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">I</span><span class="p">:</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">CNOT</span><span class="p">:</span> <span class="s2">&quot;CNOT&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">CZ</span><span class="p">:</span> <span class="s2">&quot;CZ&quot;</span><span class="p">,</span>
+    <span class="n">ops</span><span class="o">.</span><span class="n">TOFFOLI</span><span class="p">:</span> <span class="s2">&quot;TOFFOLI&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">_string_keys_to_cirq_gates</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="nb">zip</span><span class="p">(</span><span class="n">_cirq_gates_to_string_keys</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">_cirq_gates_to_string_keys</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="p">)</span>
+
+
+<span class="c1"># Helper functions</span>
+<span class="k">def</span> <span class="nf">_check_foldable</span><span class="p">(</span><span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Raises an error if the input circuit cannot be folded.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Checks whether this circuit is able to be folded.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        UnfoldableCircuitError:</span>
+<span class="sd">            * If the circuit has intermediate measurements.</span>
+<span class="sd">            * If the circuit has non-unitary channels which are not terminal</span>
+<span class="sd">              measurements.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">circuit</span><span class="o">.</span><span class="n">are_all_measurements_terminal</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="n">UnfoldableCircuitError</span><span class="p">(</span>
+            <span class="s2">&quot;Circuit contains intermediate measurements and cannot be folded.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">has_unitary</span><span class="p">(</span><span class="n">circuit</span><span class="p">):</span>
+        <span class="n">circ_measurements</span> <span class="o">=</span> <span class="n">_pop_measurements</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">inverse</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnfoldableCircuitError</span><span class="p">(</span>
+                <span class="s2">&quot;Circuit contains non-invertible channels which are not&quot;</span>
+                <span class="s2">&quot;terminal measurements and cannot be folded.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_append_measurements</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">circ_measurements</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_squash_moments</span><span class="p">(</span><span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a copy of the input circuit with all gates squashed into as few</span>
+<span class="sd">    moments as possible.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to squash moments of.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Circuit</span><span class="p">(</span>
+        <span class="n">circuit</span><span class="o">.</span><span class="n">all_operations</span><span class="p">(),</span>
+        <span class="n">strategy</span><span class="o">=</span><span class="n">InsertStrategy</span><span class="o">.</span><span class="n">EARLIEST</span><span class="p">,</span>
+        <span class="n">device</span><span class="o">=</span><span class="n">circuit</span><span class="o">.</span><span class="n">device</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_fold_all</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span>
+    <span class="n">num_folds</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">exclude</span><span class="p">:</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(),</span>
+    <span class="n">skip_moments</span><span class="p">:</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a circuit with all gates folded locally.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to fold.</span>
+<span class="sd">        num_folds: Number of times to add G G^dag for each gate G. If not an</span>
+<span class="sd">            integer, this gets rounded to the nearest integer.</span>
+<span class="sd">        exclude: Do not fold these gates.</span>
+<span class="sd">        skip_moments: Do not fold these moments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">num_folds</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">num_folds</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">num_folds</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Arg `num_folds` must be positive but was </span><span class="si">{</span><span class="n">num_folds</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Parse the exclude argument.</span>
+    <span class="n">all_gates</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">ops</span><span class="o">.</span><span class="n">Gate</span><span class="p">,</span> <span class="n">op</span><span class="o">.</span><span class="n">gate</span><span class="p">)</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">circuit</span><span class="o">.</span><span class="n">all_operations</span><span class="p">())</span>
+    <span class="n">to_exclude</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">exclude</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">to_exclude</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">_string_keys_to_cirq_gates</span><span class="p">[</span><span class="n">item</span><span class="p">])</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;single&quot;</span><span class="p">:</span>
+                    <span class="n">to_exclude</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                        <span class="n">gate</span> <span class="k">for</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">all_gates</span> <span class="k">if</span> <span class="n">gate</span><span class="o">.</span><span class="n">num_qubits</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span>
+                    <span class="p">)</span>
+                <span class="k">elif</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;double&quot;</span><span class="p">:</span>
+                    <span class="n">to_exclude</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                        <span class="n">gate</span> <span class="k">for</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">all_gates</span> <span class="k">if</span> <span class="n">gate</span><span class="o">.</span><span class="n">num_qubits</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span>
+                    <span class="p">)</span>
+                <span class="k">elif</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;triple&quot;</span><span class="p">:</span>
+                    <span class="n">to_exclude</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                        <span class="n">gate</span> <span class="k">for</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">all_gates</span> <span class="k">if</span> <span class="n">gate</span><span class="o">.</span><span class="n">num_qubits</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Do not know how to parse item &#39;</span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&#39; in exclude. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Valid items are Cirq gates, string keys specifying&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;gates, and &#39;single&#39;, &#39;double&#39;, or &#39;triple&#39;.&quot;</span>
+                    <span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">ops</span><span class="o">.</span><span class="n">Gate</span><span class="p">):</span>
+            <span class="n">to_exclude</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Do not know how to exclude </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2"> of type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+    <span class="n">folded</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">circuit</span><span class="p">)[:</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">moment</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">circuit</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">skip_moments</span><span class="p">:</span>
+            <span class="n">folded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">moment</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="n">InsertStrategy</span><span class="o">.</span><span class="n">EARLIEST</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">moment</span><span class="p">:</span>
+            <span class="n">folded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="n">InsertStrategy</span><span class="o">.</span><span class="n">EARLIEST</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">op</span><span class="o">.</span><span class="n">gate</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">to_exclude</span><span class="p">:</span>
+                <span class="n">folded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">inverse</span><span class="p">(</span><span class="n">op</span><span class="p">),</span> <span class="n">op</span><span class="p">]</span> <span class="o">*</span> <span class="n">num_folds</span><span class="p">,</span>
+                    <span class="n">strategy</span><span class="o">=</span><span class="n">InsertStrategy</span><span class="o">.</span><span class="n">EARLIEST</span><span class="p">,</span>
+                <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">folded</span>
+
+
+<span class="c1"># Helper functions for folding by fidelity</span>
+<span class="k">def</span> <span class="nf">_default_weight</span><span class="p">(</span><span class="n">op</span><span class="p">:</span> <span class="n">ops</span><span class="o">.</span><span class="n">Operation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a default weight for an operation.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">0.99</span> <span class="o">**</span> <span class="nb">len</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">qubits</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_get_weight_for_gate</span><span class="p">(</span>
+    <span class="n">weights</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]],</span> <span class="n">op</span><span class="p">:</span> <span class="n">ops</span><span class="o">.</span><span class="n">Operation</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns the weight for a given gate, using a default value of 1.0 if</span>
+<span class="sd">    weights is None or if the weight is not specified.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        weights: Dictionary of string keys mapping gates to weights.</span>
+<span class="sd">        op: Operation to get the weight of.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">_default_weight</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">weights</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">weight</span>
+
+    <span class="k">if</span> <span class="s2">&quot;single&quot;</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">qubits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="s2">&quot;single&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="s2">&quot;double&quot;</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">qubits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="s2">&quot;double&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="s2">&quot;triple&quot;</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">qubits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="s2">&quot;triple&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">op</span><span class="o">.</span><span class="n">gate</span> <span class="ow">and</span> <span class="n">op</span><span class="o">.</span><span class="n">gate</span> <span class="ow">in</span> <span class="n">_cirq_gates_to_string_keys</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="c1"># Get the string key for this gate</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">_cirq_gates_to_string_keys</span><span class="p">[</span><span class="n">op</span><span class="o">.</span><span class="n">gate</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">_cirq_gates_to_string_keys</span><span class="p">[</span><span class="n">op</span><span class="o">.</span><span class="n">gate</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">weight</span>
+
+
+<span class="c1"># Local folding functions</span>
+<div class="viewcode-block" id="fold_all"><a class="viewcode-back" href="../../../../apidoc.html#mitiq.zne.scaling.folding.fold_all">[docs]</a><span class="nd">@noise_scaling_converter</span>
+<span class="k">def</span> <span class="nf">fold_all</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span>
+    <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">exclude</span><span class="p">:</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a circuit with all gates folded locally.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to fold.</span>
+<span class="sd">        scale_factor: Approximate factor by which noise is scaled in the</span>
+<span class="sd">            circuit. Each gate is folded round((scale_factor - 1.0) / 2.0)</span>
+<span class="sd">            times. For example::</span>
+
+<span class="sd">                scale_factor | num_folds</span>
+<span class="sd">                ------------------------</span>
+<span class="sd">                1.0          | 0</span>
+<span class="sd">                3.0          | 1</span>
+<span class="sd">                5.0          | 2</span>
+
+<span class="sd">        exclude: Do not fold these gates. Supported gate keys are listed in</span>
+<span class="sd">            the following table.::</span>
+
+<span class="sd">                Gate key    | Gate</span>
+<span class="sd">                -------------------------</span>
+<span class="sd">                &quot;H&quot;         | Hadamard</span>
+<span class="sd">                &quot;X&quot;         | Pauli X</span>
+<span class="sd">                &quot;Y&quot;         | Pauli Y</span>
+<span class="sd">                &quot;Z&quot;         | Pauli Z</span>
+<span class="sd">                &quot;I&quot;         | Identity</span>
+<span class="sd">                &quot;CNOT&quot;      | CNOT</span>
+<span class="sd">                &quot;CZ&quot;        | CZ gate</span>
+<span class="sd">                &quot;TOFFOLI&quot;   | Toffoli gate</span>
+<span class="sd">                &quot;single&quot;    | All single qubit gates</span>
+<span class="sd">                &quot;double&quot;    | All two-qubit gates</span>
+<span class="sd">                &quot;triple&quot;    | All three-qubit gates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="mf">1.0</span> <span class="o">&lt;=</span> <span class="n">scale_factor</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Requires scale_factor &gt;= 1 but scale_factor = </span><span class="si">{</span><span class="n">scale_factor</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+    <span class="n">_check_foldable</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+
+    <span class="n">folded</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+    <span class="n">measurements</span> <span class="o">=</span> <span class="n">_pop_measurements</span><span class="p">(</span><span class="n">folded</span><span class="p">)</span>
+
+    <span class="n">folded</span> <span class="o">=</span> <span class="n">_fold_all</span><span class="p">(</span><span class="n">folded</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">scale_factor</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">),</span> <span class="n">exclude</span><span class="p">)</span>
+
+    <span class="n">_append_measurements</span><span class="p">(</span><span class="n">folded</span><span class="p">,</span> <span class="n">measurements</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">folded</span></div>
+
+
+<span class="c1"># Global folding function</span>
+<div class="viewcode-block" id="fold_global"><a class="viewcode-back" href="../../../../apidoc.html#mitiq.zne.scaling.folding.fold_global">[docs]</a><span class="nd">@noise_scaling_converter</span>
+<span class="k">def</span> <span class="nf">fold_global</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a new circuit obtained by folding the global unitary of the</span>
+<span class="sd">    input circuit.</span>
+
+<span class="sd">    The returned folded circuit has a number of gates approximately equal to</span>
+<span class="sd">    scale_factor * len(circuit).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to fold.</span>
+<span class="sd">        scale_factor: Factor to scale the circuit by.</span>
+
+<span class="sd">    Keyword Args:</span>
+<span class="sd">        squash_moments (bool): If True, all gates (including folded gates) are</span>
+<span class="sd">            placed as early as possible in the circuit. If False, new moments</span>
+<span class="sd">            are created for folded gates. This option only applies to QPROGRAM</span>
+<span class="sd">            types which have a &quot;moment&quot; or &quot;time&quot; structure. Default is True.</span>
+<span class="sd">        return_mitiq (bool): If True, returns a Mitiq circuit instead of</span>
+<span class="sd">            the input circuit type (if different). Default is False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        folded: the folded quantum circuit as a QPROGRAM.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_foldable</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">scale_factor</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The scale factor must be a real number &gt;= 1.&quot;</span><span class="p">)</span>
+
+    <span class="n">folded</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+    <span class="n">measurements</span> <span class="o">=</span> <span class="n">_pop_measurements</span><span class="p">(</span><span class="n">folded</span><span class="p">)</span>
+    <span class="n">base_circuit</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">folded</span><span class="p">)</span>
+
+    <span class="c1"># Determine the number of global folds and the final fractional scale</span>
+    <span class="n">num_global_folds</span><span class="p">,</span> <span class="n">fraction_scale</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">scale_factor</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Do the global folds</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num_global_folds</span><span class="p">)):</span>
+        <span class="n">folded</span> <span class="o">+=</span> <span class="n">Circuit</span><span class="p">(</span><span class="n">inverse</span><span class="p">(</span><span class="n">base_circuit</span><span class="p">),</span> <span class="n">base_circuit</span><span class="p">)</span>
+
+    <span class="c1"># Fold remaining gates until the scale is reached</span>
+    <span class="n">operations</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">base_circuit</span><span class="o">.</span><span class="n">all_operations</span><span class="p">())</span>
+    <span class="n">num_to_fold</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">fraction_scale</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">num_to_fold</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">folded</span> <span class="o">+=</span> <span class="n">Circuit</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">inverse</span><span class="p">(</span><span class="n">operations</span><span class="p">[</span><span class="o">-</span><span class="n">num_to_fold</span><span class="p">:])],</span> <span class="p">[</span><span class="n">operations</span><span class="p">[</span><span class="o">-</span><span class="n">num_to_fold</span><span class="p">:]]</span>
+        <span class="p">)</span>
+
+    <span class="n">_append_measurements</span><span class="p">(</span><span class="n">folded</span><span class="p">,</span> <span class="n">measurements</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;squash_moments&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="n">folded</span> <span class="o">=</span> <span class="n">_squash_moments</span><span class="p">(</span><span class="n">folded</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">folded</span></div>
+
+
+<span class="k">def</span> <span class="nf">_create_weight_mask</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span>
+    <span class="n">fidelities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a list of weights associated to each gate if the input</span>
+<span class="sd">    circuit. Measurement gates are ignored.</span>
+
+<span class="sd">    The gate ordering is equal to the one used in the `all_operations()`</span>
+<span class="sd">    method of the :class:`cirq.Circuit` class: gates from earlier moments</span>
+<span class="sd">    come first and gates within the same moment follow the order in which</span>
+<span class="sd">    they were given to the moment&#39;s constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: The circuit from which a weight mask is created.</span>
+<span class="sd">        fidelities: The dictionary of gate fidelities.</span>
+<span class="sd">            If None, default fidelities will be used. See the</span>
+<span class="sd">            docstring of local folding function for mode details.</span>
+
+<span class="sd">    Returns: The list of weights associated to all the gates.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">fidelities</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">&lt;</span> <span class="n">f</span> <span class="o">&lt;=</span> <span class="mf">1.0</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fidelities</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Fidelities should be in the interval (0, 1].&quot;</span><span class="p">)</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">fidelities</span><span class="p">:</span>
+        <span class="c1"># Round to avoid ugly numbers like 0.09999999999999998 instead of 0.1</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">f</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fidelities</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+    <span class="c1"># Build mask with weights of each gate</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="n">_get_weight_for_gate</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">op</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">circuit</span><span class="o">.</span><span class="n">all_operations</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_measurement</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+    <span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_create_fold_mask</span><span class="p">(</span>
+    <span class="n">weight_mask</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+    <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">folding_method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns a list of integers determining how many times each gate a</span>
+<span class="sd">    circuit should be folded to realize the desired input scale_factor.</span>
+
+<span class="sd">    More precicely, the j_th element of the returned list is associated</span>
+<span class="sd">    to the j_th gate G_j of a circuit that we want to scale and determines</span>
+<span class="sd">    how many times G_j^\dag G_j should be applied after G_j.</span>
+
+<span class="sd">    The gate ordering is equal to the one used in the `all_operations()`</span>
+<span class="sd">    method of the :class:`cirq.Circuit` class: gates from earlier moments</span>
+<span class="sd">    come first and gates within the same moment follow the order in which</span>
+<span class="sd">    they were given to the moment&#39;s constructor.</span>
+
+<span class="sd">    The returned list is built such that the total weight of the</span>
+<span class="sd">    folded circuit is approximately equal to scale_factor times the</span>
+<span class="sd">    total weight of the input circuit.</span>
+
+<span class="sd">    For equal weights, this function reproduces the local unitary folding</span>
+<span class="sd">    method defined in equation (5) of :cite:`Giurgica_Tiron_2020_arXiv`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        weight_mask: The weights of all the gates of the circuit to fold.</span>
+<span class="sd">            Highly noisy gates should have a corresponding high weight.</span>
+<span class="sd">            Gates with zero weight are assumed to be ideal and are not folded.</span>
+<span class="sd">        scale_factor: The effective noise scale factor.</span>
+<span class="sd">        folding_method: A string equal to &quot;at_random&quot;, or &quot;from_left&quot;, or</span>
+<span class="sd">            &quot;from_right&quot;. Determines the partial folding method described in</span>
+<span class="sd">            :cite:`Giurgica_Tiron_2020_arXiv`. If scale_factor is an odd</span>
+<span class="sd">            integer, all methods are equivalent and this option is irrelevant.</span>
+<span class="sd">        seed: A seed for the random number generator. This is used only when</span>
+<span class="sd">            folding_method is &quot;at_random&quot;.</span>
+
+<span class="sd">    Returns: The list of integers determining to how many times one should</span>
+<span class="sd">        fold the j_th gate of the circuit to be scaled.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt;_create_fold_mask(</span>
+<span class="sd">            weight_mask=[1.0, 0.5, 2.0, 0.0],</span>
+<span class="sd">            scale_factor=4,</span>
+<span class="sd">            folding_method=&quot;from_left&quot;,</span>
+<span class="sd">        )</span>
+<span class="sd">        [2, 2, 1, 0]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="mf">1.0</span> <span class="o">&lt;=</span> <span class="n">scale_factor</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Requires scale_factor &gt;= 1 but scale_factor = </span><span class="si">{</span><span class="n">scale_factor</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Find the maximum odd integer smaller or equal to scale_factor</span>
+    <span class="n">num_uniform_folds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">scale_factor</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+    <span class="n">odd_integer_scale_factor</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_uniform_folds</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Uniformly folding all gates to reach odd_integer_scale_factor</span>
+    <span class="n">num_folds_mask</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">weight_mask</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">):</span>
+            <span class="n">num_folds_mask</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num_folds_mask</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num_uniform_folds</span><span class="p">)</span>
+
+    <span class="c1"># If the scale_factor is an odd integer, we are done.</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">odd_integer_scale_factor</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">num_folds_mask</span>
+
+    <span class="c1"># Express folding order through a list of indices</span>
+    <span class="n">folding_order</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">weight_mask</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">folding_method</span> <span class="o">==</span> <span class="s2">&quot;from_left&quot;</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">folding_method</span> <span class="o">==</span> <span class="s2">&quot;from_right&quot;</span><span class="p">:</span>
+        <span class="n">folding_order</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">folding_method</span> <span class="o">==</span> <span class="s2">&quot;at_random&quot;</span><span class="p">:</span>
+        <span class="n">rnd_state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+        <span class="n">rnd_state</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">folding_order</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;The option &#39;folding_method&#39; is not valid.&quot;</span>
+            <span class="s2">&quot;It must be &#39;at_random&#39;, or &#39;from_left&#39;, or &#39;from_right&#39;.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Fold gates until the input scale_factor is better approximated</span>
+    <span class="n">input_circuit_weight</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">weight_mask</span><span class="p">)</span>
+    <span class="n">output_circuit_weight</span> <span class="o">=</span> <span class="n">odd_integer_scale_factor</span> <span class="o">*</span> <span class="n">input_circuit_weight</span>
+    <span class="n">approx_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span>
+        <span class="n">output_circuit_weight</span> <span class="o">-</span> <span class="n">scale_factor</span> <span class="o">*</span> <span class="n">input_circuit_weight</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">folding_order</span><span class="p">:</span>
+        <span class="c1"># Skip gates with 0 weight</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">weight_mask</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="mf">0.0</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="c1"># Compute the approx error if a new fold would be applied</span>
+        <span class="n">new_output_circuit_weight</span> <span class="o">=</span> <span class="n">output_circuit_weight</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">weight_mask</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">new_approx_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span>
+            <span class="n">new_output_circuit_weight</span> <span class="o">-</span> <span class="n">scale_factor</span> <span class="o">*</span> <span class="n">input_circuit_weight</span>
+        <span class="p">)</span>
+        <span class="c1"># Fold the candidate gate only if it helps improving the approximation</span>
+        <span class="k">if</span> <span class="n">new_approx_error</span> <span class="o">&gt;=</span> <span class="n">approx_error</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">approx_error</span> <span class="o">=</span> <span class="n">new_approx_error</span>
+        <span class="n">output_circuit_weight</span> <span class="o">=</span> <span class="n">new_output_circuit_weight</span>
+        <span class="n">num_folds_mask</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">num_folds_mask</span>
+
+
+<span class="k">def</span> <span class="nf">_apply_fold_mask</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span>
+    <span class="n">num_folds_mask</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+    <span class="n">squash_moments</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies local unitary folding to the gates of the input circuit</span>
+<span class="sd">    according to the input num_folds_mask.</span>
+
+<span class="sd">    More precicely, G_j^\dag G_j is applied after the j_th gate G_j of</span>
+<span class="sd">    the input circuit an integer number of times given by num_folds_mask[j].</span>
+
+<span class="sd">    The gate ordering is equal to the one used in the `all_operations()`</span>
+<span class="sd">    method of the :class:`cirq.Circuit` class: gates from earlier moments</span>
+<span class="sd">    come first and gates within the same moment follow the order in which</span>
+<span class="sd">    they were given to the moment&#39;s constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: The quantum circuit to fold.</span>
+<span class="sd">        num_folds_mask: The list of integers indicating how many times</span>
+<span class="sd">            the corresponding gates of &#39;circuit&#39; should be folded.</span>
+<span class="sd">        squash_moments: If True or None, all gates (including folded gates) are</span>
+<span class="sd">            placed as early as possible in the circuit. If False, new moments</span>
+<span class="sd">            are created for folded gates. This option only applies to QPROGRAM</span>
+<span class="sd">            types which have a &quot;moment&quot; or &quot;time&quot; structure. Default is True.</span>
+
+<span class="sd">    Returns: The folded quantum circuit.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_check_foldable</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+    <span class="n">circ_copy</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+    <span class="n">measurements</span> <span class="o">=</span> <span class="n">_pop_measurements</span><span class="p">(</span><span class="n">circ_copy</span><span class="p">)</span>
+
+    <span class="n">num_gates</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">circ_copy</span><span class="o">.</span><span class="n">all_operations</span><span class="p">()))</span>
+    <span class="k">if</span> <span class="n">num_gates</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_folds_mask</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;The circuit and the folding mask have incompatible sizes.&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; The number of gates is </span><span class="si">{</span><span class="n">num_gates</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; but len(num_folds_mask) is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">num_folds_mask</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">folded_circuit</span> <span class="o">=</span> <span class="n">circ_copy</span><span class="p">[:</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">squash_moments</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">op</span><span class="p">,</span> <span class="n">num_folds</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">circ_copy</span><span class="o">.</span><span class="n">all_operations</span><span class="p">(),</span> <span class="n">num_folds_mask</span><span class="p">):</span>
+            <span class="n">folded_circuit</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">op</span><span class="p">]</span> <span class="o">+</span> <span class="n">num_folds</span> <span class="o">*</span> <span class="p">[</span><span class="n">inverse</span><span class="p">(</span><span class="n">op</span><span class="p">),</span> <span class="n">op</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mask_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">moment</span> <span class="ow">in</span> <span class="n">circ_copy</span><span class="p">:</span>
+            <span class="n">folded_moment</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="n">moment</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">moment</span><span class="p">:</span>
+                <span class="n">num_folds</span> <span class="o">=</span> <span class="n">num_folds_mask</span><span class="p">[</span><span class="n">mask_index</span><span class="p">]</span>
+                <span class="n">folded_moment</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num_folds</span> <span class="o">*</span> <span class="p">[</span><span class="n">inverse</span><span class="p">(</span><span class="n">op</span><span class="p">),</span> <span class="n">op</span><span class="p">])</span>
+                <span class="n">mask_index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1"># New folded gates are only squashed with respect to folded_moment</span>
+            <span class="c1"># while folded_circuit is not squashed.</span>
+            <span class="n">folded_circuit</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">folded_moment</span><span class="p">)</span>
+
+    <span class="n">_append_measurements</span><span class="p">(</span><span class="n">folded_circuit</span><span class="p">,</span> <span class="n">measurements</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">folded_circuit</span>
+
+
+<div class="viewcode-block" id="fold_gates_from_left"><a class="viewcode-back" href="../../../../apidoc.html#mitiq.zne.scaling.folding.fold_gates_from_left">[docs]</a><span class="nd">@noise_scaling_converter</span>
+<span class="k">def</span> <span class="nf">fold_gates_from_left</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns a new folded circuit by applying the map G -&gt; G G^dag G to a</span>
+<span class="sd">    subset of gates of the input circuit, starting with gates at the</span>
+<span class="sd">    left (beginning) of the circuit.</span>
+
+<span class="sd">    The folded circuit has a number of gates approximately equal to</span>
+<span class="sd">    scale_factor * n where n is the number of gates in the input circuit.</span>
+
+<span class="sd">    For equal gate fidelities, this function reproduces the local unitary</span>
+<span class="sd">    folding method defined in equation (5) of</span>
+<span class="sd">    :cite:`Giurgica_Tiron_2020_arXiv`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to fold.</span>
+<span class="sd">        scale_factor: Factor to scale the circuit by. Any real number &gt;= 1.</span>
+
+<span class="sd">    Keyword Args:</span>
+<span class="sd">        fidelities (Dict[str, float]): Dictionary of gate fidelities. Each key</span>
+<span class="sd">            is a string which specifies the gate and each value is the</span>
+<span class="sd">            fidelity of that gate. When this argument is provided, folded</span>
+<span class="sd">            gates contribute an amount proportional to their infidelity</span>
+<span class="sd">            (1 - fidelity) to the total noise scaling. Fidelity values must be</span>
+<span class="sd">            in the interval (0, 1]. Gates not specified have a default</span>
+<span class="sd">            fidelity of 0.99**n where n is the number of qubits the gates act</span>
+<span class="sd">            on.</span>
+
+<span class="sd">            Supported gate keys are listed in the following table.::</span>
+
+<span class="sd">                Gate key    | Gate</span>
+<span class="sd">                -------------------------</span>
+<span class="sd">                &quot;H&quot;         | Hadamard</span>
+<span class="sd">                &quot;X&quot;         | Pauli X</span>
+<span class="sd">                &quot;Y&quot;         | Pauli Y</span>
+<span class="sd">                &quot;Z&quot;         | Pauli Z</span>
+<span class="sd">                &quot;I&quot;         | Identity</span>
+<span class="sd">                &quot;CNOT&quot;      | CNOT</span>
+<span class="sd">                &quot;CZ&quot;        | CZ gate</span>
+<span class="sd">                &quot;TOFFOLI&quot;   | Toffoli gate</span>
+<span class="sd">                &quot;single&quot;    | All single qubit gates</span>
+<span class="sd">                &quot;double&quot;    | All two-qubit gates</span>
+<span class="sd">                &quot;triple&quot;    | All three-qubit gates</span>
+
+<span class="sd">            Keys for specific gates override values set by &quot;single&quot;, &quot;double&quot;,</span>
+<span class="sd">            and &quot;triple&quot;.</span>
+
+<span class="sd">            For example, `fidelities = {&quot;single&quot;: 1.0, &quot;H&quot;, 0.99}` sets all</span>
+<span class="sd">            single-qubit gates except Hadamard to have fidelity one.</span>
+
+<span class="sd">        squash_moments (bool): If True, all gates (including folded gates) are</span>
+<span class="sd">            placed as early as possible in the circuit. If False, new moments</span>
+<span class="sd">            are created for folded gates. This option only applies to QPROGRAM</span>
+<span class="sd">            types which have a &quot;moment&quot; or &quot;time&quot; structure. Default is True.</span>
+
+<span class="sd">        return_mitiq (bool): If True, returns a Mitiq circuit instead of</span>
+<span class="sd">            the input circuit type (if different). Default is False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        folded: The folded quantum circuit as a QPROGRAM.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">weight_mask</span> <span class="o">=</span> <span class="n">_create_weight_mask</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;fidelities&quot;</span><span class="p">))</span>
+
+    <span class="n">num_folds_mask</span> <span class="o">=</span> <span class="n">_create_fold_mask</span><span class="p">(</span>
+        <span class="n">weight_mask</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">,</span> <span class="n">folding_method</span><span class="o">=</span><span class="s2">&quot;from_left&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_apply_fold_mask</span><span class="p">(</span>
+        <span class="n">circuit</span><span class="p">,</span>
+        <span class="n">num_folds_mask</span><span class="p">,</span>
+        <span class="n">squash_moments</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;squash_moments&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="fold_gates_from_right"><a class="viewcode-back" href="../../../../apidoc.html#mitiq.zne.scaling.folding.fold_gates_from_right">[docs]</a><span class="nd">@noise_scaling_converter</span>
+<span class="k">def</span> <span class="nf">fold_gates_from_right</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns a new folded circuit by applying the map G -&gt; G G^dag G to a</span>
+<span class="sd">    subset of gates of the input circuit, starting with gates at the</span>
+<span class="sd">    right (end) of the circuit.</span>
+
+<span class="sd">    The folded circuit has a number of gates approximately equal to</span>
+<span class="sd">    scale_factor * n where n is the number of gates in the input circuit.</span>
+
+<span class="sd">    For equal gate fidelities, this function reproduces the local unitary</span>
+<span class="sd">    folding method defined in equation (5) of</span>
+<span class="sd">    :cite:`Giurgica_Tiron_2020_arXiv`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to fold.</span>
+<span class="sd">        scale_factor: Factor to scale the circuit by. Any real number &gt;= 1.</span>
+
+<span class="sd">    Keyword Args:</span>
+<span class="sd">        fidelities (Dict[str, float]): Dictionary of gate fidelities. Each key</span>
+<span class="sd">            is a string which specifies the gate and each value is the</span>
+<span class="sd">            fidelity of that gate. When this argument is provided, folded</span>
+<span class="sd">            gates contribute an amount proportional to their infidelity</span>
+<span class="sd">            (1 - fidelity) to the total noise scaling. Fidelity values must be</span>
+<span class="sd">            in the interval (0, 1]. Gates not specified have a default</span>
+<span class="sd">            fidelity of 0.99**n where n is the number of qubits the gates act</span>
+<span class="sd">            on.</span>
+
+<span class="sd">            Supported gate keys are listed in the following table.::</span>
+
+<span class="sd">                Gate key    | Gate</span>
+<span class="sd">                -------------------------</span>
+<span class="sd">                &quot;H&quot;         | Hadamard</span>
+<span class="sd">                &quot;X&quot;         | Pauli X</span>
+<span class="sd">                &quot;Y&quot;         | Pauli Y</span>
+<span class="sd">                &quot;Z&quot;         | Pauli Z</span>
+<span class="sd">                &quot;I&quot;         | Identity</span>
+<span class="sd">                &quot;CNOT&quot;      | CNOT</span>
+<span class="sd">                &quot;CZ&quot;        | CZ gate</span>
+<span class="sd">                &quot;TOFFOLI&quot;   | Toffoli gate</span>
+<span class="sd">                &quot;single&quot;    | All single qubit gates</span>
+<span class="sd">                &quot;double&quot;    | All two-qubit gates</span>
+<span class="sd">                &quot;triple&quot;    | All three-qubit gates</span>
+
+<span class="sd">            Keys for specific gates override values set by &quot;single&quot;, &quot;double&quot;,</span>
+<span class="sd">            and &quot;triple&quot;.</span>
+
+<span class="sd">            For example, `fidelities = {&quot;single&quot;: 1.0, &quot;H&quot;, 0.99}` sets all</span>
+<span class="sd">            single-qubit gates except Hadamard to have fidelity one.</span>
+
+<span class="sd">        squash_moments (bool): If True, all gates (including folded gates) are</span>
+<span class="sd">            placed as early as possible in the circuit. If False, new moments</span>
+<span class="sd">            are created for folded gates. This option only applies to QPROGRAM</span>
+<span class="sd">            types which have a &quot;moment&quot; or &quot;time&quot; structure. Default is True.</span>
+
+<span class="sd">        return_mitiq (bool): If True, returns a Mitiq circuit instead of</span>
+<span class="sd">            the input circuit type (if different). Default is False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        folded: The folded quantum circuit as a QPROGRAM.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">weight_mask</span> <span class="o">=</span> <span class="n">_create_weight_mask</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;fidelities&quot;</span><span class="p">))</span>
+
+    <span class="n">num_folds_mask</span> <span class="o">=</span> <span class="n">_create_fold_mask</span><span class="p">(</span>
+        <span class="n">weight_mask</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">,</span> <span class="n">folding_method</span><span class="o">=</span><span class="s2">&quot;from_right&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_apply_fold_mask</span><span class="p">(</span>
+        <span class="n">circuit</span><span class="p">,</span>
+        <span class="n">num_folds_mask</span><span class="p">,</span>
+        <span class="n">squash_moments</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;squash_moments&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="fold_gates_at_random"><a class="viewcode-back" href="../../../../apidoc.html#mitiq.zne.scaling.folding.fold_gates_at_random">[docs]</a><span class="nd">@noise_scaling_converter</span>
+<span class="k">def</span> <span class="nf">fold_gates_at_random</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span>
+    <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Circuit</span><span class="p">:</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns a new folded circuit by applying the map G -&gt; G G^dag G to a</span>
+<span class="sd">    subset of gates of the input circuit, starting with gates at the</span>
+<span class="sd">    right (end) of the circuit.</span>
+
+<span class="sd">    The folded circuit has a number of gates approximately equal to</span>
+<span class="sd">    scale_factor * n where n is the number of gates in the input circuit.</span>
+
+<span class="sd">    For equal gate fidelities, this function reproduces the local unitary</span>
+<span class="sd">    folding method defined in equation (5) of</span>
+<span class="sd">    :cite:`Giurgica_Tiron_2020_arXiv`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to fold.</span>
+<span class="sd">        scale_factor: Factor to scale the circuit by. Any real number &gt;= 1.</span>
+<span class="sd">        seed: Seed for random number generator.</span>
+
+<span class="sd">    Keyword Args:</span>
+<span class="sd">        fidelities (Dict[str, float]): Dictionary of gate fidelities. Each key</span>
+<span class="sd">            is a string which specifies the gate and each value is the</span>
+<span class="sd">            fidelity of that gate. When this argument is provided, folded</span>
+<span class="sd">            gates contribute an amount proportional to their infidelity</span>
+<span class="sd">            (1 - fidelity) to the total noise scaling. Fidelity values must be</span>
+<span class="sd">            in the interval (0, 1]. Gates not specified have a default</span>
+<span class="sd">            fidelity of 0.99**n where n is the number of qubits the gates act</span>
+<span class="sd">            on.</span>
+
+<span class="sd">            Supported gate keys are listed in the following table.::</span>
+
+<span class="sd">                Gate key    | Gate</span>
+<span class="sd">                -------------------------</span>
+<span class="sd">                &quot;H&quot;         | Hadamard</span>
+<span class="sd">                &quot;X&quot;         | Pauli X</span>
+<span class="sd">                &quot;Y&quot;         | Pauli Y</span>
+<span class="sd">                &quot;Z&quot;         | Pauli Z</span>
+<span class="sd">                &quot;I&quot;         | Identity</span>
+<span class="sd">                &quot;CNOT&quot;      | CNOT</span>
+<span class="sd">                &quot;CZ&quot;        | CZ gate</span>
+<span class="sd">                &quot;TOFFOLI&quot;   | Toffoli gate</span>
+<span class="sd">                &quot;single&quot;    | All single qubit gates</span>
+<span class="sd">                &quot;double&quot;    | All two-qubit gates</span>
+<span class="sd">                &quot;triple&quot;    | All three-qubit gates</span>
+
+<span class="sd">            Keys for specific gates override values set by &quot;single&quot;, &quot;double&quot;,</span>
+<span class="sd">            and &quot;triple&quot;.</span>
+
+<span class="sd">            For example, `fidelities = {&quot;single&quot;: 1.0, &quot;H&quot;, 0.99}` sets all</span>
+<span class="sd">            single-qubit gates except Hadamard to have fidelity one.</span>
+
+<span class="sd">        squash_moments (bool): If True, all gates (including folded gates) are</span>
+<span class="sd">            placed as early as possible in the circuit. If False, new moments</span>
+<span class="sd">            are created for folded gates. This option only applies to QPROGRAM</span>
+<span class="sd">            types which have a &quot;moment&quot; or &quot;time&quot; structure. Default is True.</span>
+
+<span class="sd">        return_mitiq (bool): If True, returns a Mitiq circuit instead of</span>
+<span class="sd">            the input circuit type (if different). Default is False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        folded: The folded quantum circuit as a QPROGRAM.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">weight_mask</span> <span class="o">=</span> <span class="n">_create_weight_mask</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;fidelities&quot;</span><span class="p">))</span>
+
+    <span class="n">num_folds_mask</span> <span class="o">=</span> <span class="n">_create_fold_mask</span><span class="p">(</span>
+        <span class="n">weight_mask</span><span class="p">,</span>
+        <span class="n">scale_factor</span><span class="p">,</span>
+        <span class="n">folding_method</span><span class="o">=</span><span class="s2">&quot;at_random&quot;</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_apply_fold_mask</span><span class="p">(</span>
+        <span class="n">circuit</span><span class="p">,</span>
+        <span class="n">num_folds_mask</span><span class="p">,</span>
+        <span class="n">squash_moments</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;squash_moments&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

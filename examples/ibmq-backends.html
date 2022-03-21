@@ -1,0 +1,715 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error mitigation on IBMQ backends &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Zero Noise Extrapolation with pyQuil and parametric compilation" href="pyquil_demo.html" />
+    <link rel="prev" title="Mitiq with Braket" href="braket_mirror_circuit.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guide/guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="braket_mirror_circuit.html">
+   Mirror circuit benchmark improved with zero-noise extrapolation on AWS Braket
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Zero-noise extrapolation on IBMQ backends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pyquil_demo.html">
+   Zero-noise extrapolation on PyQuil parametric programs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vqe-pyquil-demo.html">
+   Variational quantum eigensolver improved with zero-noise extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simple_landscape.html">
+   Variational circuit mitigation with zero-noise extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maxcut-demo.html">
+   MaxCut benchmark with zero-noise extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hamiltonians.html">
+   Defining a Mitiq executor with a hamiltonian
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mitiq-paper/mitiq-paper-codeblocks.html">
+   Mitiq paper codeblocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="molecular_hydrogen.html">
+   Estimating the potential energy surface of molecular Hydrogen with ZNE
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#settings">
+   Settings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-defining-a-circuit">
+   Setup: Defining a circuit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-level-usage">
+   High-level usage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#options">
+     Options
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cirq-frontend">
+     Cirq frontend
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lower-level-usage">
+   Lower-level usage
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="error-mitigation-on-ibmq-backends">
+<span id="label-zne-example"></span><h1>Error mitigation on IBMQ backends<a class="headerlink" href="#error-mitigation-on-ibmq-backends" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows an example of how to mitigate noise on IBMQ
+backends, broken down in the following steps.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#error-mitigation-on-ibmq-backends">Error mitigation on IBMQ backends</a></p>
+<ul>
+<li><p><a class="reference external" href="#settings">Settings</a></p></li>
+<li><p><a class="reference external" href="#setup-defining-a-circuit">Setup: Defining a circuit</a></p></li>
+<li><p><a class="reference external" href="#high-level-usage">High-level usage</a></p>
+<ul>
+<li><p><a class="reference external" href="#options">Options</a></p></li>
+<li><p><a class="reference external" href="#cirq-frontend">Cirq frontend</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#lower-level-usage">Lower-level usage</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span>
+<span class="kn">from</span> <span class="nn">qiskit.test.ibmq_mock</span> <span class="kn">import</span> <span class="n">mock_get_backend</span>
+
+<span class="kn">from</span> <span class="nn">mitiq</span> <span class="kn">import</span> <span class="n">zne</span>
+<span class="kn">from</span> <span class="nn">mitiq.interface.mitiq_qiskit.qiskit_utils</span> <span class="kn">import</span> <span class="n">initialized_depolarizing_noise</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> If <code class="docutils literal notranslate"><span class="pre">USE_REAL_HARDWARE</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, a classically simulated noisy backend is used instead of a real quantum computer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">USE_REAL_HARDWARE</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setup-defining-a-circuit">
+<span id="examples-ibmq-backends-setup-defining-a-circuit"></span><h2>Setup: Defining a circuit<a class="headerlink" href="#setup-defining-a-circuit" title="Permalink to this headline">¶</a></h2>
+<p>For simplicity, we’ll use a random single-qubit circuit with ten gates that compiles to the identity, defined below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qreg</span><span class="p">,</span> <span class="n">creg</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">qreg</span><span class="p">,</span> <span class="n">creg</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">qreg</span><span class="p">)</span>
+<span class="n">circuit</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">qreg</span><span class="p">,</span> <span class="n">creg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      ┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐┌─┐
+q0_0: ┤ X ├┤ X ├┤ X ├┤ X ├┤ X ├┤ X ├┤ X ├┤ X ├┤ X ├┤ X ├┤M├
+      └───┘└───┘└───┘└───┘└───┘└───┘└───┘└───┘└───┘└───┘└╥┘
+c0: 1/═══════════════════════════════════════════════════╩═
+                                                         0 
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will use the probability of the ground state as our observable to mitigate, the expectation value of which should
+evaluate to one in the noiseless setting.</p>
+</div>
+<div class="section" id="high-level-usage">
+<h2>High-level usage<a class="headerlink" href="#high-level-usage" title="Permalink to this headline">¶</a></h2>
+<p>To use Mitiq with just a few lines of code, we simply need to define a function which inputs a circuit and outputs
+the expectation value to mitigate. This function will:</p>
+<ol class="simple">
+<li><p>[Optionally] Add measurement(s) to the circuit.</p></li>
+<li><p>Run the circuit.</p></li>
+<li><p>Convert from raw measurement statistics (or a different output format) to an expectation value.</p></li>
+</ol>
+<p>We define this function in the following code block. Because we are using IBMQ backends, we first load our account.</p>
+<p><strong>Note:</strong> Using an IBM quantum computer requires a valid IBMQ account. See https://quantum-computing.ibm.com/
+for instructions to create an account, save credentials, and see online quantum computers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">IBMQ</span><span class="o">.</span><span class="n">stored_account</span><span class="p">()</span> <span class="ow">and</span> <span class="n">USE_REAL_HARDWARE</span><span class="p">:</span>
+    <span class="n">provider</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">IBMQ</span><span class="o">.</span><span class="n">load_account</span><span class="p">()</span>
+    <span class="n">backend</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s2">&quot;ibmq_qasm_simulator&quot;</span><span class="p">)</span>  <span class="c1"># Set quantum computer here!</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Default to a simulator.</span>
+    <span class="n">backend</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s2">&quot;qasm_simulator&quot;</span><span class="p">),</span>
+
+
+<span class="k">def</span> <span class="nf">ibmq_executor</span><span class="p">(</span><span class="n">circuit</span><span class="p">:</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8192</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Returns the expectation value to be mitigated.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Circuit to run.</span>
+<span class="sd">        shots: Number of times to execute the circuit to compute the expectation value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">USE_REAL_HARDWARE</span><span class="p">:</span>
+        <span class="c1"># Run the circuit on hardware</span>
+        <span class="n">job</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+            <span class="n">experiments</span><span class="o">=</span><span class="n">circuit</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="n">optimization_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># Important to preserve folded gates.</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Simulate the circuit with noise</span>
+        <span class="n">noise_model</span> <span class="o">=</span> <span class="n">initialized_depolarizing_noise</span><span class="p">(</span><span class="n">noise_level</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+        <span class="n">job</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+            <span class="n">experiments</span><span class="o">=</span><span class="n">circuit</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="n">qiskit</span><span class="o">.</span><span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s2">&quot;qasm_simulator&quot;</span><span class="p">),</span>
+            <span class="n">noise_model</span><span class="o">=</span><span class="n">noise_model</span><span class="p">,</span>
+            <span class="n">basis_gates</span><span class="o">=</span><span class="n">noise_model</span><span class="o">.</span><span class="n">basis_gates</span><span class="p">,</span>
+            <span class="n">optimization_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># Important to preserve folded gates.</span>
+            <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Convert from raw measurement counts to the expectation value</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">expectation_value</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">expectation_value</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">shots</span>
+    <span class="k">return</span> <span class="n">expectation_value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>At this point, the circuit can be executed to return a mitigated expectation value by running <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code>,
+as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unmitigated</span> <span class="o">=</span> <span class="n">ibmq_executor</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+<span class="n">mitigated</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">ibmq_executor</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unmitigated result </span><span class="si">{</span><span class="n">unmitigated</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mitigated result </span><span class="si">{</span><span class="n">mitigated</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unmitigated result 0.906
+Mitigated result 0.993
+</pre></div>
+</div>
+</div>
+</div>
+<p>As long as a circuit and a function for executing the circuit are defined, the <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> function can
+be called as above to return zero-noise extrapolated expectation value(s).</p>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<p>Different options for noise scaling and extrapolation can be passed into the <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> function.
+By default, noise is scaled by locally folding gates at random, and the default extrapolation is Richardson.</p>
+<p>To specify a different extrapolation technique, we can pass a different <code class="docutils literal notranslate"><span class="pre">Factory</span></code> object to <code class="docutils literal notranslate"><span class="pre">execute_with_zne</span></code>. The
+following code block shows an example of using linear extrapolation with five different (noise) scale factors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear_factory</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">inference</span><span class="o">.</span><span class="n">LinearFactory</span><span class="p">(</span><span class="n">scale_factors</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+<span class="n">mitigated</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">ibmq_executor</span><span class="p">,</span> <span class="n">factory</span><span class="o">=</span><span class="n">linear_factory</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mitigated result </span><span class="si">{</span><span class="n">mitigated</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result 0.973
+</pre></div>
+</div>
+</div>
+</div>
+<p>To specify a different noise scaling method, we can pass a different function for the argument <code class="docutils literal notranslate"><span class="pre">scale_noise</span></code>. This
+function should input a circuit and scale factor and return a circuit. The following code block shows an example of
+scaling noise by folding gates starting from the left (instead of at random, the default behavior for
+<code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mitigated</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">ibmq_executor</span><span class="p">,</span> <span class="n">scale_noise</span><span class="o">=</span><span class="n">zne</span><span class="o">.</span><span class="n">scaling</span><span class="o">.</span><span class="n">fold_gates_from_left</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mitigated result </span><span class="si">{</span><span class="n">mitigated</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result 1.012
+</pre></div>
+</div>
+</div>
+</div>
+<p>Any different combination of noise scaling and extrapolation technique can be passed as arguments to
+<code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code>.</p>
+</div>
+<div class="section" id="cirq-frontend">
+<span id="examples-ibmq-backends-cirq-frontend"></span><h3>Cirq frontend<a class="headerlink" href="#cirq-frontend" title="Permalink to this headline">¶</a></h3>
+<p>It isn’t necessary to use Qiskit frontends (circuits) to run on IBM backends. We can use conversions in
+Mitiq to use any supported frontend with any supported backend. Below, we show how to run a Cirq circuit on an
+IBMQ backend.</p>
+<p>First, we define the Cirq circuit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cirq</span>
+
+<span class="n">qbit</span> <span class="o">=</span> <span class="n">cirq</span><span class="o">.</span><span class="n">LineQubit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cirq_circuit</span> <span class="o">=</span> <span class="n">cirq</span><span class="o">.</span><span class="n">Circuit</span><span class="p">([</span><span class="n">cirq</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">qbit</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">cirq</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">qbit</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we simply add a line to our executor function which converts from a Cirq circuit to a Qiskit circuit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq.interface.mitiq_qiskit.conversions</span> <span class="kn">import</span> <span class="n">to_qiskit</span>
+
+<span class="k">def</span> <span class="nf">cirq_ibm_executor</span><span class="p">(</span><span class="n">cirq_circuit</span><span class="p">:</span> <span class="n">cirq</span><span class="o">.</span><span class="n">Circuit</span><span class="p">,</span> <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">qiskit_circuit</span> <span class="o">=</span> <span class="n">to_qiskit</span><span class="p">(</span><span class="n">cirq_circuit</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ibmq_executor</span><span class="p">(</span><span class="n">qiskit_circuit</span><span class="p">,</span> <span class="n">shots</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After this, we can use <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> in the same way as above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mitigated</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span><span class="n">cirq_circuit</span><span class="p">,</span> <span class="n">cirq_ibm_executor</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mitigated result: </span><span class="si">{</span><span class="n">mitigated</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result: 0.976
+</pre></div>
+</div>
+</div>
+</div>
+<p>As above, different noise scaling or extrapolation methods can be used.</p>
+</div>
+</div>
+<div class="section" id="lower-level-usage">
+<h2>Lower-level usage<a class="headerlink" href="#lower-level-usage" title="Permalink to this headline">¶</a></h2>
+<p>Here, we give more detailed usage of the Mitiq library which mimics what happens in the call to
+<code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> in the previous example. In addition to showing more of the Mitiq library, this
+example explains the code in the previous section in more detail.</p>
+<p>First, we define factors to scale the circuit length by and fold the circuit using the <code class="docutils literal notranslate"><span class="pre">fold_gates_at_random</span></code>
+local folding method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scale_factors</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.</span><span class="p">]</span>
+<span class="n">folded_circuits</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">zne</span><span class="o">.</span><span class="n">scaling</span><span class="o">.</span><span class="n">fold_gates_at_random</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">scale</span> <span class="ow">in</span> <span class="n">scale_factors</span>
+<span class="p">]</span>
+
+<span class="c1"># Check that the circuit depth is (approximately) scaled as expected</span>
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">folded_circuits</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of gates of folded circuit </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2"> scaled by: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of gates of folded circuit 0 scaled by: 1.000
+Number of gates of folded circuit 1 scaled by: 1.364
+Number of gates of folded circuit 2 scaled by: 1.909
+Number of gates of folded circuit 3 scaled by: 2.273
+Number of gates of folded circuit 4 scaled by: 2.818
+</pre></div>
+</div>
+</div>
+</div>
+<p>For a noiseless simulation, the expectation of this observable should be 1.0 because our circuit compiles to the identity.
+For a noisy simulation, the value will be smaller than one. Because folding introduces more gates and thus more noise,
+the expectation value will decrease as the length (scale factor) of the folded circuits increase. By fitting this to
+a curve, we can extrapolate to the zero-noise limit and obtain a better estimate.</p>
+<p>Below we execute the folded circuits using the <code class="docutils literal notranslate"><span class="pre">backend</span></code> defined at the start of this example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shots</span> <span class="o">=</span> <span class="mi">8192</span>
+
+<span class="k">if</span> <span class="n">USE_REAL_HARDWARE</span><span class="p">:</span>
+    <span class="c1"># Run the circuit on hardware</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+        <span class="n">experiments</span><span class="o">=</span><span class="n">folded_circuits</span><span class="p">,</span>
+        <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+        <span class="n">optimization_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># Important to preserve folded gates.</span>
+        <span class="n">shots</span><span class="o">=</span><span class="n">shots</span>
+    <span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Simulate the circuit with noise</span>
+    <span class="n">noise_model</span> <span class="o">=</span> <span class="n">initialized_depolarizing_noise</span><span class="p">(</span><span class="n">noise_level</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+        <span class="n">experiments</span><span class="o">=</span><span class="n">folded_circuits</span><span class="p">,</span>
+        <span class="n">backend</span><span class="o">=</span><span class="n">qiskit</span><span class="o">.</span><span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s2">&quot;qasm_simulator&quot;</span><span class="p">),</span>
+        <span class="n">noise_model</span><span class="o">=</span><span class="n">noise_model</span><span class="p">,</span>
+        <span class="n">basis_gates</span><span class="o">=</span><span class="n">noise_model</span><span class="o">.</span><span class="n">basis_gates</span><span class="p">,</span>
+        <span class="n">optimization_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># Important to preserve folded gates.</span>
+        <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> We set the <code class="docutils literal notranslate"><span class="pre">optimization_level=0</span></code> to prevent any compilation by Qiskit transpilers.</p>
+<p>Once the job has finished executing, we can convert the raw measurement statistics to observable values by running the
+following code block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_counts</span> <span class="o">=</span> <span class="p">[</span><span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">folded_circuits</span><span class="p">))]</span>
+<span class="n">expectation_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">shots</span> <span class="k">for</span> <span class="n">counts</span> <span class="ow">in</span> <span class="n">all_counts</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expectation values:</span><span class="se">\n</span><span class="si">{</span><span class="n">expectation_values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Expectation values:
+[0.797119140625, 0.745361328125, 0.6893310546875, 0.6435546875, 0.6107177734375]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now see the unmitigated observable value by printing the first element of <code class="docutils literal notranslate"><span class="pre">expectation_values</span></code>. (This value
+corresponds to a circuit with scale factor one, i.e., the original circuit.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unmitigated expectation value:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">expectation_values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unmitigated expectation value: 0.797
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can use the static <code class="docutils literal notranslate"><span class="pre">extrapolate</span></code> method of <code class="docutils literal notranslate"><span class="pre">zne.inference.Factory</span></code> objects to extrapolate to the zero-noise limit. Below we use an exponential fit and print out the extrapolated zero-noise value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zero_noise_value</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">ExpFactory</span><span class="o">.</span><span class="n">extrapolate</span><span class="p">(</span><span class="n">scale_factors</span><span class="p">,</span> <span class="n">expectation_values</span><span class="p">,</span> <span class="n">asymptote</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Extrapolated zero-noise value:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">zero_noise_value</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Extrapolated zero-noise value: 0.999
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="braket_mirror_circuit.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mitiq with Braket</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pyquil_demo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Zero Noise Extrapolation with pyQuil and parametric compilation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

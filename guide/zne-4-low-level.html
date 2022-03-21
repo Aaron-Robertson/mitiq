@@ -1,0 +1,824 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What happens when I use ZNE? &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What is the theory behind ZNE?" href="zne-5-theory.html" />
+    <link rel="prev" title="What additional options are available when using ZNE?" href="zne-3-options.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="core-concepts.html">
+   Core Concepts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="frontends-backends.html">
+     Frontends and Backends
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executors.html">
+     Executors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="observables.html">
+     Observables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="zne.html">
+   Zero Noise Extrapolation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-1-intro.html">
+     How do I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-2-use-case.html">
+     When should I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-3-options.html">
+     What additional options are available when using ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     What happens when I use ZNE?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="zne-5-theory.html">
+     What is the theory behind ZNE?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="pec.html">
+   Probabilistic error cancellation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-1-intro.html">
+     How do I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-2-use-case.html">
+     When should I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-3-options.html">
+     What additional options are available in PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-4-low-level.html">
+     What happens when I use PEC?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pec-5-theory.html">
+     What is the theory behind PEC?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="cdr.html">
+   Clifford Data Regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-1-intro.html">
+     How do I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-2-use-case.html">
+     When should I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-3-options.html">
+     What additional options are available in CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-4-low-level.html">
+     What happens when I use CDR?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cdr-5-theory.html">
+     What is the theory behind CDR?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="error-mitigation.html">
+   About Error Mitigation
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-step-generating-and-executing-noise-scaled-circuits">
+   First step: generating and executing noise-scaled circuits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-setup">
+     Problem setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluate-noise-scaled-expectation-values">
+     Evaluate noise-scaled expectation values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-step-extrapolating-the-zero-noise-limit">
+   Second step: extrapolating the zero-noise limit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-noise-scaling-methods">
+   Custom noise-scaling methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-extrapolation-methods">
+   Custom extrapolation methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regression-tools-in-zne-inference">
+     Regression tools in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       zne.inference
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#low-level-usage-of-a-factory">
+   Low-level usage of a factory
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-run-method">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       run
+      </span>
+     </code>
+     method.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-run-classical-method">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       run_classical
+      </span>
+     </code>
+     method.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="what-happens-when-i-use-zne">
+<h1>What happens when I use ZNE?<a class="headerlink" href="#what-happens-when-i-use-zne" title="Permalink to this headline">¶</a></h1>
+<p>In Mitiq, ZNE is clearly divided into two steps, noise scaling and extrapolation. They are shown in the Figure below.
+The corresponding sub-modules in the codebase are <a class="reference internal" href="../apidoc.html#module-mitiq.zne.scaling.folding" title="mitiq.zne.scaling.folding"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne.scaling.folding</span></code></a> and <a class="reference internal" href="../apidoc.html#module-mitiq.zne.inference" title="mitiq.zne.inference"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne.inference</span></code></a>.</p>
+<div class="figure align-default" id="figzne">
+<a class="reference internal image-reference" href="../_images/zne_workflow2_steps.png"><img alt="../_images/zne_workflow2_steps.png" src="../_images/zne_workflow2_steps.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">The diagram shows the workflow of the zero noise extrapolation (ZNE) technique in Mitiq.</span><a class="headerlink" href="#figzne" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>The first step</strong> involves generating and executing noise-scaled quantum circuits.</p>
+<ul class="simple">
+<li><p>The user provides a <code class="docutils literal notranslate"><span class="pre">QPROGRAM</span></code>, i.e., a quantum circuit defined via any of the supported frontends.</p></li>
+<li><p>Mitiq generates a set of noise-scaled circuits by applying unitary folding with different scale factors.</p></li>
+<li><p>The noise-scaled circuits are executed on the noisy backend obtaining a set of noise-scaled expectation values.</p></li>
+</ul>
+<p><strong>The second step</strong> involves inferring the zero-noise value from the measured results.</p>
+<ul class="simple">
+<li><p>A parametrized curve is fit to the noise-scaled expectation values.</p></li>
+<li><p>The curve is extrapolated to the zero-noise limit, obtaining an error mitigated expectation value.</p></li>
+</ul>
+<p>As demonstrated in <a class="reference internal" href="zne-1-intro.html"><span class="doc std std-doc">How do I use ZNE ?</span></a>, the function <a class="reference internal" href="../apidoc.html#mitiq.zne.zne.execute_with_zne" title="mitiq.zne.zne.execute_with_zne"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_zne()</span></code></a> applies both steps behind the scenes.
+In the next sections instead, we show how one can apply ZNE at a lower level, i.e., by applying each step independently.</p>
+<p>Moreover, we will also show how the user can customize noise scaling methods and factory objects.</p>
+<div class="section" id="first-step-generating-and-executing-noise-scaled-circuits">
+<h2>First step: generating and executing noise-scaled circuits<a class="headerlink" href="#first-step-generating-and-executing-noise-scaled-circuits" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem-setup">
+<h3>Problem setup<a class="headerlink" href="#problem-setup" title="Permalink to this headline">¶</a></h3>
+<p>We define a circuit and an executor, as shown in <a class="reference internal" href="zne-1-intro.html"><span class="doc std std-doc">How do I use ZNE?</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq</span> <span class="kn">import</span> <span class="n">benchmarks</span>
+<span class="kn">from</span> <span class="nn">cirq</span> <span class="kn">import</span> <span class="n">DensityMatrixSimulator</span><span class="p">,</span> <span class="n">depolarize</span>
+
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">benchmarks</span><span class="o">.</span><span class="n">generate_rb_circuits</span><span class="p">(</span>
+  <span class="n">n_qubits</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_cliffords</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="s2">&quot;cirq&quot;</span><span class="p">,</span>
+<span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">noise_level</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns Tr[ρ |0⟩⟨0|] where ρ is the state prepared by the circuit</span>
+<span class="sd">    executed with depolarizing noise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">noisy_circuit</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">with_noise</span><span class="p">(</span><span class="n">depolarize</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="n">noise_level</span><span class="p">))</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="n">DensityMatrixSimulator</span><span class="p">()</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">noisy_circuit</span><span class="p">)</span><span class="o">.</span><span class="n">final_density_matrix</span>
+    <span class="k">return</span> <span class="n">rho</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="evaluate-noise-scaled-expectation-values">
+<h3>Evaluate noise-scaled expectation values<a class="headerlink" href="#evaluate-noise-scaled-expectation-values" title="Permalink to this headline">¶</a></h3>
+<p>We first apply local unitary folding to generate a sequence of noise-scaled circuits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq</span> <span class="kn">import</span> <span class="n">zne</span>
+
+<span class="c1"># Choose a list of scale factors</span>
+<span class="n">scale_factors</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]</span>
+<span class="c1"># Generate a list of folded circuits</span>
+<span class="n">noise_scaled_circuits</span> <span class="o">=</span> <span class="p">[</span><span class="n">zne</span><span class="o">.</span><span class="n">scaling</span><span class="o">.</span><span class="n">fold_gates_at_random</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">scale_factors</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For each noise-scaled circuit we evaluate the associated expectation value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expectation_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">execute</span><span class="p">(</span><span class="n">circ</span><span class="p">)</span> <span class="k">for</span> <span class="n">circ</span> <span class="ow">in</span> <span class="n">noise_scaled_circuits</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="second-step-extrapolating-the-zero-noise-limit">
+<h2>Second step: extrapolating the zero-noise limit<a class="headerlink" href="#second-step-extrapolating-the-zero-noise-limit" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to extrapolate the zero-noise limit of an expectation value is to use the static method <code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.extrapolate()</span></code> of a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a> object. For example, an exponential extrapolation (assuming an infinite noise limit of <span class="math notranslate nohighlight">\(0.5\)</span>) can be obtained as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zne</span><span class="o">.</span><span class="n">ExpFactory</span><span class="o">.</span><span class="n">extrapolate</span><span class="p">(</span><span class="n">scale_factors</span><span class="p">,</span> <span class="n">expectation_values</span><span class="p">,</span> <span class="n">asymptote</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999733104338
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternatively, one can also instantiate a <code class="docutils literal notranslate"><span class="pre">Factory</span></code> object, which can be useful for additional analysis and visualization of the measured data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize a factory</span>
+<span class="n">fac</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">inference</span><span class="o">.</span><span class="n">ExpFactory</span><span class="p">(</span><span class="n">scale_factors</span><span class="p">,</span> <span class="n">asymptote</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Load data:</span>
+<span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">scale_factors</span><span class="p">,</span> <span class="n">expectation_values</span><span class="p">):</span>
+    <span class="n">fac</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s2">&quot;scale_factor&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">},</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="c1"># Evaluate the extrapolation</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">reduce</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999733104338
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the extrapolation fit</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">fac</span><span class="o">.</span><span class="n">plot_fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/zne-4-low-level_13_0.png" src="../_images/zne-4-low-level_13_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="custom-noise-scaling-methods">
+<h2>Custom noise-scaling methods<a class="headerlink" href="#custom-noise-scaling-methods" title="Permalink to this headline">¶</a></h2>
+<p>Custom folding methods can be defined and used with Mitiq, e.g., with <a class="reference internal" href="../apidoc.html#mitiq.zne.zne.execute_with_zne" title="mitiq.zne.zne.execute_with_zne"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_zne()</span></code></a>. The signature of this function must be as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cirq</span>
+<span class="kn">from</span> <span class="nn">mitiq.interface.conversions</span> <span class="kn">import</span> <span class="n">atomic_converter</span>
+
+<span class="nd">@atomic_converter</span>
+<span class="k">def</span> <span class="nf">my_custom_folding_function</span><span class="p">(</span><span class="n">circuit</span><span class="p">:</span> <span class="n">cirq</span><span class="o">.</span><span class="n">Circuit</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cirq</span><span class="o">.</span><span class="n">Circuit</span><span class="p">:</span>
+    <span class="c1"># Insert custom folding method here</span>
+    <span class="n">folded_circuit</span> <span class="o">=</span> <span class="n">circuit</span>  <span class="c1"># Trivial example for testing</span>
+    <span class="k">return</span> <span class="n">folded_circuit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">atomic_converter()</span></code> decorator makes it so <code class="docutils literal notranslate"><span class="pre">my_custom_folding_function</span></code>
+can be used with any supported circuit type, not just Cirq circuits.
+The body of the <code class="docutils literal notranslate"><span class="pre">my_custom_folding_function</span></code> should assume the input
+circuit is a Cirq circuit, however.</p>
+</div>
+<p>This function can then be used with <code class="docutils literal notranslate"><span class="pre">.zne.execute_with_zne</span></code> as an option to scale the noise:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">scale_noise</span><span class="o">=</span><span class="n">my_custom_folding_function</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9613098502159114
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="custom-extrapolation-methods">
+<h2>Custom extrapolation methods<a class="headerlink" href="#custom-extrapolation-methods" title="Permalink to this headline">¶</a></h2>
+<p>If necessary, the user can modify existing extrapolation methods by subclassing
+one of the <a class="reference internal" href="zne-3-options.html#extrapolation-methods-factory-objects"><span class="std std-ref">built-in factories</span></a>.</p>
+<p>Alternatively, a custom adaptive extrapolation method can be derived from the abstract class <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.AdaptiveFactory" title="mitiq.zne.inference.AdaptiveFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">AdaptiveFactory</span></code></a>.
+In this case its core methods must be implemented:
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">AdaptiveFactory.__init__()</span></code>, <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.AdaptiveFactory.next" title="mitiq.zne.inference.AdaptiveFactory.next"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AdaptiveFactory.next()</span></code></a>, <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.AdaptiveFactory.is_converged" title="mitiq.zne.inference.AdaptiveFactory.is_converged"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AdaptiveFactory.is_converged()</span></code></a>, <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.AdaptiveFactory.reduce" title="mitiq.zne.inference.AdaptiveFactory.reduce"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AdaptiveFactory.reduce()</span></code></a>.</p>
+<p>A new non-adaptive method can instead be derived from the abstract <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.BatchedFactory" title="mitiq.zne.inference.BatchedFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">BatchedFactory</span></code></a> class.
+In this case it is usually sufficient to override only the <code class="xref py py-meth docutils literal notranslate"><span class="pre">BatchedFactory.__init__()</span></code> and
+the <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.BatchedFactory.extrapolate" title="mitiq.zne.inference.BatchedFactory.extrapolate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BatchedFactory.extrapolate()</span></code></a> methods, which are responsible for the initialization and for the
+final zero-noise extrapolation, respectively. An example of a simple custom non-adaptive <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a>
+is given in the next code cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mitiq.zne.inference</span> <span class="kn">import</span> <span class="n">BatchedFactory</span><span class="p">,</span> <span class="n">LinearFactory</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">MyFactory</span><span class="p">(</span><span class="n">BatchedFactory</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Factory object implementing a linear extrapolation taking</span>
+<span class="sd">    into account that the expectation value must be within a given</span>
+<span class="sd">    interval. If the zero-noise limit falls outside the</span>
+<span class="sd">    interval, its value is clipped.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale_factors</span><span class="p">,</span> <span class="n">min_expval</span><span class="p">,</span> <span class="n">max_expval</span><span class="p">):</span>
+       <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       Args:</span>
+<span class="sd">          scale_factors: The noise scale factors at which</span>
+<span class="sd">                         expectation values should be measured.</span>
+<span class="sd">          min_expval: The lower bound for the expectation value.</span>
+<span class="sd">          min_expval: The upper bound for the expectation value.</span>
+<span class="sd">       &quot;&quot;&quot;</span>
+       <span class="nb">super</span><span class="p">(</span><span class="n">MyFactory</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">scale_factors</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">_options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;min_expval&quot;</span><span class="p">:</span> <span class="n">min_expval</span><span class="p">,</span> <span class="s2">&quot;max_expval&quot;</span><span class="p">:</span> <span class="n">max_expval</span><span class="p">}</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">extrapolate</span><span class="p">(</span>
+       <span class="n">scale_factors</span><span class="p">,</span> <span class="n">exp_values</span><span class="p">,</span> <span class="n">min_expval</span><span class="p">,</span> <span class="n">max_expval</span><span class="p">,</span> <span class="n">full_output</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Fit a linear model and clip its zero-noise limit.&quot;&quot;&quot;</span>
+        <span class="c1"># Perform standard linear extrapolation</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">LinearFactory</span><span class="o">.</span><span class="n">extrapolate</span><span class="p">(</span><span class="n">scale_factors</span><span class="p">,</span> <span class="n">exp_values</span><span class="p">,</span> <span class="n">full_output</span><span class="p">)</span>
+        <span class="c1"># Return the clipped zero-noise extrapolation.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">full_output</span><span class="p">:</span>
+           <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">min_expval</span><span class="p">,</span> <span class="n">max_expval</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+           <span class="c1"># In this case &quot;result&quot; is a tuple of extrapolation data</span>
+           <span class="n">zne_limit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">min_expval</span><span class="p">,</span> <span class="n">max_expval</span><span class="p">)</span>
+           <span class="k">return</span> <span class="p">(</span><span class="n">zne_limit</span><span class="p">,</span> <span class="o">*</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">MyFactory</span></code> as an option for <a class="reference internal" href="../apidoc.html#mitiq.zne.zne.execute_with_zne" title="mitiq.zne.zne.execute_with_zne"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_zne()</span></code></a>, the customized extrapolation is applied.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test MyFactory clips the result as expected</span>
+<span class="n">fac</span> <span class="o">=</span> <span class="n">MyFactory</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">min_expval</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_expval</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">zne_limit_clipped</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">factory</span><span class="o">=</span><span class="n">fac</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">zne_limit_clipped</span> <span class="o">==</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After defining a custom <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a>, we suggest to check that all the methods inherited from the parent class run without errors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test parent methods run without errors</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">get_expectation_values</span><span class="p">()</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">get_extrapolation_curve</span><span class="p">()</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">get_optimal_parameters</span><span class="p">()</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">get_parameters_covariance</span><span class="p">()</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">get_scale_factors</span><span class="p">()</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">get_zero_noise_limit_error</span><span class="p">()</span>
+<span class="n">zne_limit_clipped</span> <span class="o">=</span> <span class="n">fac</span><span class="o">.</span><span class="n">get_zero_noise_limit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="regression-tools-in-zne-inference">
+<h3>Regression tools in <code class="docutils literal notranslate"><span class="pre">zne.inference</span></code><a class="headerlink" href="#regression-tools-in-zne-inference" title="Permalink to this headline">¶</a></h3>
+<p>In the body of the previous <code class="docutils literal notranslate"><span class="pre">MyFactory</span></code> example, we imported and used the <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.mitiq_polyfit" title="mitiq.zne.inference.mitiq_polyfit"><code class="xref py py-func docutils literal notranslate"><span class="pre">mitiq_polyfit()</span></code></a> function.
+This is simply a wrap of <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html#numpy.polyfit" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.polyfit()</span></code></a>, slightly adapted to the notion and to the error types
+of Mitiq. This function can be used to fit a polynomial ansatz to the measured expectation values. This function performs
+a least squares minimization which is <strong>linear</strong> (with respect to the coefficients) and therefore admits an algebraic solution.</p>
+<p>Similarly, from <a class="reference internal" href="../apidoc.html#module-mitiq.zne.inference" title="mitiq.zne.inference"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne.inference</span></code></a> one can also import <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.mitiq_curve_fit" title="mitiq.zne.inference.mitiq_curve_fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">mitiq_curve_fit()</span></code></a>,
+which is instead a wrap of <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html#scipy.optimize.curve_fit" title="(in SciPy v1.8.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.optimize.curve_fit()</span></code></a>. Differently from <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.mitiq_polyfit" title="mitiq.zne.inference.mitiq_polyfit"><code class="xref py py-func docutils literal notranslate"><span class="pre">mitiq_polyfit()</span></code></a>,
+<a class="reference internal" href="../apidoc.html#mitiq.zne.inference.mitiq_curve_fit" title="mitiq.zne.inference.mitiq_curve_fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">mitiq_curve_fit()</span></code></a> can be used with a generic (user-defined) ansatz.
+Since the fit is based on a numerical <strong>non-linear</strong> least squares minimization, this method may fail to converge
+or could be subject to numerical instabilities.</p>
+</div>
+</div>
+<div class="section" id="low-level-usage-of-a-factory">
+<h2>Low-level usage of a factory<a class="headerlink" href="#low-level-usage-of-a-factory" title="Permalink to this headline">¶</a></h2>
+<p>In this section we present a low-level usage of a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a> . In typical use-cases, the following information is not necessary but it can be useful for understanding how <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a> objects work under the hood.</p>
+<div class="section" id="the-run-method">
+<h3>The <code class="docutils literal notranslate"><span class="pre">run</span></code> method.<a class="headerlink" href="#the-run-method" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run" title="mitiq.zne.inference.Factory.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run()</span></code></a> method can be used to run all the data acquisition steps associated to a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a>, until enough data is collected for the extrapolation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fac</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">inference</span><span class="o">.</span><span class="n">AdaExpFactory</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">asymptote</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># Run the factory to collect data</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">execute</span><span class="p">)</span>
+<span class="c1"># Extrapolate</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">reduce</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999679384721
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-run-classical-method">
+<h3>The <code class="docutils literal notranslate"><span class="pre">run_classical</span></code> method.<a class="headerlink" href="#the-run-classical-method" title="Permalink to this headline">¶</a></h3>
+<p>Instead of <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run" title="mitiq.zne.inference.Factory.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run()</span></code></a>, the <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run_classical" title="mitiq.zne.inference.Factory.run_classical"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run_classical()</span></code></a> method can be used if we have at disposal a function which directly
+maps a noise scale factor to the corresponding expectation value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">noise_to_expval</span><span class="p">(</span><span class="n">scale_factor</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Function returning an expectation value for a given scale_factor.&quot;&quot;&quot;</span>
+    <span class="n">scaled_circuit</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">scaling</span><span class="o">.</span><span class="n">fold_gates_at_random</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">execute</span><span class="p">(</span><span class="n">scaled_circuit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove internal data, if present.</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="c1"># Run the factory to collect data</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">run_classical</span><span class="p">(</span><span class="n">noise_to_expval</span><span class="p">)</span>
+<span class="c1"># Extrapolate</span>
+<span class="n">fac</span><span class="o">.</span><span class="n">reduce</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999998924435657
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run_classical" title="mitiq.zne.inference.Factory.run_classical"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run_classical()</span></code></a> applies ZNE as a fully classical inference problem.
+Indeed, all the quantum aspects of the problem (circuit, observable, backend, etc.) are
+wrapped into the <code class="docutils literal notranslate"><span class="pre">noise_to_expval()</span></code> function.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="zne-3-options.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">What additional options are available when using ZNE?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="zne-5-theory.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What is the theory behind ZNE?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

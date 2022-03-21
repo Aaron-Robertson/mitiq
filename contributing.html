@@ -1,0 +1,559 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contributing to Mitiq &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing to the Documentation" href="contributing_docs.html" />
+    <link rel="prev" title="Contributing" href="toc_contributing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="guide/guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples/examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Contributing to Mitiq
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing_docs.html">
+   Contributing to the Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/template.html">
+   An example Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="release.html">
+   Mitiq Git flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code_of_conduct.html">
+   Contributor Covenant Code of Conduct
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opening-an-issue">
+   Opening an issue
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opening-a-pull-request">
+   Opening a pull request
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-control-with-git">
+     Version control with git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#forking-the-repository">
+     Forking the repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-in-a-virtual-environment">
+     Working in a virtual environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#development-install">
+     Development install
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#special-note-for-windows-users-using-python-3-8">
+       Special Note for Windows Users Using Python 3.8:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-tests">
+     Adding tests
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updating-the-documentation">
+     Updating the documentation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-local-tests">
+     Running local tests
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#style-guidelines">
+     Style Guidelines
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proposing-a-new-feature-to-mitiq">
+   Proposing a new feature to Mitiq
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-of-conduct">
+   Code of conduct
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="contributing-to-mitiq">
+<h1>Contributing to Mitiq<a class="headerlink" href="#contributing-to-mitiq" title="Permalink to this headline">¶</a></h1>
+<p>Contributions are welcome, and they are greatly appreciated, every little bit helps.</p>
+<div class="section" id="opening-an-issue">
+<h2>Opening an issue<a class="headerlink" href="#opening-an-issue" title="Permalink to this headline">¶</a></h2>
+<p>You can begin contributing to <code class="docutils literal notranslate"><span class="pre">mitiq</span></code> code by raising an
+<a class="reference external" href="https://github.com/unitaryfund/mitiq/issues/new">issue</a>, reporting a bug or
+proposing a new feature request, using the labels to organize it.
+Please use <code class="docutils literal notranslate"><span class="pre">mitiq.about()</span></code> to document your dependencies and working environment.</p>
+</div>
+<div class="section" id="opening-a-pull-request">
+<h2>Opening a pull request<a class="headerlink" href="#opening-a-pull-request" title="Permalink to this headline">¶</a></h2>
+<p>You can open a <a class="reference external" href="https://github.com/unitaryfund/mitiq/pulls">pull request</a> by pushing changes from a local branch, explaining the bug fix or new feature.</p>
+<div class="section" id="version-control-with-git">
+<h3>Version control with git<a class="headerlink" href="#version-control-with-git" title="Permalink to this headline">¶</a></h3>
+<p>git is a language that helps keeping track of the changes made. Have a look at these guidelines for getting started with <a class="reference external" href="https://www.asmeurer.com/git-workflow/">git workflow</a>.
+Use short and explanatory comments to document the changes with frequent commits.</p>
+</div>
+<div class="section" id="forking-the-repository">
+<h3>Forking the repository<a class="headerlink" href="#forking-the-repository" title="Permalink to this headline">¶</a></h3>
+<p>You can fork mitiq from the github repository, so that your changes are applied with respect to the current master branch. Use the Fork button, and then use git from the command line to clone your fork of the repository locally on your machine.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> git clone https://github.com/your_github_username/mitiq.git
+</pre></div>
+</div>
+<p>You can also use SSH instead of a HTTPS protocol.</p>
+</div>
+<div class="section" id="working-in-a-virtual-environment">
+<h3>Working in a virtual environment<a class="headerlink" href="#working-in-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>It is best to set up a clean environment with anaconda, to keep track of all installed applications.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> conda create -n myenv <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+</pre></div>
+</div>
+<p>accept the configuration ([y]) and switch to the environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> conda activate myenv
+<span class="o">(</span>myenv<span class="o">)</span> conda install pip
+</pre></div>
+</div>
+<p>Once you will finish the modifications, you can deactivate the environment with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> conda deactivate myenv
+</pre></div>
+</div>
+</div>
+<div class="section" id="development-install">
+<h3>Development install<a class="headerlink" href="#development-install" title="Permalink to this headline">¶</a></h3>
+<p>In order to install all the libraries useful for contributing to the
+development of the library, from your local clone of the fork, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> pip install -e .
+<span class="o">(</span>myenv<span class="o">)</span> pip install -r dev_requirements.txt
+</pre></div>
+</div>
+<div class="section" id="special-note-for-windows-users-using-python-3-8">
+<h4>Special Note for Windows Users Using Python 3.8:<a class="headerlink" href="#special-note-for-windows-users-using-python-3-8" title="Permalink to this headline">¶</a></h4>
+<p>To prevent errors when running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>, Windows developers using Python 3.8 will also need to edit <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> in their environment’s asyncio directory.
+This is due to Python changing <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>’s <a class="reference external" href="https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy">default event loop in Windows beginning in Python 3.8</a>.
+The new default event loop will not support Unix-style APIs used by some dependencies.</p>
+<ol>
+<li><p>Locate your environment directory (likely <code class="docutils literal notranslate"><span class="pre">C:\Users\{username}\anaconda3\envs\{your_env}</span></code>), and open <code class="docutils literal notranslate"><span class="pre">{env_dir}/Lib/asyncio/__init__.py</span></code>.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">asyncio</span></code> to the file’s import statements.</p></li>
+<li><p>Find the block of code below and replace it with the provided replacement.</p>
+<ul>
+<li><p>Original Code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if sys.platform == &#39;win32&#39;:  # pragma: no cover
+    from .windows_events import *
+    __all__ += windows_events.__all__
+else:
+    from .unix_events import *  # pragma: no cover
+    __all__ += unix_events.__all__
+</pre></div>
+</div>
+</li>
+<li><p>Replacement Code</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if sys.platform == &#39;win32&#39;:  # pragma: no cover
+    from .windows_events import *
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    __all__ += windows_events.__all__
+else:
+    from .unix_events import *  # pragma: no cover
+    __all__ += unix_events.__all__
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="adding-tests">
+<h3>Adding tests<a class="headerlink" href="#adding-tests" title="Permalink to this headline">¶</a></h3>
+<p>If you add new features to a function or class, it is required to add tests for such object. Mitiq uses a nested structure for packaging tests in directories named <code class="docutils literal notranslate"><span class="pre">tests</span></code> at the same level of each module.
+The only except to this is that any tests requiring a QVM should be placed in the mitiq_pyquil/tests folder.</p>
+</div>
+<div class="section" id="updating-the-documentation">
+<h3>Updating the documentation<a class="headerlink" href="#updating-the-documentation" title="Permalink to this headline">¶</a></h3>
+<p>Follow these <a class="reference external" href="https://mitiq.readthedocs.io/en/latest/contributing_docs.html">instructions for contributing to the documentation</a> which include guidelines about updating the API-doc list of modules and writing examples in the users guide.</p>
+</div>
+<div class="section" id="running-local-tests">
+<h3>Running local tests<a class="headerlink" href="#running-local-tests" title="Permalink to this headline">¶</a></h3>
+<p>After making changes, please ensure your changes still pass all the existing tests.
+You can check that tests run with <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. The <a class="reference external" href="https://github.com/unitaryfund/mitiq/blob/master/Makefile">Makefile</a> contains
+some commands for running different collections of tests for the repository.</p>
+<p>To only run tests that do not require a pyQuil QVM running, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make <span class="nb">test</span>
+</pre></div>
+</div>
+<p>To run the tests for the pyQuil plugins, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make test-pyquil
+</pre></div>
+</div>
+<p>To run all tests, run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make test-all
+</pre></div>
+</div>
+<p><em>NOTE</em>: For the pyQuil tests to run, you will need to have QVM &amp; quilc servers
+running in the background. The easiest way to do this is with Docker via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -idt -p <span class="m">5000</span>:5000 rigetti/qvm -S
+docker run --rm -idt -p <span class="m">5555</span>:5555 rigetti/quilc -R
+</pre></div>
+</div>
+<p>Please also remember to check that all tests run also in the documentation examples and
+docstrings with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make doctest
+</pre></div>
+</div>
+<p>You may need to run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> before you are able to run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>.</p>
+</div>
+<div class="section" id="style-guidelines">
+<h3>Style Guidelines<a class="headerlink" href="#style-guidelines" title="Permalink to this headline">¶</a></h3>
+<p>Mitiq code is developed according the best practices of Python development.</p>
+<ul class="simple">
+<li><p>Please get familiar with <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> (code)
+and <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a> (docstrings) guidelines.</p></li>
+<li><p>Use annotations for type hints in the objects’ signature.</p></li>
+<li><p>Write <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#doc-function-args">google-style docstrings</a>.</p></li>
+</ul>
+<p>We use <a class="reference external" href="https://black.readthedocs.io/en/stable/index.html">Black</a> and <code class="docutils literal notranslate"><span class="pre">flake8</span></code> to automatically
+lint the code and enforce style requirements as part of the CI pipeline. You can run these style
+tests yourself locally in the top-level directory of
+the repository.</p>
+<p>You can check for violations of the <code class="docutils literal notranslate"><span class="pre">flake8</span></code> rules with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make check-style
+</pre></div>
+</div>
+<p>In order to check if <code class="docutils literal notranslate"><span class="pre">black</span></code> would reformat the code, use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make check-format
+</pre></div>
+</div>
+<p>If above format check fails then you will be presented with a <a class="reference external" href="https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#diffs">diff</a> which can be resolved by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> make format
+</pre></div>
+</div>
+<p>If you aren’t presented with any errors, then that means your code is good enough
+for the linter (<code class="docutils literal notranslate"><span class="pre">flake8</span></code>) and formatter (<code class="docutils literal notranslate"><span class="pre">black</span></code>). Black is very opinionated, but
+saves a lot of time by removing the need for style nitpicks in PR review. We only deviate from its
+default behavior in one category: we choose to use a line length of 79 rather than the Black
+default of 88 (this is configured in the <a class="reference external" href="https://github.com/unitaryfund/mitiq/blob/master/pyproject.toml"><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></a> file).</p>
+</div>
+</div>
+<div class="section" id="proposing-a-new-feature-to-mitiq">
+<h2>Proposing a new feature to Mitiq<a class="headerlink" href="#proposing-a-new-feature-to-mitiq" title="Permalink to this headline">¶</a></h2>
+<p>If you are interested in adding a larger new feature or functionality to Mitiq, please check out our
+Mitq enhancement proposal (MEP) template <a class="reference external" href="https://github.com/unitaryfund/mitiq/blob/master/docs/mep/0000-feature-proposal-TEMPLATE.md"><code class="docutils literal notranslate"><span class="pre">docs/mep/0000-feature-proposal-TEMPLATE.md</span></code></a>. To help facilitate
+discussion about the feature you would like to add, make a copy of the template and increment the proposal
+number and change <code class="docutils literal notranslate"><span class="pre">feature-proposal-TEMPLATE</span></code> to a short description of what you are proposing.
+Please fill out any relevant sections of that template as best you can and we can discuss in
+both PR threads as well as on the <a class="reference external" href="http://discord.unitary.fund">discord</a>.</p>
+</div>
+<div class="section" id="code-of-conduct">
+<h2>Code of conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h2>
+<p>Mitiq development abides to the <a class="reference external" href="https://mitiq.readthedocs.io/en/latest/code_of_conduct.html">Contributors’ Covenant</a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="toc_contributing.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contributing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="contributing_docs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contributing to the Documentation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

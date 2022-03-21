@@ -1,0 +1,805 @@
+<!-- This file displays the animated SVG link to the GitHub repository 
+in the top right corner -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variational Quantum Eigensolver improved with Zero Noise Extrapolation &#8212; Mitiq 0.14.0dev documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mitigating the energy landscape of a variational circuit with Mitiq" href="simple_landscape.html" />
+    <link rel="prev" title="Zero Noise Extrapolation with pyQuil and parametric compilation" href="pyquil_demo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/mitiq-logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../readme.html">
+  <a href="https://github.com/unitaryfund/mitiq">
+  </a>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guide/guide.html">
+  Users Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../apidoc.html">
+  API-doc
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../toc_contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../zz_bibliography.html">
+  References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="braket_mirror_circuit.html">
+   Mirror circuit benchmark improved with zero-noise extrapolation on AWS Braket
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ibmq-backends.html">
+   Zero-noise extrapolation on IBMQ backends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pyquil_demo.html">
+   Zero-noise extrapolation on PyQuil parametric programs
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Variational quantum eigensolver improved with zero-noise extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simple_landscape.html">
+   Variational circuit mitigation with zero-noise extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maxcut-demo.html">
+   MaxCut benchmark with zero-noise extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hamiltonians.html">
+   Defining a Mitiq executor with a hamiltonian
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mitiq-paper/mitiq-paper-codeblocks.html">
+   Mitiq paper codeblocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="molecular_hydrogen.html">
+   Estimating the potential energy surface of molecular Hydrogen with ZNE
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-the-quantum-system-using-pyquil">
+   Defining the quantum system using pyQuil
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up-vqe-define-hamiltonian-and-energy-expectation-functions">
+   Set up VQE: define Hamiltonian and energy expectation functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-vqe-first-without-error-mitigation-and-then-with-zne-and-compare-results">
+   Run VQE first without error mitigation and then with ZNE, and compare results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-we-introduce-zne-and-compare-results">
+     Now we introduce ZNE and compare results.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="variational-quantum-eigensolver-improved-with-zero-noise-extrapolation">
+<h1>Variational Quantum Eigensolver improved with Zero Noise Extrapolation<a class="headerlink" href="#variational-quantum-eigensolver-improved-with-zero-noise-extrapolation" title="Permalink to this headline">¶</a></h1>
+<p>In this example we investigate how Zero Noise Extrapolation (ZNE) can improve
+convergence when applied to a variational problem. ZNE works by computing the
+observable of interest at increased noise levels, i.e. beyond the minimum noise
+strength in the computer, and then extrapolating back to the zero-noise limit.
+The two main components of ZNE are noise scaling and extrapolation. You can read more about
+ZNE in the Mitiq Users Guide.</p>
+<p>The Variational Quantum Eigensolver (VQE) is a hybrid quantum-classical algorithm used to
+solve eigenvalue and optimization problems. The VQE algorithm consists of a quantum
+subroutine run inside of a classical optimization loop. In this example, the goal of the
+optimization is to find the smallest eigenvalue of a matrix H, which is the Hamiltonian
+of a simple quantum system. The quantum subroutine prepares the quantum state
+|Ψ(vec(θ))⟩ and measures the expectation value ⟨Ψ(vec(θ))|H|Ψ(vec(θ))⟩. By the
+variational principle, ⟨Ψ(vec(θ))|H|Ψ(vec(θ))⟩ is always greater than the smallest
+eigenvalue of H, which means a classical optimization loop can be used to find this
+eigenvalue.</p>
+<p>The VQE example shown here is adapted from the <code class="docutils literal notranslate"><span class="pre">VQE</span></code> function in Grove
+<a class="reference external" href="#References">[1]</a> and the pyQuil / Grove VQE tutorial <a class="reference external" href="#References">[2]</a>.</p>
+<div class="section" id="defining-the-quantum-system-using-pyquil">
+<h2>Defining the quantum system using pyQuil<a class="headerlink" href="#defining-the-quantum-system-using-pyquil" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pyquil</span> <span class="kn">import</span> <span class="n">get_qc</span><span class="p">,</span> <span class="n">Program</span>
+<span class="kn">from</span> <span class="nn">pyquil.gates</span> <span class="kn">import</span> <span class="n">RX</span><span class="p">,</span> <span class="n">RY</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">CNOT</span><span class="p">,</span> <span class="n">MEASURE</span>
+<span class="kn">from</span> <span class="nn">pyquil.paulis</span> <span class="kn">import</span> <span class="n">PauliTerm</span><span class="p">,</span> <span class="n">PauliSum</span><span class="p">,</span> <span class="n">sZ</span>
+<span class="kn">from</span> <span class="nn">pyquil.noise</span> <span class="kn">import</span> <span class="n">pauli_kraus_map</span><span class="p">,</span> <span class="n">append_kraus_to_gate</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
+<span class="kn">import</span> <span class="nn">mitiq</span>
+<span class="kn">from</span> <span class="nn">mitiq</span> <span class="kn">import</span> <span class="n">zne</span>
+<span class="kn">from</span> <span class="nn">mitiq.zne.scaling.folding</span> <span class="kn">import</span> <span class="n">fold_gates_from_right</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">get_qc</span></code> command to initialize the simulated backend
+where the pyQuil program will run</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backend</span> <span class="o">=</span> <span class="n">get_qc</span><span class="p">(</span><span class="s2">&quot;2q-qvm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define example ansatz, consisting of a rotation by angle <code class="docutils literal notranslate"><span class="pre">theta</span></code> and a layer of static gates:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">program</span> <span class="o">=</span> <span class="n">Program</span><span class="p">()</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">program</span><span class="o">.</span><span class="n">declare</span><span class="p">(</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span> <span class="n">memory_type</span><span class="o">=</span><span class="s2">&quot;REAL&quot;</span><span class="p">)</span>
+<span class="n">program</span> <span class="o">+=</span> <span class="n">RX</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">program</span> <span class="o">+=</span> <span class="n">T</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">program</span> <span class="o">+=</span> <span class="n">CNOT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">program</span> <span class="o">+=</span> <span class="n">S</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">program</span> <span class="o">+=</span> <span class="n">Z</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Simulate depolarizing noise on the static gates:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_noise_to_circuit</span><span class="p">(</span><span class="n">quil_prog</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Define pyQuil gates with a custom noise model via Kraus operators:</span>
+<span class="sd">        1. Generate Kraus operators at given survival probability</span>
+<span class="sd">        2. Append Kraus operators to the gate matrices</span>
+<span class="sd">        3. Add custom gates to circuit</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      quil_prog: the pyQuil quantum program to which the noise model will be added</span>
+<span class="sd">      </span>
+<span class="sd">    Returns:</span>
+<span class="sd">      A quantum program with depolarizing noise on the static gates.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">prob</span> <span class="o">=</span> <span class="mf">0.8</span>
+    <span class="n">num_qubits</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="n">num_qubits</span>
+    <span class="n">d_sq</span> <span class="o">=</span> <span class="n">d</span> <span class="o">**</span> <span class="mi">2</span>
+    
+    <span class="n">kraus_list</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob</span><span class="p">)</span> <span class="o">/</span> <span class="n">d</span><span class="p">]</span> <span class="o">*</span> <span class="n">d</span>
+    <span class="n">kraus_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">prob</span>
+    <span class="n">kraus_ops</span> <span class="o">=</span> <span class="n">pauli_kraus_map</span><span class="p">(</span><span class="n">kraus_list</span><span class="p">)</span>
+    
+    <span class="n">k_list</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob</span><span class="p">)</span> <span class="o">/</span> <span class="n">d_sq</span><span class="p">]</span> <span class="o">*</span> <span class="n">d_sq</span>
+    <span class="n">k_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">prob</span>
+    <span class="n">k_ops</span> <span class="o">=</span> <span class="n">pauli_kraus_map</span><span class="p">(</span><span class="n">k_list</span><span class="p">)</span>
+    
+    <span class="n">T_gate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)]])</span>
+    <span class="n">CNOT_gate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">block</span><span class="p">(</span>
+        <span class="p">[[</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">1</span><span class="p">)]]</span>
+    <span class="p">)</span>
+    <span class="n">S_gate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="n">j</span><span class="p">]])</span>
+    <span class="n">Z_gate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+    
+    <span class="n">quil_prog</span><span class="o">.</span><span class="n">define_noisy_gate</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">append_kraus_to_gate</span><span class="p">(</span><span class="n">kraus_ops</span><span class="p">,</span> <span class="n">T_gate</span><span class="p">))</span>
+    <span class="n">quil_prog</span><span class="o">.</span><span class="n">define_noisy_gate</span><span class="p">(</span><span class="s2">&quot;CNOT&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">append_kraus_to_gate</span><span class="p">(</span><span class="n">k_ops</span><span class="p">,</span> <span class="n">CNOT_gate</span><span class="p">))</span>
+    <span class="n">quil_prog</span><span class="o">.</span><span class="n">define_noisy_gate</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">append_kraus_to_gate</span><span class="p">(</span><span class="n">kraus_ops</span><span class="p">,</span> <span class="n">S_gate</span><span class="p">))</span>
+    <span class="n">quil_prog</span><span class="o">.</span><span class="n">define_noisy_gate</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">append_kraus_to_gate</span><span class="p">(</span><span class="n">kraus_ops</span><span class="p">,</span> <span class="n">Z_gate</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">quil_prog</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-up-vqe-define-hamiltonian-and-energy-expectation-functions">
+<h2>Set up VQE: define Hamiltonian and energy expectation functions<a class="headerlink" href="#set-up-vqe-define-hamiltonian-and-energy-expectation-functions" title="Permalink to this headline">¶</a></h2>
+<p>Hamiltonian in this example is just <code class="docutils literal notranslate"><span class="pre">sigma_z</span></code> on the zeroth qubit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hamiltonian</span> <span class="o">=</span> <span class="n">sZ</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pauli_sum</span> <span class="o">=</span> <span class="n">PauliSum</span><span class="p">([</span><span class="n">hamiltonian</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">term</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pauli_sum</span><span class="o">.</span><span class="n">terms</span><span class="p">):</span>
+    <span class="n">meas_basis_change</span> <span class="o">=</span> <span class="n">Program</span><span class="p">()</span>
+    <span class="n">marked_qubits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">term</span><span class="p">:</span>
+        <span class="n">marked_qubits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">gate</span> <span class="o">==</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span>
+            <span class="n">meas_basis_change</span><span class="o">.</span><span class="n">inst</span><span class="p">(</span><span class="n">RY</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">index</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">gate</span> <span class="o">==</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span>
+            <span class="n">meas_basis_change</span><span class="o">.</span><span class="n">inst</span><span class="p">(</span><span class="n">RX</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">index</span><span class="p">))</span>
+        <span class="n">program</span> <span class="o">+=</span> <span class="n">meas_basis_change</span>
+    <span class="n">readout_qubit</span> <span class="o">=</span> <span class="n">program</span><span class="o">.</span><span class="n">declare</span><span class="p">(</span><span class="s2">&quot;ro&quot;</span><span class="p">,</span> <span class="s2">&quot;BIT&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">marked_qubits</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">samples</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">program</span><span class="o">.</span><span class="n">wrap_in_numshots_loop</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyquil.quil.Program at 0x7fe83c190b50&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Compute expectation value of the Hamiltonian over the over the distribution
+generated from the quantum program. The following function is a modified version
+of <code class="docutils literal notranslate"><span class="pre">expectation</span></code> from the <code class="docutils literal notranslate"><span class="pre">VQE</span></code> function in Grove <a class="reference external" href="#References">[1]</a>. Here the noisy
+gates are defined inside the executor function via <code class="docutils literal notranslate"><span class="pre">add_noise_to_circuit</span></code>, since
+pyQuil custom gates cannot be folded in Mitiq.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">executor</span><span class="p">(</span>
+    <span class="n">theta</span><span class="p">,</span>
+    <span class="n">backend</span><span class="p">,</span>
+    <span class="n">readout_qubit</span><span class="p">,</span>
+    <span class="n">samples</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">pauli_sum</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PauliSum</span><span class="p">,</span> <span class="n">PauliTerm</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span>
+    <span class="n">pyquil_prog</span><span class="p">:</span> <span class="n">Program</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the expectation value of pauli_sum over the distribution generated from </span>
+<span class="sd">    pyquil_prog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">noisy</span> <span class="o">=</span> <span class="n">pyquil_prog</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">noisy</span> <span class="o">+=</span> <span class="p">[</span>
+        <span class="n">MEASURE</span><span class="p">(</span><span class="n">qubit</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">qubit</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">marked_qubits</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">readout_qubit</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">noisy</span> <span class="o">=</span> <span class="n">add_noise_to_circuit</span><span class="p">(</span><span class="n">noisy</span><span class="p">)</span>
+    <span class="n">expectation</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">pauli_sum</span> <span class="o">=</span> <span class="n">PauliSum</span><span class="p">([</span><span class="n">pauli_sum</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">term</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pauli_sum</span><span class="o">.</span><span class="n">terms</span><span class="p">):</span>
+        <span class="n">qubits_to_measure</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">gate</span> <span class="ow">in</span> <span class="n">term</span><span class="p">:</span>
+            <span class="n">qubits_to_measure</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">meas_outcome</span> <span class="o">=</span> <span class="n">expectation_from_sampling</span><span class="p">(</span>
+                <span class="n">theta</span><span class="p">,</span> <span class="n">noisy</span><span class="p">,</span> <span class="n">qubits_to_measure</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">samples</span>
+            <span class="p">)</span>
+            <span class="n">expectation</span> <span class="o">+=</span> <span class="n">term</span><span class="o">.</span><span class="n">coefficient</span> <span class="o">*</span> <span class="n">meas_outcome</span>
+    <span class="k">return</span> <span class="n">expectation</span><span class="o">.</span><span class="n">real</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following function is a modified version of <code class="docutils literal notranslate"><span class="pre">expectation_from_sampling</span></code>
+from the <code class="docutils literal notranslate"><span class="pre">VQE</span></code> function in Grove <a class="reference external" href="#References">[1]</a>. It is modified to follow pyQuil
+conventions for defining custom gates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">expectation_from_sampling</span><span class="p">(</span>
+    <span class="n">theta</span><span class="p">,</span> <span class="n">executable</span><span class="p">:</span> <span class="n">Program</span><span class="p">,</span> <span class="n">marked_qubits</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">backend</span><span class="p">,</span> <span class="n">samples</span><span class="p">:</span> <span class="nb">int</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Calculate the expectation value of the Zi operator where i ranges over all </span>
+<span class="sd">    qubits given in marked_qubits.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bitstring_samples</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">executable</span><span class="o">.</span><span class="n">write_memory</span><span class="p">(</span><span class="n">region_name</span><span class="o">=</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">theta</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">readout_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ro&quot;</span><span class="p">)</span>
+    <span class="n">bitstring_tuples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">bitstring_samples</span><span class="p">))</span>
+
+    <span class="n">freq</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">bitstring_tuples</span><span class="p">)</span>
+
+    
+    <span class="n">exp_val</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">bitstring</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">freq</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">bitstring_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bitstring</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">parity_even_p</span><span class="p">(</span><span class="n">bitstring_int</span><span class="p">,</span> <span class="n">marked_qubits</span><span class="p">):</span>
+            <span class="n">exp_val</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">/</span> <span class="n">samples</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">exp_val</span> <span class="o">-=</span> <span class="nb">float</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">/</span> <span class="n">samples</span>
+    <span class="k">return</span> <span class="n">exp_val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate the parity of elements at indexes in marked_qubits. The function is a
+modified version of <code class="docutils literal notranslate"><span class="pre">parity_even_p</span></code> from the <code class="docutils literal notranslate"><span class="pre">VQE</span></code> function in Grove <a class="reference external" href="#References">[1]</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">parity_even_p</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">marked_qubits</span><span class="p">):</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">marked_qubits</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">|=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">q</span>
+    <span class="k">return</span> <span class="nb">bin</span><span class="p">(</span><span class="n">mask</span> <span class="o">&amp;</span> <span class="n">state</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="run-vqe-first-without-error-mitigation-and-then-with-zne-and-compare-results">
+<h2>Run VQE first without error mitigation and then with ZNE, and compare results<a class="headerlink" href="#run-vqe-first-without-error-mitigation-and-then-with-zne-and-compare-results" title="Permalink to this headline">¶</a></h2>
+<p>Scan over the parameter <code class="docutils literal notranslate"><span class="pre">theta</span></code> and calculate energy expectation, without mitigation.
+In a later section we will plot these results and compare them with the results from
+ZNE.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thetas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">thetas</span><span class="p">:</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">executor</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">readout_qubit</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">,</span> <span class="n">program</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Optimization routine without mitigation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">init_angle</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+    <span class="n">executor</span><span class="p">,</span>
+    <span class="n">init_angle</span><span class="p">,</span>
+    <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">readout_qubit</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">,</span> <span class="n">program</span><span class="p">),</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Nelder-Mead&quot;</span><span class="p">,</span>
+    <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xatol&quot;</span><span class="p">:</span> <span class="mf">1.0e-3</span><span class="p">,</span> <span class="s2">&quot;fatol&quot;</span><span class="p">:</span> <span class="mf">1.0e-2</span><span class="p">},</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> final_simplex: (array([[3.0375    ],
+       [3.03779297]]), array([-0.43      , -0.42266667]))
+           fun: -0.43
+       message: &#39;Optimization terminated successfully.&#39;
+          nfev: 24
+           nit: 10
+        status: 0
+       success: True
+             x: array([3.0375])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result on the unmitigated noisy circuit result in loss of accuracy (relative to
+the ideal expectation value of -1.0) and additional iterations required to reach
+convergence.</p>
+<div class="section" id="now-we-introduce-zne-and-compare-results">
+<h3>Now we introduce ZNE and compare results.<a class="headerlink" href="#now-we-introduce-zne-and-compare-results" title="Permalink to this headline">¶</a></h3>
+<p>This is done by wrapping the noisy executor into a mitigated executor.
+We will fold the gates from the right and apply a linear inference (using a Linear
+Factory object) to implement ZNE. You can read more about noise scaling by unitary folding in the Mitiq user guide.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mitigated_expectation</span><span class="p">(</span>
+    <span class="n">thetas</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">readout_qubit</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">pauli_sum</span><span class="p">,</span> <span class="n">executable</span><span class="p">:</span> <span class="n">Program</span><span class="p">,</span> <span class="n">factory</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function is the ZNE-wrapped executor, which outputs the error-mitigated </span>
+<span class="sd">    expectation value. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      thetas: the input parameter for the optimization</span>
+<span class="sd">      backend: the quantum computer that runs the quantum program</span>
+<span class="sd">      readout_qubit: declared memory for the readout</span>
+<span class="sd">      samples: number of times the experiment (or simulation) will be run</span>
+<span class="sd">      pauli_sum: the Hamiltonian expressed as </span>
+<span class="sd">      executable: the pyQuil quantum program</span>
+<span class="sd">      factory: factory object containing the type of inference and scaling parameters</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      The error-mitigated expectation value as a float.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mitigated_exp</span> <span class="o">=</span> <span class="n">zne</span><span class="o">.</span><span class="n">execute_with_zne</span><span class="p">(</span>
+        <span class="n">executable</span><span class="p">,</span>
+        <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">executor</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">readout_qubit</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">pauli_sum</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span>
+        <span class="n">factory</span><span class="o">=</span><span class="n">factory</span><span class="p">,</span>
+        <span class="n">scale_noise</span><span class="o">=</span><span class="n">fold_gates_from_right</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">mitigated_exp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we use a linear inference for the extrapolation.
+See the section on <a class="reference internal" href="../guide/zne-3-options.html#extrapolation-methods-factory-objects"><span class="std std-ref">Factory Objects</span></a>
+in the Mitiq user guide for more information:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fac</span> <span class="o">=</span> <span class="n">mitiq</span><span class="o">.</span><span class="n">zne</span><span class="o">.</span><span class="n">inference</span><span class="o">.</span><span class="n">LinearFactory</span><span class="p">(</span><span class="n">scale_factors</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Scan over the parameter <code class="docutils literal notranslate"><span class="pre">theta</span></code> and plot the energy expectation with error mitigation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_zne</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">thetas</span><span class="p">:</span>
+    <span class="n">results_zne</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="n">mitigated_expectation</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">readout_qubit</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">,</span> <span class="n">program</span><span class="p">,</span> <span class="n">fac</span><span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="s2">&quot;o-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ideal landscape&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">results</span><span class="p">,</span> <span class="s2">&quot;o-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Noisy landscape&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">results_zne</span><span class="p">,</span> <span class="s2">&quot;o-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Mitigated landscape&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\theta$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\langle \Psi(\theta) | Z | \Psi(\theta) \rangle$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Mitigated Energy Landscape&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/vqe-pyquil-demo_25_0.png" src="../_images/vqe-pyquil-demo_25_0.png" />
+</div>
+</div>
+<p>In the energy landscape plot, we can see that the noise has flattened the unmitigated
+landscape and with error mitigation it has become peaked again. Therefore, we expect
+the optimization loop to have better convergence with ZNE applied.</p>
+<p>Run VQE routine with ZNE</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_zne</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+    <span class="n">mitigated_expectation</span><span class="p">,</span>
+    <span class="n">init_angle</span><span class="p">,</span>
+    <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">readout_qubit</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">hamiltonian</span><span class="p">,</span> <span class="n">program</span><span class="p">,</span> <span class="n">fac</span><span class="p">),</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Nelder-Mead&quot;</span><span class="p">,</span>
+    <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xatol&quot;</span><span class="p">:</span> <span class="mf">1.0e-3</span><span class="p">,</span> <span class="s2">&quot;fatol&quot;</span><span class="p">:</span> <span class="mf">1.0e-2</span><span class="p">},</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res_zne</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> final_simplex: (array([[3.17695313],
+       [3.17693481]]), array([-0.79533333, -0.795     ]))
+           fun: -0.7953333333333336
+       message: &#39;Optimization terminated successfully.&#39;
+          nfev: 38
+           nit: 15
+        status: 0
+       success: True
+             x: array([3.17695313])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see that the convergence to the minimum energy is enhanced by applying ZNE.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>While the VQE algorithm is generally considered to be robust to noise
+<a class="reference external" href="#References">[2]</a>, at the noise level modeled in this example, the
+accumulation of errors results in loss of accuracy and additional iterations
+required to reach convergence. Adding ZNE then improves the convergence of the
+algorithm to the minimum energy. The result is also demonstrated in the energy
+landscape plot, where the noisy landscape is noticeably flatter than the landscape
+generated with ZNE.</p>
+<p>Note: In this example, a small ansatz was used to keep the runtime within acceptable
+limits. ZNE generally performs better on longer circuits, but there is a tradeoff with
+execution time.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>[1] Rigetti Computing (2018) Grove (Version 1.7.0)
+<a class="reference external" href="https://github.com/rigetti/grove/blob/master/grove/pyvqe/vqe.py">[Source code].</a></p>
+<p>[2] <a class="reference external" href="https://grove-docs.readthedocs.io/en/latest/vqe.html">[VQE tutorial in pyQuil / Grove].</a></p>
+<p>This final block displays information about Mitiq, installed packages, and Python version/platform</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mitiq</span><span class="o">.</span><span class="n">about</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitiq: A Python toolkit for implementing error mitigation on quantum computers
+==============================================================================
+Authored by: Mitiq team, 2020 &amp; later (https://github.com/unitaryfund/mitiq)
+
+Mitiq Version:	0.14.0dev
+
+Core Dependencies
+-----------------
+Cirq Version:	0.13.1
+NumPy Version:	1.20.3
+SciPy Version:	1.7.3
+
+Optional Dependencies
+---------------------
+PyQuil Version:	3.0.1
+Qiskit Version:	0.32.1
+Braket Version:	1.17.0
+
+Python Version:	3.8.12
+Platform Info:	Linux (x86_64)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/qiskit/aqua/__init__.py:86: DeprecationWarning: The package qiskit.aqua is deprecated. It was moved/refactored to qiskit-terra For more information see &lt;https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide&gt;
+  warn_package(&#39;aqua&#39;, &#39;qiskit-terra&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="pyquil_demo.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Zero Noise Extrapolation with pyQuil and parametric compilation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="simple_landscape.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mitigating the energy landscape of a variational circuit with Mitiq</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+    
+<!--
+    Adds link to GitHub repository as an animated SVG in the top-right corner
+    of the documentation.
+    
+    Source: github-corners https://github.com/tholman/github-corners
+
+    License:
+    The MIT License (MIT)
+
+    Copyright (c) 2016 Tim Holman
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation 
+    the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+    and/or sell copies of the Software, and to permit persons to whom the 
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in 
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+-->
+<a href="https://github.com/unitaryfund/mitiq" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 60; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020, Tech Team @ Unitary Fund.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
