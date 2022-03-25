@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Executors &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -318,7 +316,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -385,7 +383,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="executors">
-<h1>Executors<a class="headerlink" href="#executors" title="Permalink to this headline">¶</a></h1>
+<h1>Executors<a class="headerlink" href="#executors" title="Permalink to this headline">#</a></h1>
 <p>Error mitigation methods can involve running many circuits. The <code class="docutils literal notranslate"><span class="pre">mitiq.Executor</span></code> class is a tool for efficiently running many circuits and storing the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -395,7 +393,7 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="the-input-function">
-<h2>The input function<a class="headerlink" href="#the-input-function" title="Permalink to this headline">¶</a></h2>
+<h2>The input function<a class="headerlink" href="#the-input-function" title="Permalink to this headline">#</a></h2>
 <p>To instantiate an <code class="docutils literal notranslate"><span class="pre">Executor</span></code>, provide a function which either:</p>
 <ol class="simple">
 <li><p>Inputs a <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> and outputs a <code class="docutils literal notranslate"><span class="pre">mitiq.QuantumResult</span></code>.</p></li>
@@ -429,7 +427,7 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="creating-an-executor">
-<h2>Creating an <code class="docutils literal notranslate"><span class="pre">Executor</span></code><a class="headerlink" href="#creating-an-executor" title="Permalink to this headline">¶</a></h2>
+<h2>Creating an <code class="docutils literal notranslate"><span class="pre">Executor</span></code><a class="headerlink" href="#creating-an-executor" title="Permalink to this headline">#</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">mitiq_cirq.compute_density_matrix</span></code> inputs a Cirq circuit and returns a density matrix as an <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -457,7 +455,7 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="running-circuits">
-<h2>Running circuits<a class="headerlink" href="#running-circuits" title="Permalink to this headline">¶</a></h2>
+<h2>Running circuits<a class="headerlink" href="#running-circuits" title="Permalink to this headline">#</a></h2>
 <p>When first created, the executor hasn’t been called yet and has no executed circuits and no computed results in memory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -573,7 +571,7 @@ Quantum results:
 </div>
 </div>
 <div class="section" id="batched-execution">
-<h3>Batched execution<a class="headerlink" href="#batched-execution" title="Permalink to this headline">¶</a></h3>
+<h3>Batched execution<a class="headerlink" href="#batched-execution" title="Permalink to this headline">#</a></h3>
 <p>Notice in the above output that the executor has been called once for each circuit it has executed. This is because <code class="docutils literal notranslate"><span class="pre">mitiq_cirq.compute_density_matrix</span></code> inputs one circuit and outputs one <code class="docutils literal notranslate"><span class="pre">QuantumResult</span></code>.</p>
 <p>Several quantum computing services allow running a sequence, or “batch,” of circuits at once. This is important for error mitigation when running many circuits to speed up the computation.</p>
 <p>To define a batched executor, annotate it with <code class="docutils literal notranslate"><span class="pre">Sequence[T]</span></code>, <code class="docutils literal notranslate"><span class="pre">List[T]</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuple[T]</span></code>, or <code class="docutils literal notranslate"><span class="pre">Iterable[T]</span></code> where <code class="docutils literal notranslate"><span class="pre">T</span></code> is a <code class="docutils literal notranslate"><span class="pre">QuantumResult</span></code>. Here is an example:</p>
@@ -646,7 +644,7 @@ Quantum results:
 </div>
 </div>
 <div class="section" id="using-executors-in-error-mitigation-techniques">
-<h2>Using <code class="docutils literal notranslate"><span class="pre">Executor</span></code>s in error mitigation techniques<a class="headerlink" href="#using-executors-in-error-mitigation-techniques" title="Permalink to this headline">¶</a></h2>
+<h2>Using <code class="docutils literal notranslate"><span class="pre">Executor</span></code>s in error mitigation techniques<a class="headerlink" href="#using-executors-in-error-mitigation-techniques" title="Permalink to this headline">#</a></h2>
 <p>You can provide a function or an <code class="docutils literal notranslate"><span class="pre">Executor</span></code> to the <code class="docutils literal notranslate"><span class="pre">executor</span></code> argument of error mitigation techniques, but <strong>providing an <code class="docutils literal notranslate"><span class="pre">Executor</span></code> is strongly recommended</strong> for seeing the history of results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -669,7 +667,7 @@ Quantum results:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ZNE value: 0.999971+0j
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ZNE value: 0.999972+0j
 </pre></div>
 </div>
 </div>
@@ -695,7 +693,7 @@ Quantum results:
 
 [[0.992667  +0.j 0.01470262+0.j]
  [0.01470265+0.j 0.00733284+0.j]]
-[[0.98565817+0.j 0.02875519+0.j]
+[[0.985658  +0.j 0.0287551 +0.j]
  [0.0287551 +0.j 0.01434148+0.j]]
 [[0.97895914+0.j 0.0421859 +0.j]
  [0.04218622+0.j 0.02104016+0.j]]
@@ -774,8 +772,9 @@ Quantum results:
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

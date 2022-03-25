@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What happens when I use CDR? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -342,18 +340,18 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="what-happens-when-i-use-cdr">
-<h1>What happens when I use CDR?<a class="headerlink" href="#what-happens-when-i-use-cdr" title="Permalink to this headline">¶</a></h1>
+<h1>What happens when I use CDR?<a class="headerlink" href="#what-happens-when-i-use-cdr" title="Permalink to this headline">#</a></h1>
 <p>Clifford Data Regression (CDR) is a learning-based quantum error mitigation technique <span id="id1">[<a class="reference internal" href="../zz_bibliography.html#id9" title="Piotr Czarnik, Andrew Arrasmith, Patrick J. Coles, and Lukasz Cincio. Error mitigation with Clifford quantum-circuit data. Quantum, 5:592, (2021). URL: http://dx.doi.org/10.22331/q-2021-11-26-592, doi:10.22331/q-2021-11-26-592.">11</a>]</span>.</p>
 <p>A figure of the typical workflow for CDR in Mitiq is shown in the figure below.</p>
 <div class="figure align-default" id="cdr-workflow">
 <a class="reference internal image-reference" href="../_images/cdr_workflow2_steps.png"><img alt="../_images/cdr_workflow2_steps.png" src="../_images/cdr_workflow2_steps.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">The CDR workflow in Mitiq is divided in two steps: Generating circuits, both for a classical simulator and on the intended backend, and then performing the inference from measurements to obtain a noise mitigated expectation value.</span><a class="headerlink" href="#cdr-workflow" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The CDR workflow in Mitiq is divided in two steps: Generating circuits, both for a classical simulator and on the intended backend, and then performing the inference from measurements to obtain a noise mitigated expectation value.</span><a class="headerlink" href="#cdr-workflow" title="Permalink to this image">#</a></p>
 </div>
 <p>The figure illustrates the Clifford data regression (CDR) workflow in Mitiq.</p>
 <p>The CDR workflow Figure above shows a schema of the implementation of CDR in Mitiq. Similarly to ZNE and PEC, also CDR in Mitiq is divided in two main stages: The first one of circuit generation and the second for inference of the mitigated value. However, in CDR, the generation of quantum circuits is different, as it involves the generation of training circuits. The division of CDR into training, learning and prediction stages is shown in the figure below.</p>
 <div class="figure align-default" id="cdr-process">
 <a class="reference internal image-reference" href="../_images/cdr_diagram2.png"><img alt="../_images/cdr_diagram2.png" src="../_images/cdr_diagram2.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Near-Clifford approximations of the actual circuit are simulated, without noise, on a classical simulator (circuits can be efficiently simulated classically) and executed on the noisy quantum computer (or a noisy simulator). These results are used as training data to infer the zero-noise expectation value of the error miitigated original circuit, that is finally run on the quantum computer (or noisy simulator).</span><a class="headerlink" href="#cdr-process" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Near-Clifford approximations of the actual circuit are simulated, without noise, on a classical simulator (circuits can be efficiently simulated classically) and executed on the noisy quantum computer (or a noisy simulator). These results are used as training data to infer the zero-noise expectation value of the error miitigated original circuit, that is finally run on the quantum computer (or noisy simulator).</span><a class="headerlink" href="#cdr-process" title="Permalink to this image">#</a></p>
 </div>
 </div>
 
@@ -425,8 +423,9 @@ in the top right corner -->
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

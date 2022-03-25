@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What additional options are available in PEC? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -431,7 +429,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="what-additional-options-are-available-in-pec">
-<h1>What additional options are available in PEC?<a class="headerlink" href="#what-additional-options-are-available-in-pec" title="Permalink to this headline">¶</a></h1>
+<h1>What additional options are available in PEC?<a class="headerlink" href="#what-additional-options-are-available-in-pec" title="Permalink to this headline">#</a></h1>
 <p>The application of probabilistic error cancellation (PEC) with Mitiq requires two main steps:</p>
 <ol class="simple">
 <li><p>Building <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects expressing ideal gates as linear combinations of noisy gates;</p></li>
@@ -448,7 +446,7 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="building-operationrepresentation-objects">
-<h2>Building <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects<a class="headerlink" href="#building-operationrepresentation-objects" title="Permalink to this headline">¶</a></h2>
+<h2>Building <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects<a class="headerlink" href="#building-operationrepresentation-objects" title="Permalink to this headline">#</a></h2>
 <p>Given the superoperator of an ideal gate <span class="math notranslate nohighlight">\(\mathcal G\)</span>, its quasi-probability representation is:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal G = \sum_\alpha \eta_\alpha \mathcal O_\alpha\]</div>
@@ -460,7 +458,7 @@ i.e., those which can be actually applied by a noisy quantum computer.</p>
 <p>The value of <span class="math notranslate nohighlight">\(\gamma\)</span> is related to the negative “volume” of the distribution and quantifies to the sampling
 cost of PEC (see <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">What is the theory behind PEC?</span></a>).</p>
 <div class="section" id="defining-noisyoperation-objects">
-<h3>Defining <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyOperation" title="mitiq.pec.types.types.NoisyOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyOperation</span></code></a> objects<a class="headerlink" href="#defining-noisyoperation-objects" title="Permalink to this headline">¶</a></h3>
+<h3>Defining <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyOperation" title="mitiq.pec.types.types.NoisyOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyOperation</span></code></a> objects<a class="headerlink" href="#defining-noisyoperation-objects" title="Permalink to this headline">#</a></h3>
 <p>The noisy operations <span class="math notranslate nohighlight">\(\{\mathcal O_\alpha\}\)</span> in the equation above can correspond to single noisy gates.
 However, it is often useful to define a noisy operation as a sequence multiple noisy gates.
 To have this flexibility, we associate to each noisy operation a small <code class="docutils literal notranslate"><span class="pre">QPROGRAM</span></code>,
@@ -549,7 +547,7 @@ In this case, however, the quasi-probability distribution must be known to the u
 and cannot be derived by Mitiq with the procedure shown in the next section.</em></p>
 </div>
 <div class="section" id="finding-an-optimal-operationrepresentation">
-<h3>Finding an optimal <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code><a class="headerlink" href="#finding-an-optimal-operationrepresentation" title="Permalink to this headline">¶</a></h3>
+<h3>Finding an optimal <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code><a class="headerlink" href="#finding-an-optimal-operationrepresentation" title="Permalink to this headline">#</a></h3>
 <p>Combining the noisy operations defined above, we obtain a <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.NoisyBasis" title="mitiq.pec.types.types.NoisyBasis"><code class="xref py py-class docutils literal notranslate"><span class="pre">NoisyBasis</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -591,7 +589,7 @@ in the basis of the noisy implementable gates (<code class="docutils literal not
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimal representation:
-q_0: ───H─── = 1.273*(q_0: ───H───)-0.091*(q_0: ───H───Y───)-0.091*(q_0: ───H───Z───)-0.091*(q_0: ───H───X───)
+q_0: ───H─── = -0.091*(q_0: ───H───Z───)-0.091*(q_0: ───H───Y───)-0.091*(q_0: ───H───X───)+1.273*(q_0: ───H───)
 </pre></div>
 </div>
 </div>
@@ -605,7 +603,7 @@ Behind the scenes, <a class="reference internal" href="../apidoc.html#mitiq.pec.
 = \sum_\alpha \eta_\alpha \mathcal O_\alpha \, .\end{split}\]</div>
 </div>
 <div class="section" id="manually-defining-an-operationrepresentation">
-<h3>Manually defining an <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code><a class="headerlink" href="#manually-defining-an-operationrepresentation" title="Permalink to this headline">¶</a></h3>
+<h3>Manually defining an <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code><a class="headerlink" href="#manually-defining-an-operationrepresentation" title="Permalink to this headline">#</a></h3>
 <p>Instead of solving the previous optimization problem, an <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> can
 also be manually defined. This approach can be applied if the user already knows the quasi-probability
 distribution <span class="math notranslate nohighlight">\({\eta_\alpha}\)</span>.</p>
@@ -647,7 +645,7 @@ distribution <span class="math notranslate nohighlight">\({\eta_\alpha}\)</span>
 </div>
 </div>
 <div class="section" id="methods-of-the-operationrepresentation-class">
-<h3>Methods of the <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code> class<a class="headerlink" href="#methods-of-the-operationrepresentation-class" title="Permalink to this headline">¶</a></h3>
+<h3>Methods of the <code class="docutils literal notranslate"><span class="pre">OperationRepresentation</span></code> class<a class="headerlink" href="#methods-of-the-operationrepresentation-class" title="Permalink to this headline">#</a></h3>
 <p>The main idea of PEC is to estimate the average with respect to a
 quasi-probability distribution over noisy circuits with a probabilistic Monte-Carlo
 approach.
@@ -684,7 +682,7 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5454545145454555
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5454545145454566
 </pre></div>
 </div>
 </div>
@@ -698,7 +696,7 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.2727272472727287, -0.09090908909090867, -0.09090908909090867, -0.09090908909090911)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0.09090908909090833, -0.09090908909090956, -0.09090908909090956, 1.2727272472727291)
 </pre></div>
 </div>
 </div>
@@ -711,7 +709,7 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.82352941, 0.05882353, 0.05882353, 0.05882353])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.05882353, 0.05882353, 0.05882353, 0.82352941])
 </pre></div>
 </div>
 </div>
@@ -719,13 +717,13 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="section" id="estimating-expectation-values-with-pec">
-<h2>Estimating expectation values with PEC<a class="headerlink" href="#estimating-expectation-values-with-pec" title="Permalink to this headline">¶</a></h2>
+<h2>Estimating expectation values with PEC<a class="headerlink" href="#estimating-expectation-values-with-pec" title="Permalink to this headline">#</a></h2>
 <p>The second main step of PEC is to make use of the previously defined <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a>s to estimate
 expectation values with respect to a quantum state prepared by a circuit of interest.
 In the previous section we defined the representation of the Hadamard gate.
 So, for simplicity, we consider a circuit that contains only Hadamard gates.</p>
 <div class="section" id="defining-a-circuit-of-interest-and-an-executor">
-<h3>Defining a circuit of interest and an Executor<a class="headerlink" href="#defining-a-circuit-of-interest-and-an-executor" title="Permalink to this headline">¶</a></h3>
+<h3>Defining a circuit of interest and an Executor<a class="headerlink" href="#defining-a-circuit-of-interest-and-an-executor" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -782,7 +780,7 @@ Here, for simplicity, we import the basic <a class="reference internal" href="..
 </div>
 </div>
 <div class="section" id="options-for-estimating-expectation-values">
-<h3>Options for estimating expectation values<a class="headerlink" href="#options-for-estimating-expectation-values" title="Permalink to this headline">¶</a></h3>
+<h3>Options for estimating expectation values<a class="headerlink" href="#options-for-estimating-expectation-values" title="Permalink to this headline">#</a></h3>
 <p>In the <a class="reference internal" href="pec-1-intro.html"><span class="doc std std-doc">“How do I use PEC?”</span></a> section, we have shown how to apply PEC
 with the minimum amount of options by simply calling the function <a class="reference internal" href="../apidoc.html#mitiq.pec.pec.execute_with_pec" title="mitiq.pec.pec.execute_with_pec"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_pec()</span></code></a>
 with the basic arguments <code class="docutils literal notranslate"><span class="pre">circuit</span></code>, <code class="docutils literal notranslate"><span class="pre">executor</span></code>, and <code class="docutils literal notranslate"><span class="pre">representations</span></code>.</p>
@@ -836,7 +834,7 @@ See <a class="reference internal" href="pec-5-theory.html"><span class="doc std 
 time. Try re-executing the previous cell with smaller values of <code class="docutils literal notranslate"><span class="pre">precision</span></code> to improve the result.</em></p>
 </div>
 <div class="section" id="analyzing-the-executed-circuits">
-<h3>Analyzing the executed circuits<a class="headerlink" href="#analyzing-the-executed-circuits" title="Permalink to this headline">¶</a></h3>
+<h3>Analyzing the executed circuits<a class="headerlink" href="#analyzing-the-executed-circuits" title="Permalink to this headline">#</a></h3>
 <p>As discussed in the <a class="reference internal" href="executors.html"><span class="doc std std-doc">Executors</span></a> section, we can extract the execution history
 from <code class="docutils literal notranslate"><span class="pre">executor</span></code>. This is a way to see what Mitiq does behind the scenes which is independent from the error
 mitigation technique.</p>
@@ -860,34 +858,34 @@ mitigation technique.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>During the previous PEC process, 130  circuits have been executed.
 The first 5 circuits are:
-     ┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
-     └───┘└───┘└───┘└───┘
-     ┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
-     └───┘└───┘└───┘└───┘
-     ┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
-     └───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├┤ Y ├
+     └───┘└───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ Y ├┤ H ├
+     └───┘└───┘└───┘└───┘└───┘
      ┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ H ├┤ Z ├┤ H ├┤ Y ├
+q_0: ┤ H ├┤ H ├┤ X ├┤ H ├┤ Z ├┤ H ├
      └───┘└───┘└───┘└───┘└───┘└───┘
      ┌───┐┌───┐┌───┐┌───┐
 q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
      └───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├┤ Z ├
+     └───┘└───┘└───┘└───┘└───┘
 The corresponding noisy expectation values are:
+0.33615999999999974
+0.3361599999999998
+0.6310719999999994
 0.7047999999999993
-0.7047999999999993
-0.7047999999999993
-0.6310719999999995
-0.7047999999999993
+0.6638399999999994
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="analyzing-data-of-the-pec-process">
-<h3>Analyzing data of the PEC process<a class="headerlink" href="#analyzing-data-of-the-pec-process" title="Permalink to this headline">¶</a></h3>
+<h3>Analyzing data of the PEC process<a class="headerlink" href="#analyzing-data-of-the-pec-process" title="Permalink to this headline">#</a></h3>
 <p>Beyond the executed circuits, one may be interested in analyzing additional data related to the specifc PEC technique.
 Setting <code class="docutils literal notranslate"><span class="pre">full_output=True</span></code>, this data is returned in <code class="docutils literal notranslate"><span class="pre">pec_data</span></code> as a dictionary.</p>
 <div class="cell docutils container">
@@ -923,11 +921,11 @@ For example, the first 5 unbiased samples are:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.020599418806923,
- 4.020599418806923,
- 4.020599418806923,
- 3.6000109483900724,
- 4.020599418806923]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.9176570667226724,
+ -1.9176570667226727,
+ 3.6000109483900826,
+ 4.020599418806935,
+ -3.7869391574642393]
 </pre></div>
 </div>
 </div>
@@ -942,7 +940,7 @@ the standard deviation of the unbiased samples, i.e., the square root of the mea
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2925838283088833
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.28246682762115466
 </pre></div>
 </div>
 </div>
@@ -1024,8 +1022,9 @@ value and compute the standard deviation of the results.</p>
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

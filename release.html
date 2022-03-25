@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mitiq Git flow &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -200,7 +198,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -290,7 +288,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="mitiq-git-flow">
-<span id="release"></span><h1>Mitiq Git flow<a class="headerlink" href="#mitiq-git-flow" title="Permalink to this headline">¶</a></h1>
+<span id="release"></span><h1>Mitiq Git flow<a class="headerlink" href="#mitiq-git-flow" title="Permalink to this headline">#</a></h1>
 <p>The basic development workflow for Mitiq is done in units of milestones.
 These are tracked in the GitHub milestone feature and all issues that are
 planned to be addressed in the current milestone should be tagged with the
@@ -307,7 +305,7 @@ Development work is done on separate branches and forks that get merged into
 - Once the code is ready to be released, the PR from Master to release is approved and a tag is created on release for the appropriate semantic version number.</p>
 </div>
 <div class="section" id="releasing-a-new-version-of-mitiq">
-<h1>Releasing a new version of Mitiq<a class="headerlink" href="#releasing-a-new-version-of-mitiq" title="Permalink to this headline">¶</a></h1>
+<h1>Releasing a new version of Mitiq<a class="headerlink" href="#releasing-a-new-version-of-mitiq" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These instructions are for Mitiq maintainers.</p>
@@ -333,11 +331,11 @@ instructions of this document to go through all the steps below:</p>
 </ul>
 </div>
 <div class="section" id="prepare-the-master-branch">
-<h2><a class="toc-backref" href="#id1">Prepare the master branch</a><a class="headerlink" href="#prepare-the-master-branch" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Prepare the master branch</a><a class="headerlink" href="#prepare-the-master-branch" title="Permalink to this headline">#</a></h2>
 <p>The start of any release is drafting the changelog and bumping the version
 number.</p>
 <div class="section" id="update-the-changelog">
-<h3><a class="toc-backref" href="#id2">Update the changelog</a><a class="headerlink" href="#update-the-changelog" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">Update the changelog</a><a class="headerlink" href="#update-the-changelog" title="Permalink to this headline">#</a></h3>
 <p>This task has two parts:
 1. Make sure that <code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code> has an entry for each pull request (PR)
 since the last release (PRs). These entries should contain a short description
@@ -349,7 +347,7 @@ section to include the release date and remove the “In Development”
 designation.</p>
 </div>
 <div class="section" id="bump-version-in-version-txt">
-<h3><a class="toc-backref" href="#id3">Bump version in VERSION.txt</a><a class="headerlink" href="#bump-version-in-version-txt" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Bump version in VERSION.txt</a><a class="headerlink" href="#bump-version-in-version-txt" title="Permalink to this headline">#</a></h3>
 <p>When releasing a new version, one must update the <code class="docutils literal notranslate"><span class="pre">VERSION.txt</span></code>
 file which is the single source of truth for version information. We follow
 SemVer, so typically a release will involve changing the version from
@@ -357,9 +355,9 @@ SemVer, so typically a release will involve changing the version from
 </div>
 </div>
 <div class="section" id="do-the-release">
-<h2><a class="toc-backref" href="#id4">Do the release</a><a class="headerlink" href="#do-the-release" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Do the release</a><a class="headerlink" href="#do-the-release" title="Permalink to this headline">#</a></h2>
 <div class="section" id="create-a-new-tag">
-<h3><a class="toc-backref" href="#id5">Create a new tag</a><a class="headerlink" href="#create-a-new-tag" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Create a new tag</a><a class="headerlink" href="#create-a-new-tag" title="Permalink to this headline">#</a></h3>
 <p>Once the above changes (new changelog and new version) are merged into the master branch, checkout and pull the
 latest on the master branch from your local machine. Then once you are up to date, tag the most recent
 commit on master (using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span></code>) with a tag that matches the number <code class="docutils literal notranslate"><span class="pre">VERSION.txt</span></code>
@@ -371,7 +369,7 @@ git push origin v0.1.0
 </div>
 </div>
 <div class="section" id="release-the-new-version-on-github">
-<h3><a class="toc-backref" href="#id6">Release the new version on Github</a><a class="headerlink" href="#release-the-new-version-on-github" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Release the new version on Github</a><a class="headerlink" href="#release-the-new-version-on-github" title="Permalink to this headline">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You need to have write access to the Mitiq Github repository to make
@@ -398,7 +396,7 @@ build status <a class="reference external" href="https://readthedocs.org/project
 </div>
 </div>
 <div class="section" id="release-the-new-version-on-pypi">
-<h3><a class="toc-backref" href="#id7">Release the new version on PyPI</a><a class="headerlink" href="#release-the-new-version-on-pypi" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Release the new version on PyPI</a><a class="headerlink" href="#release-the-new-version-on-pypi" title="Permalink to this headline">#</a></h3>
 <p>Once the GitHub release is published, the release is also published on PyPI
 by the <cite>publish-pypi</cite> action. This may require a few minutes.
 If it seems like it didn’t push a new version to PyPI, you can trigger it manually.
@@ -420,7 +418,7 @@ a new release on PyPI from your local machine.</p>
 </div>
 </div>
 <div class="section" id="update-the-new-development-version">
-<h2><a class="toc-backref" href="#id8">Update the new development version</a><a class="headerlink" href="#update-the-new-development-version" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Update the new development version</a><a class="headerlink" href="#update-the-new-development-version" title="Permalink to this headline">#</a></h2>
 <p>Add a new section to the <code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code> to track changes in the following
 release, meaning that if <code class="docutils literal notranslate"><span class="pre">vX.Y.Z</span></code> was just released, then there should be
 a section for <code class="docutils literal notranslate"><span class="pre">vX.(Y+1).Z</span></code> that is marked “In Development”. Also, change the
@@ -428,7 +426,7 @@ version in the <code class="docutils literal notranslate"><span class="pre">VERS
 </div>
 </div>
 <div class="section" id="releasing-a-version-patch">
-<h1>Releasing a version patch<a class="headerlink" href="#releasing-a-version-patch" title="Permalink to this headline">¶</a></h1>
+<h1>Releasing a version patch<a class="headerlink" href="#releasing-a-version-patch" title="Permalink to this headline">#</a></h1>
 <p>The steps for the patch should be basically identical to a release, however,
 the commits for the patch should be pushed/cherry-picked onto a branch that
 starts from the tag of the version it is patching. So if you had just made the
@@ -514,8 +512,9 @@ the change log are all that are needed to be merged back.</p>
       </div>
     </div>
   
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

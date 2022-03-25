@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Error Mitigation &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -425,7 +423,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="about-error-mitigation">
-<span id="guide-qem"></span><h1>About Error Mitigation<a class="headerlink" href="#about-error-mitigation" title="Permalink to this headline">¶</a></h1>
+<span id="guide-qem"></span><h1>About Error Mitigation<a class="headerlink" href="#about-error-mitigation" title="Permalink to this headline">#</a></h1>
 <p>This is intended as a primer on quantum error mitigation, providing a
 collection of up-to-date resources from the academic literature, as well as
 other external links framing this topic in the open-source software ecosystem.
@@ -438,7 +436,7 @@ techniques.</p>
 <li><p><a class="reference internal" href="#guide-qem-references"><span class="std std-ref">External References</span></a></p></li>
 </ul>
 <div class="section" id="what-is-quantum-error-mitigation">
-<span id="guide-qem-what"></span><h2>What is quantum error mitigation?<a class="headerlink" href="#what-is-quantum-error-mitigation" title="Permalink to this headline">¶</a></h2>
+<span id="guide-qem-what"></span><h2>What is quantum error mitigation?<a class="headerlink" href="#what-is-quantum-error-mitigation" title="Permalink to this headline">#</a></h2>
 <p>Quantum error mitigation refers to a series of techniques aimed at
 reducing (<em>mitigating</em>) the errors that occur in quantum computing algorithms.
 Unlike software bugs affecting code in usual computers, the errors which we
@@ -451,7 +449,7 @@ is distinctly different from <a class="reference internal" href="#guide-qem-qec"
 error mitigation techniques implemented in Mitiq are zero-noise extrapolation
 and probabilistic error cancellation.</p>
 <div class="section" id="zero-noise-extrapolation">
-<span id="guide-qem-zne"></span><h3>Zero-noise extrapolation<a class="headerlink" href="#zero-noise-extrapolation" title="Permalink to this headline">¶</a></h3>
+<span id="guide-qem-zne"></span><h3>Zero-noise extrapolation<a class="headerlink" href="#zero-noise-extrapolation" title="Permalink to this headline">#</a></h3>
 <p>In Mitiq, zero-noise extrapolation is implemented in the module <code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne</span></code>.</p>
 <p>The crucial idea behind zero-noise extrapolation is that, although some minimum
 noise strength quantified <span class="math notranslate nohighlight">\(\lambda\)</span> exists in the computer,
@@ -462,7 +460,7 @@ extrapolate to the zero-noise limit. In Mitiq, extrapolation (or inference) meth
 contained in <a class="reference internal" href="../apidoc.html#module-mitiq.zne.inference" title="mitiq.zne.inference"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne.inference</span></code></a>.</p>
 </div>
 <div class="section" id="limitations-of-zero-noise-extrapolation">
-<h3>Limitations of zero-noise extrapolation<a class="headerlink" href="#limitations-of-zero-noise-extrapolation" title="Permalink to this headline">¶</a></h3>
+<h3>Limitations of zero-noise extrapolation<a class="headerlink" href="#limitations-of-zero-noise-extrapolation" title="Permalink to this headline">#</a></h3>
 <p>While zero-noise extrapolation is very general and can be applied even if
 the underlying noise model is unknown, the method can be sensitive to
 extrapolation errors. For this reason, it is important to choose a good
@@ -472,7 +470,7 @@ initial error in the measured expectation values will propagate to the extrapola
 value. This fact can significantly amplify the statistical uncertainty of the result.</p>
 </div>
 <div class="section" id="probabilistic-error-cancellation">
-<span id="guide-qem-pec"></span><h3>Probabilistic error cancellation<a class="headerlink" href="#probabilistic-error-cancellation" title="Permalink to this headline">¶</a></h3>
+<span id="guide-qem-pec"></span><h3>Probabilistic error cancellation<a class="headerlink" href="#probabilistic-error-cancellation" title="Permalink to this headline">#</a></h3>
 <p>In Mitiq, probabilistic error cancellation is implemented in the module <code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.pec</span></code>.</p>
 <p>Probabilistic error cancellation (PEC) uses a quasi-probability representation <span id="id2">[<a class="reference internal" href="../zz_bibliography.html#id32" title="Kristan Temme, Sergey Bravyi, and Jay M. Gambetta. Error mitigation for short-depth quantum circuits. Physical Review Letters, (2017). URL: https://doi.org/10.1103/PhysRevLett.119.180509, doi:10.1103/physrevlett.119.180509.">4</a>]</span>
 to express an ideal (unitary) quantum channel as a linear combination of noisy operations.
@@ -497,7 +495,7 @@ where <span class="math notranslate nohighlight">\(X_{\rm noisy}\)</span> is the
 and <span class="math notranslate nohighlight">\(\mathbb E\)</span> is the sample average over many repetitions of the previous procedure.</p>
 </div>
 <div class="section" id="limitations-of-probabilistic-error-cancellation">
-<h3>Limitations of probabilistic error cancellation<a class="headerlink" href="#limitations-of-probabilistic-error-cancellation" title="Permalink to this headline">¶</a></h3>
+<h3>Limitations of probabilistic error cancellation<a class="headerlink" href="#limitations-of-probabilistic-error-cancellation" title="Permalink to this headline">#</a></h3>
 <p>The number of samples required to estimate the ideal expectation value with error
 <span class="math notranslate nohighlight">\(\delta\)</span> and probability <span class="math notranslate nohighlight">\(1-\epsilon\)</span> scales as
 <span class="math notranslate nohighlight">\(\left(2 \gamma_{\text{tot}}^{2} / \delta^{2}\right) \log (2 / \epsilon)\)</span>
@@ -508,14 +506,14 @@ In addition, a full characterization of the noisy operations up to a good precis
 is required, which can be costly depending on the implementation.</p>
 </div>
 <div class="section" id="other-error-mitigation-techniques">
-<h3>Other error mitigation techniques<a class="headerlink" href="#other-error-mitigation-techniques" title="Permalink to this headline">¶</a></h3>
+<h3>Other error mitigation techniques<a class="headerlink" href="#other-error-mitigation-techniques" title="Permalink to this headline">#</a></h3>
 <p>A collection of references on additional error mitigation techniques,
 including randomized compiling or subspace expansion, can be found in
 <a class="reference internal" href="#guide-qem-articles"><span class="std std-ref">Research articles</span></a>.</p>
 </div>
 </div>
 <div class="section" id="why-is-quantum-error-mitigation-important">
-<span id="guide-qem-why"></span><h2>Why is quantum error mitigation important?<a class="headerlink" href="#why-is-quantum-error-mitigation-important" title="Permalink to this headline">¶</a></h2>
+<span id="guide-qem-why"></span><h2>Why is quantum error mitigation important?<a class="headerlink" href="#why-is-quantum-error-mitigation-important" title="Permalink to this headline">#</a></h2>
 <p>The noisy intermediate-scale quantum (NISQ) era is characterized by
 short-depth circuits in which noise affects state
 preparation, gate operations, and measurement <span id="id4">[<a class="reference internal" href="../zz_bibliography.html#id27" title="John Preskill. Quantum computing in the NISQ era and beyond. Quantum, 2:79, (2018). URL: https://doi.org/10.22331/q-2018-08-06-79, doi:10.22331/q-2018-08-06-79.">13</a>]</span>.
@@ -526,7 +524,7 @@ offers low-overhead methods to more accurately and reliably estimate observable 
 error mitigation techniques to increase the performance of NISQ computers.</p>
 </div>
 <div class="section" id="related-fields">
-<span id="guide-qem-related"></span><h2>Related fields<a class="headerlink" href="#related-fields" title="Permalink to this headline">¶</a></h2>
+<span id="guide-qem-related"></span><h2>Related fields<a class="headerlink" href="#related-fields" title="Permalink to this headline">#</a></h2>
 <p>Quantum error mitigation is connected to quantum error correction and quantum
 optimal control, two fields of study that also aim at reducing the impact of
 errors in quantum information processing in quantum computers. While these are
@@ -537,7 +535,7 @@ two well-established fields and the emerging field of quantum error mitigation.<
 in the previous decade similar concepts or techniques were scattered across
 these and other fields. Suggestions for additional references are <a class="reference external" href="https://github.com/unitaryfund/mitiq/issues/new/choose">welcome</a>.</p>
 <div class="section" id="quantum-error-correction">
-<span id="guide-qem-qec"></span><h3>Quantum error correction<a class="headerlink" href="#quantum-error-correction" title="Permalink to this headline">¶</a></h3>
+<span id="guide-qem-qec"></span><h3>Quantum error correction<a class="headerlink" href="#quantum-error-correction" title="Permalink to this headline">#</a></h3>
 <p>Quantum error correction is different from quantum error mitigation, as it
 introduces a series of techniques that generally aim at completely <em>removing</em>
 the impact of errors on quantum computations. In particular, if errors
@@ -552,7 +550,7 @@ techniques that stemmed as more practical quantum error correction solutions
 <span id="id5">[<a class="reference internal" href="../zz_bibliography.html#id16" title="E. Knill. Quantum computing with realistically noisy devices. Nature, 434(7029):39–44, (2005). URL: https://doi.org/10.1038/nature03350, doi:10.1038/nature03350.">14</a>]</span>.</p>
 </div>
 <div class="section" id="quantum-optimal-control">
-<span id="guide-qem-qoc"></span><h3>Quantum optimal control<a class="headerlink" href="#quantum-optimal-control" title="Permalink to this headline">¶</a></h3>
+<span id="guide-qem-qoc"></span><h3>Quantum optimal control<a class="headerlink" href="#quantum-optimal-control" title="Permalink to this headline">#</a></h3>
 <p>Optimal control theory is a very versatile set of techniques that can be
 applied for many scopes. It entails many fields, and it is generally based on a
 feedback loop between an agent and a target system.
@@ -569,7 +567,7 @@ decouple a system from its environment, with techniques pioneered in the nuclear
 magnetic resonance community.</p>
 </div>
 <div class="section" id="open-quantum-systems">
-<span id="guide-qem-noise"></span><h3>Open quantum systems<a class="headerlink" href="#open-quantum-systems" title="Permalink to this headline">¶</a></h3>
+<span id="guide-qem-noise"></span><h3>Open quantum systems<a class="headerlink" href="#open-quantum-systems" title="Permalink to this headline">#</a></h3>
 <p>More in general, quantum computing devices can be studied in the framework of
 open quantum systems <span id="id8">[<a class="reference internal" href="../zz_bibliography.html#id7" title="Howard J. Carmichael. Statistical Methods in Quantum Optics 1: Master Equations and Fokker-Planck Equations. Springer-Verlag, (1999). ISBN 978-3-540-54882-9.">17</a>, <a class="reference internal" href="../zz_bibliography.html#id8" title="H.J. Carmichael. Statistical Methods in Quantum Optics 2: Non-Classical Fields. Springer Berlin Heidelberg, (2007). ISBN 9783540713197.">18</a>, <a class="reference internal" href="../zz_bibliography.html#id13" title="C. Gardiner and P. Zoller. Quantum Noise: A Handbook of Markovian and Non-Markovian Quantum Stochastic Methods with Applications to Quantum Optics. Springer, (2004). ISBN 9783540223016.">19</a>, <a class="reference internal" href="../zz_bibliography.html#id4" title="H.P. Breuer and F. Petruccione. The Theory of Open Quantum Systems. OUP Oxford, (2007). ISBN 9780199213900.">20</a>]</span>,
 that is, systems that exchange energy and information with the surrounding
@@ -592,12 +590,12 @@ quantum dots, are heavily affected by inhomogeneous broadening <span id="id9">[<
 </div>
 </div>
 <div class="section" id="external-references">
-<span id="guide-qem-references"></span><h2>External References<a class="headerlink" href="#external-references" title="Permalink to this headline">¶</a></h2>
+<span id="guide-qem-references"></span><h2>External References<a class="headerlink" href="#external-references" title="Permalink to this headline">#</a></h2>
 <p>Here is a list of useful external resources on quantum error mitigation,
 including software tools that provide the possibility of studying quantum
 circuits.</p>
 <div class="section" id="research-articles">
-<span id="guide-qem-articles"></span><h3>Research articles<a class="headerlink" href="#research-articles" title="Permalink to this headline">¶</a></h3>
+<span id="guide-qem-articles"></span><h3>Research articles<a class="headerlink" href="#research-articles" title="Permalink to this headline">#</a></h3>
 <p>A list of research articles academic resources on error mitigation:</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -652,7 +650,7 @@ circuits.</p>
 </ul>
 </div>
 <div class="section" id="software">
-<h3>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h3>
+<h3>Software<a class="headerlink" href="#software" title="Permalink to this headline">#</a></h3>
 <p>Here is a (non-comprehensive) list of open-source software libraries related to
 quantum computing, noisy quantum dynamics and error mitigation:</p>
 <ul class="simple">
@@ -738,8 +736,9 @@ can be found <a class="reference external" href="https://github.com/qosf/awesome
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

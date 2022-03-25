@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contributing to Mitiq &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -200,7 +198,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -298,25 +296,25 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="contributing-to-mitiq">
-<h1>Contributing to Mitiq<a class="headerlink" href="#contributing-to-mitiq" title="Permalink to this headline">¶</a></h1>
+<h1>Contributing to Mitiq<a class="headerlink" href="#contributing-to-mitiq" title="Permalink to this headline">#</a></h1>
 <p>Contributions are welcome, and they are greatly appreciated, every little bit helps.</p>
 <div class="section" id="opening-an-issue">
-<h2>Opening an issue<a class="headerlink" href="#opening-an-issue" title="Permalink to this headline">¶</a></h2>
+<h2>Opening an issue<a class="headerlink" href="#opening-an-issue" title="Permalink to this headline">#</a></h2>
 <p>You can begin contributing to <code class="docutils literal notranslate"><span class="pre">mitiq</span></code> code by raising an
 <a class="reference external" href="https://github.com/unitaryfund/mitiq/issues/new">issue</a>, reporting a bug or
 proposing a new feature request, using the labels to organize it.
 Please use <code class="docutils literal notranslate"><span class="pre">mitiq.about()</span></code> to document your dependencies and working environment.</p>
 </div>
 <div class="section" id="opening-a-pull-request">
-<h2>Opening a pull request<a class="headerlink" href="#opening-a-pull-request" title="Permalink to this headline">¶</a></h2>
+<h2>Opening a pull request<a class="headerlink" href="#opening-a-pull-request" title="Permalink to this headline">#</a></h2>
 <p>You can open a <a class="reference external" href="https://github.com/unitaryfund/mitiq/pulls">pull request</a> by pushing changes from a local branch, explaining the bug fix or new feature.</p>
 <div class="section" id="version-control-with-git">
-<h3>Version control with git<a class="headerlink" href="#version-control-with-git" title="Permalink to this headline">¶</a></h3>
+<h3>Version control with git<a class="headerlink" href="#version-control-with-git" title="Permalink to this headline">#</a></h3>
 <p>git is a language that helps keeping track of the changes made. Have a look at these guidelines for getting started with <a class="reference external" href="https://www.asmeurer.com/git-workflow/">git workflow</a>.
 Use short and explanatory comments to document the changes with frequent commits.</p>
 </div>
 <div class="section" id="forking-the-repository">
-<h3>Forking the repository<a class="headerlink" href="#forking-the-repository" title="Permalink to this headline">¶</a></h3>
+<h3>Forking the repository<a class="headerlink" href="#forking-the-repository" title="Permalink to this headline">#</a></h3>
 <p>You can fork mitiq from the github repository, so that your changes are applied with respect to the current master branch. Use the Fork button, and then use git from the command line to clone your fork of the repository locally on your machine.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> git clone https://github.com/your_github_username/mitiq.git
 </pre></div>
@@ -324,7 +322,7 @@ Use short and explanatory comments to document the changes with frequent commits
 <p>You can also use SSH instead of a HTTPS protocol.</p>
 </div>
 <div class="section" id="working-in-a-virtual-environment">
-<h3>Working in a virtual environment<a class="headerlink" href="#working-in-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<h3>Working in a virtual environment<a class="headerlink" href="#working-in-a-virtual-environment" title="Permalink to this headline">#</a></h3>
 <p>It is best to set up a clean environment with anaconda, to keep track of all installed applications.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> conda create -n myenv <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
 </pre></div>
@@ -340,7 +338,7 @@ Use short and explanatory comments to document the changes with frequent commits
 </div>
 </div>
 <div class="section" id="development-install">
-<h3>Development install<a class="headerlink" href="#development-install" title="Permalink to this headline">¶</a></h3>
+<h3>Development install<a class="headerlink" href="#development-install" title="Permalink to this headline">#</a></h3>
 <p>In order to install all the libraries useful for contributing to the
 development of the library, from your local clone of the fork, run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span> pip install -e .
@@ -348,7 +346,7 @@ development of the library, from your local clone of the fork, run</p>
 </pre></div>
 </div>
 <div class="section" id="special-note-for-windows-users-using-python-3-8">
-<h4>Special Note for Windows Users Using Python 3.8:<a class="headerlink" href="#special-note-for-windows-users-using-python-3-8" title="Permalink to this headline">¶</a></h4>
+<h4>Special Note for Windows Users Using Python 3.8:<a class="headerlink" href="#special-note-for-windows-users-using-python-3-8" title="Permalink to this headline">#</a></h4>
 <p>To prevent errors when running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>, Windows developers using Python 3.8 will also need to edit <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> in their environment’s asyncio directory.
 This is due to Python changing <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>’s <a class="reference external" href="https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy">default event loop in Windows beginning in Python 3.8</a>.
 The new default event loop will not support Unix-style APIs used by some dependencies.</p>
@@ -384,16 +382,16 @@ else:
 </div>
 </div>
 <div class="section" id="adding-tests">
-<h3>Adding tests<a class="headerlink" href="#adding-tests" title="Permalink to this headline">¶</a></h3>
+<h3>Adding tests<a class="headerlink" href="#adding-tests" title="Permalink to this headline">#</a></h3>
 <p>If you add new features to a function or class, it is required to add tests for such object. Mitiq uses a nested structure for packaging tests in directories named <code class="docutils literal notranslate"><span class="pre">tests</span></code> at the same level of each module.
 The only except to this is that any tests requiring a QVM should be placed in the mitiq_pyquil/tests folder.</p>
 </div>
 <div class="section" id="updating-the-documentation">
-<h3>Updating the documentation<a class="headerlink" href="#updating-the-documentation" title="Permalink to this headline">¶</a></h3>
+<h3>Updating the documentation<a class="headerlink" href="#updating-the-documentation" title="Permalink to this headline">#</a></h3>
 <p>Follow these <a class="reference external" href="https://mitiq.readthedocs.io/en/latest/contributing_docs.html">instructions for contributing to the documentation</a> which include guidelines about updating the API-doc list of modules and writing examples in the users guide.</p>
 </div>
 <div class="section" id="running-local-tests">
-<h3>Running local tests<a class="headerlink" href="#running-local-tests" title="Permalink to this headline">¶</a></h3>
+<h3>Running local tests<a class="headerlink" href="#running-local-tests" title="Permalink to this headline">#</a></h3>
 <p>After making changes, please ensure your changes still pass all the existing tests.
 You can check that tests run with <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. The <a class="reference external" href="https://github.com/unitaryfund/mitiq/blob/master/Makefile">Makefile</a> contains
 some commands for running different collections of tests for the repository.</p>
@@ -423,7 +421,7 @@ docstrings with</p>
 <p>You may need to run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> before you are able to run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>.</p>
 </div>
 <div class="section" id="style-guidelines">
-<h3>Style Guidelines<a class="headerlink" href="#style-guidelines" title="Permalink to this headline">¶</a></h3>
+<h3>Style Guidelines<a class="headerlink" href="#style-guidelines" title="Permalink to this headline">#</a></h3>
 <p>Mitiq code is developed according the best practices of Python development.</p>
 <ul class="simple">
 <li><p>Please get familiar with <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> (code)
@@ -455,7 +453,7 @@ default of 88 (this is configured in the <a class="reference external" href="htt
 </div>
 </div>
 <div class="section" id="proposing-a-new-feature-to-mitiq">
-<h2>Proposing a new feature to Mitiq<a class="headerlink" href="#proposing-a-new-feature-to-mitiq" title="Permalink to this headline">¶</a></h2>
+<h2>Proposing a new feature to Mitiq<a class="headerlink" href="#proposing-a-new-feature-to-mitiq" title="Permalink to this headline">#</a></h2>
 <p>If you are interested in adding a larger new feature or functionality to Mitiq, please check out our
 Mitq enhancement proposal (MEP) template <a class="reference external" href="https://github.com/unitaryfund/mitiq/blob/master/docs/mep/0000-feature-proposal-TEMPLATE.md"><code class="docutils literal notranslate"><span class="pre">docs/mep/0000-feature-proposal-TEMPLATE.md</span></code></a>. To help facilitate
 discussion about the feature you would like to add, make a copy of the template and increment the proposal
@@ -464,7 +462,7 @@ Please fill out any relevant sections of that template as best you can and we ca
 both PR threads as well as on the <a class="reference external" href="http://discord.unitary.fund">discord</a>.</p>
 </div>
 <div class="section" id="code-of-conduct">
-<h2>Code of conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h2>
+<h2>Code of conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">#</a></h2>
 <p>Mitiq development abides to the <a class="reference external" href="https://mitiq.readthedocs.io/en/latest/code_of_conduct.html">Contributors’ Covenant</a>.</p>
 </div>
 </div>
@@ -537,8 +535,9 @@ both PR threads as well as on the <a class="reference external" href="http://dis
       </div>
     </div>
   
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solving MaxCut with Mitiq-improved QAOA &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -222,7 +220,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -324,12 +322,12 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="solving-maxcut-with-mitiq-improved-qaoa">
-<h1>Solving MaxCut with Mitiq-improved QAOA<a class="headerlink" href="#solving-maxcut-with-mitiq-improved-qaoa" title="Permalink to this headline">¶</a></h1>
+<h1>Solving MaxCut with Mitiq-improved QAOA<a class="headerlink" href="#solving-maxcut-with-mitiq-improved-qaoa" title="Permalink to this headline">#</a></h1>
 <p>In this notebook we solve a simple <a class="reference external" href="https://en.wikipedia.org/wiki/Maximum_cut"><em>MaxCut</em> problem</a> with the
 <em>Quantum Approximate Optimization Algorithm</em> (QAOA) <a class="reference external" href="#References">[1-5]</a> executed on a simulated noisy backend.
 In particular we are interested in investigating how Mitiq can help reduce errors and improve the results.</p>
 <div class="section" id="the-maxcut-problem">
-<h2>The MaxCut problem<a class="headerlink" href="#the-maxcut-problem" title="Permalink to this headline">¶</a></h2>
+<h2>The MaxCut problem<a class="headerlink" href="#the-maxcut-problem" title="Permalink to this headline">#</a></h2>
 <p>A <strong>graph</strong> is a mathematical object characterized by a set <span class="math notranslate nohighlight">\(V\)</span> of <strong>vertices (or nodes)</strong> that we can
 enumerate with integers <span class="math notranslate nohighlight">\(V=\{0, 1, 2, \dots, n-1\}\)</span> and a set <span class="math notranslate nohighlight">\(E\)</span> of <strong>edges</strong> (pairs of nodes) which can be defined as
 <span class="math notranslate nohighlight">\(E=\{(a_1, b_1), (a_2, b_2), ...., (a_m, b_m)\}\)</span>, where <span class="math notranslate nohighlight">\(a_j\neq b_j\)</span> and  <span class="math notranslate nohighlight">\(a_j, b_j \in V\)</span>.</p>
@@ -403,7 +401,7 @@ achieved by multiple solutions. For example one of the two optimal solutions is:
 </div>
 </div>
 <div class="section" id="representing-a-solution-as-bitstring">
-<h3>Representing a solution as bitstring<a class="headerlink" href="#representing-a-solution-as-bitstring" title="Permalink to this headline">¶</a></h3>
+<h3>Representing a solution as bitstring<a class="headerlink" href="#representing-a-solution-as-bitstring" title="Permalink to this headline">#</a></h3>
 <p>A handy way of representing a candidate solution of the MaxCut problem, is to use a bitstring <span class="math notranslate nohighlight">\(s_n \cdots s_2s_1\)</span>
 in which each bit <span class="math notranslate nohighlight">\(s_j\)</span> is associated to the <span class="math notranslate nohighlight">\(j_{\rm th}\)</span> node of the graph. The value of each bit, <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(1\)</span>,
 can be used to represent the corresponding subset, <span class="math notranslate nohighlight">\(V_A\)</span> or <span class="math notranslate nohighlight">\(V_B\)</span>, to which the node belongs.</p>
@@ -468,7 +466,7 @@ Algorithm</em> (QAOA) to get an approximate solution the MaxCut problem for a gi
 </div>
 </div>
 <div class="section" id="embedding-a-maxcut-problem-into-a-physical-hamiltonian">
-<h2>Embedding a MaxCut problem into a physical Hamiltonian<a class="headerlink" href="#embedding-a-maxcut-problem-into-a-physical-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<h2>Embedding a MaxCut problem into a physical Hamiltonian<a class="headerlink" href="#embedding-a-maxcut-problem-into-a-physical-hamiltonian" title="Permalink to this headline">#</a></h2>
 <p>Given a graph <span class="math notranslate nohighlight">\(G=(V,E)\)</span> with <span class="math notranslate nohighlight">\(n=|V|\)</span> nodes and <span class="math notranslate nohighlight">\(m=|E|\)</span> edges, one can define the following Hamiltonian
 acting on a system of <span class="math notranslate nohighlight">\(n\)</span> qubits:</p>
 <div class="math notranslate nohighlight">
@@ -487,7 +485,7 @@ expectation value of the Hamiltonian <span class="math notranslate nohighlight">
 <p>In this physical picture, the MaxCut problem corresponds to the problem of finding the ground state of <span class="math notranslate nohighlight">\(H\)</span>
 and the maximum number of cuts is equal to minus the ground state energy.</p>
 <div class="section" id="define-the-qaoa-cost-hamiltonian-using-cirq">
-<h3>Define the QAOA cost Hamiltonian using Cirq<a class="headerlink" href="#define-the-qaoa-cost-hamiltonian-using-cirq" title="Permalink to this headline">¶</a></h3>
+<h3>Define the QAOA cost Hamiltonian using Cirq<a class="headerlink" href="#define-the-qaoa-cost-hamiltonian-using-cirq" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cirq</span> <span class="kn">import</span> <span class="n">NamedQubit</span><span class="p">,</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">identity_each</span><span class="p">,</span> <span class="n">ZZ</span>
@@ -557,7 +555,7 @@ and the maximum number of cuts is equal to minus the ground state energy.</p>
 </div>
 </div>
 <div class="section" id="using-the-quantum-approximate-optimization-algorithm-to-find-the-ground-state">
-<h2>Using the Quantum Approximate Optimization Algorithm to find the ground state<a class="headerlink" href="#using-the-quantum-approximate-optimization-algorithm-to-find-the-ground-state" title="Permalink to this headline">¶</a></h2>
+<h2>Using the Quantum Approximate Optimization Algorithm to find the ground state<a class="headerlink" href="#using-the-quantum-approximate-optimization-algorithm-to-find-the-ground-state" title="Permalink to this headline">#</a></h2>
 <p>The size of the previously introduced Hamiltonian is <span class="math notranslate nohighlight">\(2^n \times 2^n\)</span>. So, when the graph has many nodes,
 finding  the eigenvalues and or the eigenstates as we did above becomes exponentially hard.</p>
 <p><strong>Is there a way of finding the ground state of a Hamiltonian using a near-term quantum computer?</strong></p>
@@ -585,7 +583,7 @@ steps and minimizing the <strong>cost function</strong> <span class="math notran
 <p>The corresponding state will be a superposition of one or more optimal solution states
 <span class="math notranslate nohighlight">\(|s_1 \rangle |s_2 \rangle \cdots |s_n\rangle\)</span> representing optimal bipartitions <span class="math notranslate nohighlight">\((V_A, V_B)\)</span> of the MaxCut problem.</p>
 <div class="section" id="defining-the-qaoa-ansatz">
-<h3>Defining the QAOA ansatz<a class="headerlink" href="#defining-the-qaoa-ansatz" title="Permalink to this headline">¶</a></h3>
+<h3>Defining the QAOA ansatz<a class="headerlink" href="#defining-the-qaoa-ansatz" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cirq</span> <span class="kn">import</span> <span class="n">H</span><span class="p">,</span> <span class="n">X</span>
@@ -652,7 +650,7 @@ steps and minimizing the <strong>cost function</strong> <span class="math notran
 </div>
 </div>
 <div class="section" id="defining-an-executor-function-to-run-or-simulate-the-experiment">
-<h3>Defining an “executor” function to run or simulate the experiment<a class="headerlink" href="#defining-an-executor-function-to-run-or-simulate-the-experiment" title="Permalink to this headline">¶</a></h3>
+<h3>Defining an “executor” function to run or simulate the experiment<a class="headerlink" href="#defining-an-executor-function-to-run-or-simulate-the-experiment" title="Permalink to this headline">#</a></h3>
 <p>QAOA requires the evaluation of quantum expectation values. Therefore, we define a function which inputs
 a generic  circuit and returns the expectation value of a generic observable.</p>
 <div class="cell docutils container">
@@ -694,7 +692,7 @@ a generic  circuit and returns the expectation value of a generic observable.</p
 </div>
 </div>
 <div class="section" id="minimization-of-the-qaoa-cost">
-<h3>Minimization of the QAOA cost<a class="headerlink" href="#minimization-of-the-qaoa-cost" title="Permalink to this headline">¶</a></h3>
+<h3>Minimization of the QAOA cost<a class="headerlink" href="#minimization-of-the-qaoa-cost" title="Permalink to this headline">#</a></h3>
 <p>Let us define a function which can be used for running the QAOA optimization.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -748,9 +746,9 @@ a generic  circuit and returns the expectation value of a generic observable.</p
 </div>
 </div>
 <div class="section" id="comparing-ideal-noisy-and-mitigated-backends">
-<h2>Comparing ideal, noisy and mitigated backends<a class="headerlink" href="#comparing-ideal-noisy-and-mitigated-backends" title="Permalink to this headline">¶</a></h2>
+<h2>Comparing ideal, noisy and mitigated backends<a class="headerlink" href="#comparing-ideal-noisy-and-mitigated-backends" title="Permalink to this headline">#</a></h2>
 <div class="section" id="ideal-simulation">
-<h3>Ideal simulation<a class="headerlink" href="#ideal-simulation" title="Permalink to this headline">¶</a></h3>
+<h3>Ideal simulation<a class="headerlink" href="#ideal-simulation" title="Permalink to this headline">#</a></h3>
 <p>We focus on the square graph and try to solve the associated QAOA algorithm.
 First, we consider the ideal situation of a noiseless backend.</p>
 <div class="cell docutils container">
@@ -791,7 +789,7 @@ First, we consider the ideal situation of a noiseless backend.</p>
 <p>Since the simulation is exact, we reach the optimal cost associated to (minus) the maximum number of cuts of the graph.</p>
 </div>
 <div class="section" id="using-a-noisy-unmitigated-simulator">
-<h3>Using a noisy unmitigated simulator<a class="headerlink" href="#using-a-noisy-unmitigated-simulator" title="Permalink to this headline">¶</a></h3>
+<h3>Using a noisy unmitigated simulator<a class="headerlink" href="#using-a-noisy-unmitigated-simulator" title="Permalink to this headline">#</a></h3>
 <p>We assume to have some depolarizing noise. This means that we need to re-define the QAOA cost function using a noisy executor function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -833,7 +831,7 @@ Ideal cost:  -4.0
 </div>
 </div>
 <div class="section" id="using-a-noisy-simulator-mitigated-with-mitiq">
-<h3>Using a noisy simulator mitigated with Mitiq<a class="headerlink" href="#using-a-noisy-simulator-mitigated-with-mitiq" title="Permalink to this headline">¶</a></h3>
+<h3>Using a noisy simulator mitigated with Mitiq<a class="headerlink" href="#using-a-noisy-simulator-mitigated-with-mitiq" title="Permalink to this headline">#</a></h3>
 <p>Now let’s try to mitigate this noise using Mitiq.</p>
 <p>This can be done by simply wrapping the noisy executor into a mitigated executor. We will use global folding and a linear inference (using a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.LinearFactory" title="mitiq.zne.inference.LinearFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearFactory</span></code></a> object) to implement zero-noise extrapolation.</p>
 <div class="cell docutils container">
@@ -903,7 +901,7 @@ the accuracy of the results and the execution time.</p>
 </div>
 </div>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>[1] Edward Farhi, Jeffrey Goldstone, Sam Gutmann, <em>A Quantum Approximate Optimization Algorithm</em>, <a class="reference external" href="https://arxiv.org/abs/1411.4028">arXiv:1411.4028</a>, (2014).</p>
 <p>[2] <a class="reference external" href="https://pennylane.ai/qml/demos/tutorial_qaoa_maxcut.html">MaxCut tutorial in PennyLane.</a></p>
 <p>[3] <a class="reference external" href="https://qiskit.org/documentation/tutorials/optimization/6_examples_max_cut_and_tsp.html">MaxCut tutorial in Qiskit.</a></p>
@@ -1015,8 +1013,9 @@ Platform Info:	Linux (x86_64)
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

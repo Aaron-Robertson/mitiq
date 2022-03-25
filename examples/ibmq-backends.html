@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Error mitigation on IBMQ backends &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -220,7 +218,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -281,7 +279,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="error-mitigation-on-ibmq-backends">
-<span id="label-zne-example"></span><h1>Error mitigation on IBMQ backends<a class="headerlink" href="#error-mitigation-on-ibmq-backends" title="Permalink to this headline">¶</a></h1>
+<span id="label-zne-example"></span><h1>Error mitigation on IBMQ backends<a class="headerlink" href="#error-mitigation-on-ibmq-backends" title="Permalink to this headline">#</a></h1>
 <p>This tutorial shows an example of how to mitigate noise on IBMQ
 backends, broken down in the following steps.</p>
 <ul class="simple">
@@ -300,7 +298,7 @@ backends, broken down in the following steps.</p>
 </li>
 </ul>
 <div class="section" id="settings">
-<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span>
@@ -322,7 +320,7 @@ backends, broken down in the following steps.</p>
 </div>
 </div>
 <div class="section" id="setup-defining-a-circuit">
-<span id="examples-ibmq-backends-setup-defining-a-circuit"></span><h2>Setup: Defining a circuit<a class="headerlink" href="#setup-defining-a-circuit" title="Permalink to this headline">¶</a></h2>
+<span id="examples-ibmq-backends-setup-defining-a-circuit"></span><h2>Setup: Defining a circuit<a class="headerlink" href="#setup-defining-a-circuit" title="Permalink to this headline">#</a></h2>
 <p>For simplicity, we’ll use a random single-qubit circuit with ten gates that compiles to the identity, defined below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -349,7 +347,7 @@ c0: 1/════════════════════════�
 evaluate to one in the noiseless setting.</p>
 </div>
 <div class="section" id="high-level-usage">
-<h2>High-level usage<a class="headerlink" href="#high-level-usage" title="Permalink to this headline">¶</a></h2>
+<h2>High-level usage<a class="headerlink" href="#high-level-usage" title="Permalink to this headline">#</a></h2>
 <p>To use Mitiq with just a few lines of code, we simply need to define a function which inputs a circuit and outputs
 the expectation value to mitigate. This function will:</p>
 <ol class="simple">
@@ -420,8 +418,8 @@ as follows.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unmitigated result 0.906
-Mitigated result 0.993
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unmitigated result 0.901
+Mitigated result 0.999
 </pre></div>
 </div>
 </div>
@@ -429,7 +427,7 @@ Mitigated result 0.993
 <p>As long as a circuit and a function for executing the circuit are defined, the <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> function can
 be called as above to return zero-noise extrapolated expectation value(s).</p>
 <div class="section" id="options">
-<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">#</a></h3>
 <p>Different options for noise scaling and extrapolation can be passed into the <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> function.
 By default, noise is scaled by locally folding gates at random, and the default extrapolation is Richardson.</p>
 <p>To specify a different extrapolation technique, we can pass a different <code class="docutils literal notranslate"><span class="pre">Factory</span></code> object to <code class="docutils literal notranslate"><span class="pre">execute_with_zne</span></code>. The
@@ -460,7 +458,7 @@ scaling noise by folding gates starting from the left (instead of at random, the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result 1.012
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result 0.988
 </pre></div>
 </div>
 </div>
@@ -469,7 +467,7 @@ scaling noise by folding gates starting from the left (instead of at random, the
 <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code>.</p>
 </div>
 <div class="section" id="cirq-frontend">
-<span id="examples-ibmq-backends-cirq-frontend"></span><h3>Cirq frontend<a class="headerlink" href="#cirq-frontend" title="Permalink to this headline">¶</a></h3>
+<span id="examples-ibmq-backends-cirq-frontend"></span><h3>Cirq frontend<a class="headerlink" href="#cirq-frontend" title="Permalink to this headline">#</a></h3>
 <p>It isn’t necessary to use Qiskit frontends (circuits) to run on IBM backends. We can use conversions in
 Mitiq to use any supported frontend with any supported backend. Below, we show how to run a Cirq circuit on an
 IBMQ backend.</p>
@@ -505,7 +503,7 @@ IBMQ backend.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result: 0.976
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mitigated result: 1.015
 </pre></div>
 </div>
 </div>
@@ -514,7 +512,7 @@ IBMQ backend.</p>
 </div>
 </div>
 <div class="section" id="lower-level-usage">
-<h2>Lower-level usage<a class="headerlink" href="#lower-level-usage" title="Permalink to this headline">¶</a></h2>
+<h2>Lower-level usage<a class="headerlink" href="#lower-level-usage" title="Permalink to this headline">#</a></h2>
 <p>Here, we give more detailed usage of the Mitiq library which mimics what happens in the call to
 <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> in the previous example. In addition to showing more of the Mitiq library, this
 example explains the code in the previous section in more detail.</p>
@@ -589,7 +587,7 @@ following code block.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Expectation values:
-[0.797119140625, 0.745361328125, 0.6893310546875, 0.6435546875, 0.6107177734375]
+[0.7996826171875, 0.73583984375, 0.6861572265625, 0.6427001953125, 0.6068115234375]
 </pre></div>
 </div>
 </div>
@@ -603,7 +601,7 @@ corresponds to a circuit with scale factor one, i.e., the original circuit.)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unmitigated expectation value: 0.797
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unmitigated expectation value: 0.8
 </pre></div>
 </div>
 </div>
@@ -617,7 +615,7 @@ corresponds to a circuit with scale factor one, i.e., the original circuit.)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Extrapolated zero-noise value: 0.999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Extrapolated zero-noise value: 1.002
 </pre></div>
 </div>
 </div>
@@ -693,8 +691,9 @@ corresponds to a circuit with scale factor one, i.e., the original circuit.)</p>
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

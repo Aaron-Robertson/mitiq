@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What happens when I use ZNE? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -422,12 +420,12 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="what-happens-when-i-use-zne">
-<h1>What happens when I use ZNE?<a class="headerlink" href="#what-happens-when-i-use-zne" title="Permalink to this headline">¶</a></h1>
+<h1>What happens when I use ZNE?<a class="headerlink" href="#what-happens-when-i-use-zne" title="Permalink to this headline">#</a></h1>
 <p>In Mitiq, ZNE is clearly divided into two steps, noise scaling and extrapolation. They are shown in the Figure below.
 The corresponding sub-modules in the codebase are <a class="reference internal" href="../apidoc.html#module-mitiq.zne.scaling.folding" title="mitiq.zne.scaling.folding"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne.scaling.folding</span></code></a> and <a class="reference internal" href="../apidoc.html#module-mitiq.zne.inference" title="mitiq.zne.inference"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mitiq.zne.inference</span></code></a>.</p>
 <div class="figure align-default" id="figzne">
 <a class="reference internal image-reference" href="../_images/zne_workflow2_steps.png"><img alt="../_images/zne_workflow2_steps.png" src="../_images/zne_workflow2_steps.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">The diagram shows the workflow of the zero noise extrapolation (ZNE) technique in Mitiq.</span><a class="headerlink" href="#figzne" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The diagram shows the workflow of the zero noise extrapolation (ZNE) technique in Mitiq.</span><a class="headerlink" href="#figzne" title="Permalink to this image">#</a></p>
 </div>
 <p><strong>The first step</strong> involves generating and executing noise-scaled quantum circuits.</p>
 <ul class="simple">
@@ -444,9 +442,9 @@ The corresponding sub-modules in the codebase are <a class="reference internal" 
 In the next sections instead, we show how one can apply ZNE at a lower level, i.e., by applying each step independently.</p>
 <p>Moreover, we will also show how the user can customize noise scaling methods and factory objects.</p>
 <div class="section" id="first-step-generating-and-executing-noise-scaled-circuits">
-<h2>First step: generating and executing noise-scaled circuits<a class="headerlink" href="#first-step-generating-and-executing-noise-scaled-circuits" title="Permalink to this headline">¶</a></h2>
+<h2>First step: generating and executing noise-scaled circuits<a class="headerlink" href="#first-step-generating-and-executing-noise-scaled-circuits" title="Permalink to this headline">#</a></h2>
 <div class="section" id="problem-setup">
-<h3>Problem setup<a class="headerlink" href="#problem-setup" title="Permalink to this headline">¶</a></h3>
+<h3>Problem setup<a class="headerlink" href="#problem-setup" title="Permalink to this headline">#</a></h3>
 <p>We define a circuit and an executor, as shown in <a class="reference internal" href="zne-1-intro.html"><span class="doc std std-doc">How do I use ZNE?</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -471,7 +469,7 @@ In the next sections instead, we show how one can apply ZNE at a lower level, i.
 </div>
 </div>
 <div class="section" id="evaluate-noise-scaled-expectation-values">
-<h3>Evaluate noise-scaled expectation values<a class="headerlink" href="#evaluate-noise-scaled-expectation-values" title="Permalink to this headline">¶</a></h3>
+<h3>Evaluate noise-scaled expectation values<a class="headerlink" href="#evaluate-noise-scaled-expectation-values" title="Permalink to this headline">#</a></h3>
 <p>We first apply local unitary folding to generate a sequence of noise-scaled circuits.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -496,7 +494,7 @@ In the next sections instead, we show how one can apply ZNE at a lower level, i.
 </div>
 </div>
 <div class="section" id="second-step-extrapolating-the-zero-noise-limit">
-<h2>Second step: extrapolating the zero-noise limit<a class="headerlink" href="#second-step-extrapolating-the-zero-noise-limit" title="Permalink to this headline">¶</a></h2>
+<h2>Second step: extrapolating the zero-noise limit<a class="headerlink" href="#second-step-extrapolating-the-zero-noise-limit" title="Permalink to this headline">#</a></h2>
 <p>The simplest way to extrapolate the zero-noise limit of an expectation value is to use the static method <code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.extrapolate()</span></code> of a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a> object. For example, an exponential extrapolation (assuming an infinite noise limit of <span class="math notranslate nohighlight">\(0.5\)</span>) can be obtained as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -505,7 +503,7 @@ In the next sections instead, we show how one can apply ZNE at a lower level, i.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999733104338
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999345020677
 </pre></div>
 </div>
 </div>
@@ -526,7 +524,7 @@ In the next sections instead, we show how one can apply ZNE at a lower level, i.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999733104338
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999345020677
 </pre></div>
 </div>
 </div>
@@ -544,7 +542,7 @@ In the next sections instead, we show how one can apply ZNE at a lower level, i.
 </div>
 </div>
 <div class="section" id="custom-noise-scaling-methods">
-<h2>Custom noise-scaling methods<a class="headerlink" href="#custom-noise-scaling-methods" title="Permalink to this headline">¶</a></h2>
+<h2>Custom noise-scaling methods<a class="headerlink" href="#custom-noise-scaling-methods" title="Permalink to this headline">#</a></h2>
 <p>Custom folding methods can be defined and used with Mitiq, e.g., with <a class="reference internal" href="../apidoc.html#mitiq.zne.zne.execute_with_zne" title="mitiq.zne.zne.execute_with_zne"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_zne()</span></code></a>. The signature of this function must be as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -575,14 +573,14 @@ circuit is a Cirq circuit, however.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9613098502159114
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9613097310066215
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="custom-extrapolation-methods">
-<h2>Custom extrapolation methods<a class="headerlink" href="#custom-extrapolation-methods" title="Permalink to this headline">¶</a></h2>
+<h2>Custom extrapolation methods<a class="headerlink" href="#custom-extrapolation-methods" title="Permalink to this headline">#</a></h2>
 <p>If necessary, the user can modify existing extrapolation methods by subclassing
 one of the <a class="reference internal" href="zne-3-options.html#extrapolation-methods-factory-objects"><span class="std std-ref">built-in factories</span></a>.</p>
 <p>Alternatively, a custom adaptive extrapolation method can be derived from the abstract class <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.AdaptiveFactory" title="mitiq.zne.inference.AdaptiveFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">AdaptiveFactory</span></code></a>.
@@ -661,7 +659,7 @@ is given in the next code cell.</p>
 </div>
 </div>
 <div class="section" id="regression-tools-in-zne-inference">
-<h3>Regression tools in <code class="docutils literal notranslate"><span class="pre">zne.inference</span></code><a class="headerlink" href="#regression-tools-in-zne-inference" title="Permalink to this headline">¶</a></h3>
+<h3>Regression tools in <code class="docutils literal notranslate"><span class="pre">zne.inference</span></code><a class="headerlink" href="#regression-tools-in-zne-inference" title="Permalink to this headline">#</a></h3>
 <p>In the body of the previous <code class="docutils literal notranslate"><span class="pre">MyFactory</span></code> example, we imported and used the <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.mitiq_polyfit" title="mitiq.zne.inference.mitiq_polyfit"><code class="xref py py-func docutils literal notranslate"><span class="pre">mitiq_polyfit()</span></code></a> function.
 This is simply a wrap of <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html#numpy.polyfit" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.polyfit()</span></code></a>, slightly adapted to the notion and to the error types
 of Mitiq. This function can be used to fit a polynomial ansatz to the measured expectation values. This function performs
@@ -674,10 +672,10 @@ or could be subject to numerical instabilities.</p>
 </div>
 </div>
 <div class="section" id="low-level-usage-of-a-factory">
-<h2>Low-level usage of a factory<a class="headerlink" href="#low-level-usage-of-a-factory" title="Permalink to this headline">¶</a></h2>
+<h2>Low-level usage of a factory<a class="headerlink" href="#low-level-usage-of-a-factory" title="Permalink to this headline">#</a></h2>
 <p>In this section we present a low-level usage of a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a> . In typical use-cases, the following information is not necessary but it can be useful for understanding how <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a> objects work under the hood.</p>
 <div class="section" id="the-run-method">
-<h3>The <code class="docutils literal notranslate"><span class="pre">run</span></code> method.<a class="headerlink" href="#the-run-method" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">run</span></code> method.<a class="headerlink" href="#the-run-method" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run" title="mitiq.zne.inference.Factory.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run()</span></code></a> method can be used to run all the data acquisition steps associated to a <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory" title="mitiq.zne.inference.Factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Factory</span></code></a>, until enough data is collected for the extrapolation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -690,14 +688,14 @@ or could be subject to numerical instabilities.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999679384721
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999998666976173
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="the-run-classical-method">
-<h3>The <code class="docutils literal notranslate"><span class="pre">run_classical</span></code> method.<a class="headerlink" href="#the-run-classical-method" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">run_classical</span></code> method.<a class="headerlink" href="#the-run-classical-method" title="Permalink to this headline">#</a></h3>
 <p>Instead of <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run" title="mitiq.zne.inference.Factory.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run()</span></code></a>, the <a class="reference internal" href="../apidoc.html#mitiq.zne.inference.Factory.run_classical" title="mitiq.zne.inference.Factory.run_classical"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Factory.run_classical()</span></code></a> method can be used if we have at disposal a function which directly
 maps a noise scale factor to the corresponding expectation value.</p>
 <div class="cell docutils container">
@@ -722,7 +720,7 @@ maps a noise scale factor to the corresponding expectation value.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999998924435657
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999620235053
 </pre></div>
 </div>
 </div>
@@ -802,8 +800,9 @@ wrapped into the <code class="docutils literal notranslate"><span class="pre">no
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

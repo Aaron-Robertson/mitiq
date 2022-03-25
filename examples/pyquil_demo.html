@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zero Noise Extrapolation with pyQuil and parametric compilation &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -220,7 +218,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -254,7 +252,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="zero-noise-extrapolation-with-pyquil-and-parametric-compilation">
-<span id="examples-pyquil-demo"></span><h1>Zero Noise Extrapolation with pyQuil and parametric compilation<a class="headerlink" href="#zero-noise-extrapolation-with-pyquil-and-parametric-compilation" title="Permalink to this headline">¶</a></h1>
+<span id="examples-pyquil-demo"></span><h1>Zero Noise Extrapolation with pyQuil and parametric compilation<a class="headerlink" href="#zero-noise-extrapolation-with-pyquil-and-parametric-compilation" title="Permalink to this headline">#</a></h1>
 <p>In this example we demonstrate how to use Zero Noise Extrapolation (ZNE) in Mitiq with a parametrically compiled program in pyQuil. Parametric compilation saves time by compiling the program ansatz once, instead of compiling each time the parameters are updated. In pyQuil, a <code class="docutils literal notranslate"><span class="pre">memory_map</span></code> argument is used to substitute in values for previously-declared Quil variables in the pre-compiled executable.</p>
 <p>When adding the noise mitigation function <code class="docutils literal notranslate"><span class="pre">zne.execute_with_zne</span></code> the <code class="docutils literal notranslate"><span class="pre">memory_map</span></code> is still passed to the executor function and the circuit parameters are updated without the need for repeated compilation.</p>
 <p>The example shown here is adapted from the <a class="reference external" href="https://pyquil-docs.rigetti.com/en/v2.28.1/migration3-declare.html">pyQuil parametric compilation tutorial</a>.</p>
@@ -354,13 +352,13 @@ resulting from running the quantum program.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 0.041
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 0.04
    maxcv: 0.0
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 20
+    nfev: 18
   status: 1
  success: True
-       x: array([-0.08955312])
+       x: array([0.00635])
 </pre></div>
 </div>
 </div>
@@ -411,19 +409,19 @@ resulting from running the quantum program.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 0.02949999999999999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 0.03249999999999999
    maxcv: 0.0
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 19
+    nfev: 20
   status: 1
  success: True
-       x: array([0.0374])
+       x: array([0.06938242])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>[1] <a class="reference external" href="https://pyquil-docs.rigetti.com/en/v2.28.1/migration3-declare.html">Parametric compilation tutorial in pyQuil.</a></p>
 <p>display information about Mitiq, packages, and Python version/platform</p>
 <div class="cell docutils container">
@@ -532,8 +530,9 @@ Platform Info:	Linux (x86_64)
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

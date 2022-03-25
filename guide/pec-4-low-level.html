@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What happens when I use PEC? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -383,7 +381,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="what-happens-when-i-use-pec">
-<h1>What happens when I use PEC?<a class="headerlink" href="#what-happens-when-i-use-pec" title="Permalink to this headline">¶</a></h1>
+<h1>What happens when I use PEC?<a class="headerlink" href="#what-happens-when-i-use-pec" title="Permalink to this headline">#</a></h1>
 <p>When applying PEC with Mitiq, the workflow of quantum and classical data is represented in the figure below.</p>
 <p><img alt="pec_figure" src="../_images/pec_workflow2_steps.png" /></p>
 <ul class="simple">
@@ -406,9 +404,9 @@ In particular, it could be useful to explicitly split the PEC process into the t
 <li><p>Step 2: Inference of the ideal expectation value from the noisy execution of the auxiliary circuits.</p></li>
 </ul>
 <div class="section" id="step-1-probabilistic-generation-of-all-the-auxiliary-circuits">
-<h2>Step 1: Probabilistic generation of all the auxiliary circuits<a class="headerlink" href="#step-1-probabilistic-generation-of-all-the-auxiliary-circuits" title="Permalink to this headline">¶</a></h2>
+<h2>Step 1: Probabilistic generation of all the auxiliary circuits<a class="headerlink" href="#step-1-probabilistic-generation-of-all-the-auxiliary-circuits" title="Permalink to this headline">#</a></h2>
 <div class="section" id="define-the-circuit-of-interest-and-the-quasi-probability-representations">
-<h3>Define the circuit of interest and the quasi-probability representations<a class="headerlink" href="#define-the-circuit-of-interest-and-the-quasi-probability-representations" title="Permalink to this headline">¶</a></h3>
+<h3>Define the circuit of interest and the quasi-probability representations<a class="headerlink" href="#define-the-circuit-of-interest-and-the-quasi-probability-representations" title="Permalink to this headline">#</a></h3>
 <p>We define the circuit of interest as we did in <a class="reference internal" href="pec-1-intro.html"><span class="doc std std-doc">How do I use PEC?</span></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -425,9 +423,9 @@ In particular, it could be useful to explicitly split the PEC process into the t
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌──────────┐┌────┐┌─────────┐┌───┐┌───┐┌──────────┐┌────┐┌─────────┐
-q_0: ┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├┤ Y ├┤ X ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├
-     └──────────┘└────┘└─────────┘└───┘└───┘└──────────┘└────┘└─────────┘
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌────┐┌─────────┐┌───────┐┌──────────┐┌──────────┐
+q_0: ┤ √X ├┤ Ry(π/2) ├┤ Rx(0) ├┤ Ry(-π/2) ├┤ Rx(-π/2) ├
+     └────┘└─────────┘└───────┘└──────────┘└──────────┘
 </pre></div>
 </div>
 </div>
@@ -464,14 +462,14 @@ as we did in <a class="reference internal" href="pec-1-intro.html"><span class="
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>q_0: ───Ry(-0.5π)─── = 1.010*(q_0: ───Ry(-0.5π)───)-0.003*(q_0: ───Ry(-0.5π)───X───)-0.003*(q_0: ───Ry(-0.5π)───Y───)-0.003*(q_0: ───Ry(-0.5π)───Z───)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>q_0: ───Ry(0.5π)─── = 1.010*(q_0: ───Ry(0.5π)───)-0.003*(q_0: ───Ry(0.5π)───X───)-0.003*(q_0: ───Ry(0.5π)───Y───)-0.003*(q_0: ───Ry(0.5π)───Z───)
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="probabilistic-generation-of-all-the-auxiliary-circuits">
-<h3>Probabilistic generation of all the auxiliary circuits<a class="headerlink" href="#probabilistic-generation-of-all-the-auxiliary-circuits" title="Permalink to this headline">¶</a></h3>
+<h3>Probabilistic generation of all the auxiliary circuits<a class="headerlink" href="#probabilistic-generation-of-all-the-auxiliary-circuits" title="Permalink to this headline">#</a></h3>
 <p>According to the <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">theory of PEC</span></a>, to probabilistically generate an auxiliary circuit one should:</p>
 <ul class="simple">
 <li><p>Define an empty <code class="docutils literal notranslate"><span class="pre">sampled_circuit</span></code> to be populated with probabilistic operations <span class="math notranslate nohighlight">\(\mathcal O_{j,\alpha}\)</span>;</p></li>
@@ -498,23 +496,23 @@ the elements of <code class="docutils literal notranslate"><span class="pre">gat
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌──────────┐┌────┐┌─────────┐┌───┐┌───┐┌──────────┐┌────┐┌─────────┐
-q_0: ┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├┤ Y ├┤ X ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├
-     └──────────┘└────┘└─────────┘└───┘└───┘└──────────┘└────┘└─────────┘
-     ┌──────────┐┌────┐┌───┐┌─────────┐┌───┐┌───┐┌──────────┐┌────┐┌─────────┐
-q_0: ┤ Ry(-π/2) ├┤ √X ├┤ X ├┤ Ry(π/2) ├┤ Y ├┤ X ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├
-     └──────────┘└────┘└───┘└─────────┘└───┘└───┘└──────────┘└────┘└─────────┘
-     ┌──────────┐┌────┐┌─────────┐┌───┐┌───┐┌───┐┌──────────┐┌────┐┌─────────┐
-q_0: ┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├┤ Y ├┤ Y ├┤ X ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├
-     └──────────┘└────┘└─────────┘└───┘└───┘└───┘└──────────┘└────┘└─────────┘
-     ┌──────────┐┌────┐┌─────────┐┌───┐┌───┐┌──────────┐┌────┐┌─────────┐
-q_0: ┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├┤ Y ├┤ X ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├
-     └──────────┘└────┘└─────────┘└───┘└───┘└──────────┘└────┘└─────────┘
-     ┌──────────┐┌────┐┌─────────┐┌───┐┌───┐┌──────────┐┌────┐┌─────────┐
-q_0: ┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├┤ Y ├┤ X ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(π/2) ├
-     └──────────┘└────┘└─────────┘└───┘└───┘└──────────┘└────┘└─────────┘
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌────┐┌─────────┐┌───────┐┌──────────┐┌──────────┐
+q_0: ┤ √X ├┤ Ry(π/2) ├┤ Rx(0) ├┤ Ry(-π/2) ├┤ Rx(-π/2) ├
+     └────┘└─────────┘└───────┘└──────────┘└──────────┘
+     ┌────┐┌─────────┐┌───┐┌───────┐┌──────────┐┌──────────┐
+q_0: ┤ √X ├┤ Ry(π/2) ├┤ X ├┤ Rx(0) ├┤ Ry(-π/2) ├┤ Rx(-π/2) ├
+     └────┘└─────────┘└───┘└───────┘└──────────┘└──────────┘
+     ┌────┐┌─────────┐┌───────┐┌──────────┐┌───┐┌──────────┐
+q_0: ┤ √X ├┤ Ry(π/2) ├┤ Rx(0) ├┤ Ry(-π/2) ├┤ Y ├┤ Rx(-π/2) ├
+     └────┘└─────────┘└───────┘└──────────┘└───┘└──────────┘
+     ┌────┐┌─────────┐┌───────┐┌──────────┐┌──────────┐
+q_0: ┤ √X ├┤ Ry(π/2) ├┤ Rx(0) ├┤ Ry(-π/2) ├┤ Rx(-π/2) ├
+     └────┘└─────────┘└───────┘└──────────┘└──────────┘
+     ┌────┐┌─────────┐┌───────┐┌──────────┐┌──────────┐
+q_0: ┤ √X ├┤ Ry(π/2) ├┤ Rx(0) ├┤ Ry(-π/2) ├┤ Rx(-π/2) ├
+     └────┘└─────────┘└───────┘└──────────┘└──────────┘
 Signs: [1, -1, -1, 1, 1]
-One-norm: 1.1741453302371863
+One-norm: 1.1055443247377823
 </pre></div>
 </div>
 </div>
@@ -540,9 +538,9 @@ of the ideal expectation value from the noisy execution of the <code class="docu
 </div>
 </div>
 <div class="section" id="step-2-inference-of-the-ideal-expectation-value-from-the-noisy-execution-of-the-auxiliary-circuits">
-<h2>Step 2: Inference of the ideal expectation value from the noisy execution of the auxiliary circuits<a class="headerlink" href="#step-2-inference-of-the-ideal-expectation-value-from-the-noisy-execution-of-the-auxiliary-circuits" title="Permalink to this headline">¶</a></h2>
+<h2>Step 2: Inference of the ideal expectation value from the noisy execution of the auxiliary circuits<a class="headerlink" href="#step-2-inference-of-the-ideal-expectation-value-from-the-noisy-execution-of-the-auxiliary-circuits" title="Permalink to this headline">#</a></h2>
 <div class="section" id="noisy-execution-of-all-the-auxiliary-circuits">
-<h3>Noisy execution of all the auxiliary circuits<a class="headerlink" href="#noisy-execution-of-all-the-auxiliary-circuits" title="Permalink to this headline">¶</a></h3>
+<h3>Noisy execution of all the auxiliary circuits<a class="headerlink" href="#noisy-execution-of-all-the-auxiliary-circuits" title="Permalink to this headline">#</a></h3>
 <p>To execute the auxiliary circuits we define the same <code class="docutils literal notranslate"><span class="pre">execute</span></code> function that we used in the Section <a class="reference internal" href="pec-1-intro.html"><span class="doc std std-doc">“How do I use PEC?”</span></a>.
 Actually, since we have a list of circuits to execute, we define a <em>batched</em> version of the function, i.e., a function that takes a list of
 circuits as input and returns a list of expectation values. More details on batched executors can be found in the <a class="reference internal" href="pec-1-intro.html"><span class="doc std std-doc">“Executors”</span></a> section.</p>
@@ -591,21 +589,7 @@ circuits as input and returns a list of expectation values. More details on batc
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.94909024,
- 0.056897588,
- 0.056897637,
- 0.056897588,
- 0.056897588,
- 0.9431023,
- 0.94310224,
- 0.05689766,
- 0.05689766,
- 0.94310206,
- 0.062805615,
- 0.94310206,
- 0.056897637,
- 0.056897637,
- 0.056897588]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.9675436, 0.9613096, 0.038690142, 0.038690142, 0.9613096, 0.038690183]
 </pre></div>
 </div>
 </div>
@@ -621,7 +605,7 @@ independence of the quantum results.</em></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200 noisy expectation values efficiently evaluated by executing only 15 unique circuits.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200 noisy expectation values efficiently evaluated by executing only 6 unique circuits.
 </pre></div>
 </div>
 </div>
@@ -638,7 +622,7 @@ independence of the quantum results.</em></p>
 </div>
 </div>
 <div class="section" id="estimate-the-ideal-expectation-value-from-the-noisy-results">
-<h3>Estimate the ideal expectation value from the noisy results<a class="headerlink" href="#estimate-the-ideal-expectation-value-from-the-noisy-results" title="Permalink to this headline">¶</a></h3>
+<h3>Estimate the ideal expectation value from the noisy results<a class="headerlink" href="#estimate-the-ideal-expectation-value-from-the-noisy-results" title="Permalink to this headline">#</a></h3>
 <p>According to the <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">theory of PEC</span></a>, the ideal expectation value can be estimated as an average of
 the noisy auxiliary expectation values, after scaling them by the corresponding <code class="docutils literal notranslate"><span class="pre">sampled_signs</span></code> and by the <code class="docutils literal notranslate"><span class="pre">one_norm</span></code> coefficient
 (obtained in the previous section).</p>
@@ -660,8 +644,8 @@ the noisy auxiliary expectation values, after scaling them by the corresponding 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Expectation value without error mitigation:    0.9490902423858643
-Expectation value with error mitigation (PEC): 0.9886593429743846
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Expectation value without error mitigation:    0.9675436019897461
+Expectation value with error mitigation (PEC): 1.0209893069523344
 </pre></div>
 </div>
 </div>
@@ -741,8 +725,9 @@ the <a class="reference internal" href="../apidoc.html#mitiq.pec.sampling.sample
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

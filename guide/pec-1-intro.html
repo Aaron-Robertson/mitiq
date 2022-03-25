@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How do I use PEC? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -371,7 +369,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="how-do-i-use-pec">
-<h1>How do I use PEC?<a class="headerlink" href="#how-do-i-use-pec" title="Permalink to this headline">¶</a></h1>
+<h1>How do I use PEC?<a class="headerlink" href="#how-do-i-use-pec" title="Permalink to this headline">#</a></h1>
 <p>Probabilistic error cancellation (PEC) is an error mitigation technique for improving the estimation
 of expectation values (see <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">What is the theory behind PEC?</span></a>).</p>
 <p>To apply PEC, you must know how to represent <em>ideal operations</em> as linear combinations of <em>noisy implementable operations</em>.
@@ -409,7 +407,7 @@ operation.</p>
 </div>
 </div>
 <div class="section" id="problem-setup">
-<h2>Problem setup<a class="headerlink" href="#problem-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Problem setup<a class="headerlink" href="#problem-setup" title="Permalink to this headline">#</a></h2>
 <p>We first define the circuit of interest. For simplicity, in this example we use
 a single-qubit randomized-benchmarking circuit whose ideal (noiseless) execution is equivalent to the
 identity operation.</p>
@@ -426,9 +424,9 @@ identity operation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌──────────┐┌─────────┐┌─────────┐┌────┐┌───┐┌───┐
-q_0: ┤ Rx(-π/2) ├┤ Ry(π/2) ├┤ Ry(π/2) ├┤ √X ├┤ Y ├┤ X ├
-     └──────────┘└─────────┘└─────────┘└────┘└───┘└───┘
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ┌───┐┌───┐┌─────────┐┌────┐┌─────────┐┌──────────┐┌────┐┌──────────┐
+q_0: ┤ Y ├┤ X ├┤ Ry(π/2) ├┤ √X ├┤ Ry(π/2) ├┤ Ry(-π/2) ├┤ √X ├┤ Ry(-π/2) ├
+     └───┘└───┘└─────────┘└────┘└─────────┘└──────────┘└────┘└──────────┘
 </pre></div>
 </div>
 </div>
@@ -469,7 +467,7 @@ representation (Cirq) and then simulate it.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error without mitigation: 0.03869
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error without mitigation: 0.05091
 </pre></div>
 </div>
 </div>
@@ -477,9 +475,9 @@ representation (Cirq) and then simulate it.</p>
 <p>We now show how to use PEC to reduce this error.</p>
 </div>
 <div class="section" id="appling-probabilistic-error-cancellation-pec">
-<h2>Appling probabilistic error cancellation (PEC)<a class="headerlink" href="#appling-probabilistic-error-cancellation-pec" title="Permalink to this headline">¶</a></h2>
+<h2>Appling probabilistic error cancellation (PEC)<a class="headerlink" href="#appling-probabilistic-error-cancellation-pec" title="Permalink to this headline">#</a></h2>
 <div class="section" id="represent-ideal-gates-as-linear-combinations-of-noisy-gates">
-<h3>Represent ideal gates as linear combinations of noisy gates<a class="headerlink" href="#represent-ideal-gates-as-linear-combinations-of-noisy-gates" title="Permalink to this headline">¶</a></h3>
+<h3>Represent ideal gates as linear combinations of noisy gates<a class="headerlink" href="#represent-ideal-gates-as-linear-combinations-of-noisy-gates" title="Permalink to this headline">#</a></h3>
 <p>To apply PEC, we need to represent some or all of the operations of the ideal <code class="docutils literal notranslate"><span class="pre">circuit</span></code> as linear combinations
 of noisy implementable operations. Such linear combinations are also known as quasi-probability representations (see <a class="reference internal" href="pec-5-theory.html"><span class="doc std std-doc">What is the theory behind PEC?</span></a>) and, in Mitiq, they correspond to <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects. More information on the <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> class can be found in the section <a class="reference internal" href="pec-3-options.html"><span class="doc std std-doc">What additional options are available in PEC?</span></a>.</p>
 <p>But how can we obtain the quasi-probability representations that are appropriate for a given backend?
@@ -527,7 +525,7 @@ numerical optimization problems <span id="id3">[<a class="reference internal" hr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>q_0: ───X^0.5─── = 1.010*(q_0: ───X^0.5───)-0.003*(q_0: ───X^0.5───X───)-0.003*(q_0: ───X^0.5───Y───)-0.003*(q_0: ───X^0.5───Z───)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>q_0: ───X─── = 1.010*(q_0: ───X───)-0.003*(q_0: ───X───X───)-0.003*(q_0: ───X───Y───)-0.003*(q_0: ───X───Z───)
 </pre></div>
 </div>
 </div>
@@ -537,7 +535,7 @@ associated to the <code class="docutils literal notranslate"><span class="pre">e
 <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a> objects.</p>
 </div>
 <div class="section" id="run-pec">
-<h3>Run PEC<a class="headerlink" href="#run-pec" title="Permalink to this headline">¶</a></h3>
+<h3>Run PEC<a class="headerlink" href="#run-pec" title="Permalink to this headline">#</a></h3>
 <p>Once the necessary <a class="reference internal" href="../apidoc.html#mitiq.pec.types.types.OperationRepresentation" title="mitiq.pec.types.types.OperationRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationRepresentation</span></code></a>s have been defined,
 probabilistic error cancellation can be applied through the <a class="reference internal" href="../apidoc.html#mitiq.pec.pec.execute_with_pec" title="mitiq.pec.pec.execute_with_pec"><code class="xref py py-func docutils literal notranslate"><span class="pre">execute_with_pec()</span></code></a> function as follows:</p>
 <div class="cell docutils container">
@@ -552,8 +550,8 @@ probabilistic error cancellation can be applied through the <a class="reference 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error without PEC: 0.03869
-Error with PEC:    0.02085
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error without PEC: 0.05091
+Error with PEC:    0.01728
 </pre></div>
 </div>
 </div>
@@ -631,8 +629,9 @@ Error with PEC:    0.02085
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

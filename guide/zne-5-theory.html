@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What is the theory behind ZNE? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -359,7 +357,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="what-is-the-theory-behind-zne">
-<h1>What is the theory behind ZNE?<a class="headerlink" href="#what-is-the-theory-behind-zne" title="Permalink to this headline">¶</a></h1>
+<h1>What is the theory behind ZNE?<a class="headerlink" href="#what-is-the-theory-behind-zne" title="Permalink to this headline">#</a></h1>
 <p>Zero noise extrapolation (ZNE) <span id="id1">[<a class="reference internal" href="../zz_bibliography.html#id17" title="Ying Li and Simon C. Benjamin. Efficient variational quantum simulator incorporating active error minimization. Phys. Rev. X, 7:021050, (2017). URL: https://link.aps.org/doi/10.1103/PhysRevX.7.021050, doi:10.1103/PhysRevX.7.021050.">3</a>, <a class="reference internal" href="../zz_bibliography.html#id32" title="Kristan Temme, Sergey Bravyi, and Jay M. Gambetta. Error mitigation for short-depth quantum circuits. Physical Review Letters, (2017). URL: https://doi.org/10.1103/PhysRevLett.119.180509, doi:10.1103/physrevlett.119.180509.">4</a>, <a class="reference internal" href="../zz_bibliography.html#id15" title="Abhinav Kandala, Kristan Temme, Antonio D. Córcoles, Antonio Mezzacapo, Jerry M. Chow, and Jay M. Gambetta. Error mitigation extends the computational reach of a noisy quantum processor. Nature, 567(7749):491–495, (2019). URL: https://doi.org/10.1038/s41586-019-1040-7, doi:10.1038/s41586-019-1040-7.">5</a>]</span> is an error
 mitigation technique used to extrapolate the noiseless expectation value of an
 observable from a range of expectation values computed at different noise levels.
@@ -374,17 +372,17 @@ fitting a curve (often called <em>extrapolation model</em>) to the expectation v
 to extrapolate the noiseless expectation value.</p></li>
 </ul>
 <div class="section" id="step-1-intentionally-scale-noise">
-<h2>Step 1: Intentionally scale noise.<a class="headerlink" href="#step-1-intentionally-scale-noise" title="Permalink to this headline">¶</a></h2>
+<h2>Step 1: Intentionally scale noise.<a class="headerlink" href="#step-1-intentionally-scale-noise" title="Permalink to this headline">#</a></h2>
 <p>A technique to increase the noise level of a circuit is to intentionally increase its depth.
 This can be obtained using the <em>unitary folding</em> mapping <span class="math notranslate nohighlight">\(G \mapsto G G^\dagger G\)</span>.
 This mapping can be applied <em>globally</em> or <em>locally</em> as shown in the diagrams below.</p>
 <div class="figure align-default" id="figzne-global">
 <a class="reference internal image-reference" href="../_images/zne_global_folding.png"><img alt="../_images/zne_global_folding.png" src="../_images/zne_global_folding.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">The diagram demonstrates how gates are inserted in a circuit when <em>global folding</em> is applied.</span><a class="headerlink" href="#figzne-global" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The diagram demonstrates how gates are inserted in a circuit when <em>global folding</em> is applied.</span><a class="headerlink" href="#figzne-global" title="Permalink to this image">#</a></p>
 </div>
 <div class="figure align-default" id="figzne-local">
 <a class="reference internal image-reference" href="../_images/zne_local_folding.png"><img alt="../_images/zne_local_folding.png" src="../_images/zne_local_folding.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">The diagram demonstrates how gates are inserted in a circuit when <em>local folding</em> is applied.</span><a class="headerlink" href="#figzne-local" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The diagram demonstrates how gates are inserted in a circuit when <em>local folding</em> is applied.</span><a class="headerlink" href="#figzne-local" title="Permalink to this image">#</a></p>
 </div>
 <p>More details on the theory of unitary folding can be found in <span id="id4">[<a class="reference internal" href="../zz_bibliography.html#id14" title="Tudor Giurgica-Tiron, Yousef Hindy, Ryan LaRose, Andrea Mari, and William J. Zeng. Digital zero noise extrapolation for quantum error mitigation. (2020). arXiv:2005.10921.">6</a>]</span>.
 More details on its practical implementation in Mitiq can be found in
@@ -395,11 +393,11 @@ The noise of the device can be altered by increasing the time over which pulses
 are implemented, as shown in the following diagram:</p>
 <div class="figure align-default" id="figzne-pulse">
 <a class="reference internal image-reference" href="../_images/zne_pulse_stretching.png"><img alt="../_images/zne_pulse_stretching.png" src="../_images/zne_pulse_stretching.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">The diagram demonstrates how pulse stretching is used to increase noise in a physical device for ZNE.</span><a class="headerlink" href="#figzne-pulse" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The diagram demonstrates how pulse stretching is used to increase noise in a physical device for ZNE.</span><a class="headerlink" href="#figzne-pulse" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="step-2-extrapolate-to-the-noiseless-limit">
-<h2>Step 2: Extrapolate to the noiseless limit<a class="headerlink" href="#step-2-extrapolate-to-the-noiseless-limit" title="Permalink to this headline">¶</a></h2>
+<h2>Step 2: Extrapolate to the noiseless limit<a class="headerlink" href="#step-2-extrapolate-to-the-noiseless-limit" title="Permalink to this headline">#</a></h2>
 <p>In both gate-model and pulse-model scenarios, let <span class="math notranslate nohighlight">\(\tau\)</span> be a parameter quantifying
 noise level in the circuit and let <span class="math notranslate nohighlight">\(\tau^\prime = \lambda \tau\)</span> the scaled noise level.</p>
 <p>For <span class="math notranslate nohighlight">\(\lambda = 1\)</span>, the input circuit remains unchanged
@@ -502,8 +500,9 @@ are available in ZNE?</span></a>.</p>
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

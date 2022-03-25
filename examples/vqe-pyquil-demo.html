@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variational Quantum Eigensolver improved with Zero Noise Extrapolation &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -220,7 +218,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -281,7 +279,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="variational-quantum-eigensolver-improved-with-zero-noise-extrapolation">
-<h1>Variational Quantum Eigensolver improved with Zero Noise Extrapolation<a class="headerlink" href="#variational-quantum-eigensolver-improved-with-zero-noise-extrapolation" title="Permalink to this headline">¶</a></h1>
+<h1>Variational Quantum Eigensolver improved with Zero Noise Extrapolation<a class="headerlink" href="#variational-quantum-eigensolver-improved-with-zero-noise-extrapolation" title="Permalink to this headline">#</a></h1>
 <p>In this example we investigate how Zero Noise Extrapolation (ZNE) can improve
 convergence when applied to a variational problem. ZNE works by computing the
 observable of interest at increased noise levels, i.e. beyond the minimum noise
@@ -300,7 +298,7 @@ eigenvalue.</p>
 <p>The VQE example shown here is adapted from the <code class="docutils literal notranslate"><span class="pre">VQE</span></code> function in Grove
 <a class="reference external" href="#References">[1]</a> and the pyQuil / Grove VQE tutorial <a class="reference external" href="#References">[2]</a>.</p>
 <div class="section" id="defining-the-quantum-system-using-pyquil">
-<h2>Defining the quantum system using pyQuil<a class="headerlink" href="#defining-the-quantum-system-using-pyquil" title="Permalink to this headline">¶</a></h2>
+<h2>Defining the quantum system using pyQuil<a class="headerlink" href="#defining-the-quantum-system-using-pyquil" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -389,7 +387,7 @@ where the pyQuil program will run</p>
 </div>
 </div>
 <div class="section" id="set-up-vqe-define-hamiltonian-and-energy-expectation-functions">
-<h2>Set up VQE: define Hamiltonian and energy expectation functions<a class="headerlink" href="#set-up-vqe-define-hamiltonian-and-energy-expectation-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Set up VQE: define Hamiltonian and energy expectation functions<a class="headerlink" href="#set-up-vqe-define-hamiltonian-and-energy-expectation-functions" title="Permalink to this headline">#</a></h2>
 <p>Hamiltonian in this example is just <code class="docutils literal notranslate"><span class="pre">sigma_z</span></code> on the zeroth qubit</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -414,7 +412,7 @@ where the pyQuil program will run</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyquil.quil.Program at 0x7fe83c190b50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pyquil.quil.Program at 0x7fdfb761e8b0&gt;
 </pre></div>
 </div>
 </div>
@@ -504,7 +502,7 @@ modified version of <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="section" id="run-vqe-first-without-error-mitigation-and-then-with-zne-and-compare-results">
-<h2>Run VQE first without error mitigation and then with ZNE, and compare results<a class="headerlink" href="#run-vqe-first-without-error-mitigation-and-then-with-zne-and-compare-results" title="Permalink to this headline">¶</a></h2>
+<h2>Run VQE first without error mitigation and then with ZNE, and compare results<a class="headerlink" href="#run-vqe-first-without-error-mitigation-and-then-with-zne-and-compare-results" title="Permalink to this headline">#</a></h2>
 <p>Scan over the parameter <code class="docutils literal notranslate"><span class="pre">theta</span></code> and calculate energy expectation, without mitigation.
 In a later section we will plot these results and compare them with the results from
 ZNE.</p>
@@ -536,15 +534,15 @@ ZNE.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> final_simplex: (array([[3.0375    ],
-       [3.03779297]]), array([-0.43      , -0.42266667]))
-           fun: -0.43
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> final_simplex: (array([[3.14985352],
+       [3.15      ]]), array([-0.43866667, -0.43      ]))
+           fun: -0.4386666666666667
        message: &#39;Optimization terminated successfully.&#39;
-          nfev: 24
-           nit: 10
+          nfev: 28
+           nit: 12
         status: 0
        success: True
-             x: array([3.0375])
+             x: array([3.14985352])
 </pre></div>
 </div>
 </div>
@@ -553,7 +551,7 @@ ZNE.</p>
 the ideal expectation value of -1.0) and additional iterations required to reach
 convergence.</p>
 <div class="section" id="now-we-introduce-zne-and-compare-results">
-<h3>Now we introduce ZNE and compare results.<a class="headerlink" href="#now-we-introduce-zne-and-compare-results" title="Permalink to this headline">¶</a></h3>
+<h3>Now we introduce ZNE and compare results.<a class="headerlink" href="#now-we-introduce-zne-and-compare-results" title="Permalink to this headline">#</a></h3>
 <p>This is done by wrapping the noisy executor into a mitigated executor.
 We will fold the gates from the right and apply a linear inference (using a Linear
 Factory object) to implement ZNE. You can read more about noise scaling by unitary folding in the Mitiq user guide.</p>
@@ -642,15 +640,15 @@ the optimization loop to have better convergence with ZNE applied.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> final_simplex: (array([[3.17695313],
-       [3.17693481]]), array([-0.79533333, -0.795     ]))
-           fun: -0.7953333333333336
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> final_simplex: (array([[3.15      ],
+       [3.15029297]]), array([-0.79433333, -0.79333333]))
+           fun: -0.7943333333333333
        message: &#39;Optimization terminated successfully.&#39;
-          nfev: 38
-           nit: 15
+          nfev: 27
+           nit: 10
         status: 0
        success: True
-             x: array([3.17695313])
+             x: array([3.15])
 </pre></div>
 </div>
 </div>
@@ -659,7 +657,7 @@ the optimization loop to have better convergence with ZNE applied.</p>
 </div>
 </div>
 <div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
 <p>While the VQE algorithm is generally considered to be robust to noise
 <a class="reference external" href="#References">[2]</a>, at the noise level modeled in this example, the
 accumulation of errors results in loss of accuracy and additional iterations
@@ -672,7 +670,7 @@ limits. ZNE generally performs better on longer circuits, but there is a tradeof
 execution time.</p>
 </div>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>[1] Rigetti Computing (2018) Grove (Version 1.7.0)
 <a class="reference external" href="https://github.com/rigetti/grove/blob/master/grove/pyvqe/vqe.py">[Source code].</a></p>
 <p>[2] <a class="reference external" href="https://grove-docs.readthedocs.io/en/latest/vqe.html">[VQE tutorial in pyQuil / Grove].</a></p>
@@ -783,8 +781,9 @@ Platform Info:	Linux (x86_64)
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

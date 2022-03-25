@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What is the theory behind PEC? &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -320,7 +318,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -364,7 +362,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="what-is-the-theory-behind-pec">
-<h1>What is the theory behind PEC?<a class="headerlink" href="#what-is-the-theory-behind-pec" title="Permalink to this headline">¶</a></h1>
+<h1>What is the theory behind PEC?<a class="headerlink" href="#what-is-the-theory-behind-pec" title="Permalink to this headline">#</a></h1>
 <p>Probabilistic error cancellation (PEC) <span id="id1">[<a class="reference internal" href="../zz_bibliography.html#id32" title="Kristan Temme, Sergey Bravyi, and Jay M. Gambetta. Error mitigation for short-depth quantum circuits. Physical Review Letters, (2017). URL: https://doi.org/10.1103/PhysRevLett.119.180509, doi:10.1103/physrevlett.119.180509.">4</a>, <a class="reference internal" href="../zz_bibliography.html#id30" title="Jinzhao Sun, Xiao Yuan, Takahiro Tsunoda, Vlatko Vedral, Simon C. Benjamin, and Suguru Endo. Mitigating realistic noise in practical noisy intermediate-scale quantum devices. Phys. Rev. Applied, 15:034026, (2021). URL: https://link.aps.org/doi/10.1103/PhysRevApplied.15.034026, doi:10.1103/PhysRevApplied.15.034026.">7</a>, <a class="reference internal" href="../zz_bibliography.html#id29" title="Shuaining Zhang, Yao Lu, Kuan Zhang, Wentao Chen, Ying Li, Jing-Ning Zhang, and Kihwan Kim. Error-mitigated quantum gates exceeding physical fidelities in a trapped-ion system. Nature Communications, (2020). URL: http://dx.doi.org/10.1038/s41467-020-14376-z, doi:10.1038/s41467-020-14376-z.">9</a>]</span>  is a noise-aware error mitigation technique which is
 based on two main ideas:</p>
 <ul class="simple">
@@ -375,7 +373,7 @@ quantum expectation values via a Monte Carlo average.</p></li>
 </ul>
 <p><em><em>Note:</em> In this section we follow the same notation of <span id="id3">[<a class="reference internal" href="../zz_bibliography.html#id19" title="Andrea Mari, Nathan Shammah, and William J. Zeng. Extending quantum probabilistic error cancellation by noise scaling. Phys. Rev. A, 104:052607, (2021). URL: https://link.aps.org/doi/10.1103/PhysRevA.104.052607, doi:10.1103/PhysRevA.104.052607.">1</a>]</span>.</em></p>
 <div class="section" id="quasi-probability-representations">
-<h2>Quasi-probability representations<a class="headerlink" href="#quasi-probability-representations" title="Permalink to this headline">¶</a></h2>
+<h2>Quasi-probability representations<a class="headerlink" href="#quasi-probability-representations" title="Permalink to this headline">#</a></h2>
 <p>In PEC, each ideal gate <span class="math notranslate nohighlight">\(\mathcal G_i\)</span> of a circuit of interest
 <span class="math notranslate nohighlight">\(\mathcal U = {\mathcal G}_t \circ  \dots \circ {\mathcal G}_2 \circ {\mathcal G}_1 \)</span>
 is represented as a linear combination of noisy implementable operations <span class="math notranslate nohighlight">\({\mathcal O_{i, \alpha}}\)</span> (i.e., operations that
@@ -399,7 +397,7 @@ the  structure of the <code class="docutils literal notranslate"><span class="pr
 available in PEC?</span></a>.</em></p>
 </div>
 <div class="section" id="error-cancellation">
-<h2>Error cancellation<a class="headerlink" href="#error-cancellation" title="Permalink to this headline">¶</a></h2>
+<h2>Error cancellation<a class="headerlink" href="#error-cancellation" title="Permalink to this headline">#</a></h2>
 <p>The aim of PEC is estimating the ideal expectation value of some observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span> with respect to
 the quantum state prepared by an ideal circuit of interest <span class="math notranslate nohighlight">\(\mathcal U\)</span> acting on some initial  reference
 state <span class="math notranslate nohighlight">\(\rho_0\)</span> (typically <span class="math notranslate nohighlight">\(\rho_0= |0\dots 0 \rangle \langle 0 \dots 0 |\)</span>).</p>
@@ -438,7 +436,7 @@ For this reason, it is more efficient to estimate <span class="math notranslate 
 <a class="reference external" href="https://en.wikipedia.org/wiki/Importance_sampling">importance-sampling</a> Monte Carlo approach as described in the next section.</p>
 </div>
 <div class="section" id="monte-carlo-estimation">
-<h2>Monte Carlo estimation<a class="headerlink" href="#monte-carlo-estimation" title="Permalink to this headline">¶</a></h2>
+<h2>Monte Carlo estimation<a class="headerlink" href="#monte-carlo-estimation" title="Permalink to this headline">#</a></h2>
 <p>To apply a Monte Carlo estimation, we need to replace quasi-probabilities with positive probabilities.
 This can be achieved as follows:</p>
 <div class="math notranslate nohighlight">
@@ -541,8 +539,9 @@ unfeasible.</p>
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

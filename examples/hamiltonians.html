@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Defining Hamiltonians as Linear Combinations of Pauli Strings &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -222,7 +220,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -276,7 +274,7 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="defining-hamiltonians-as-linear-combinations-of-pauli-strings">
-<h1>Defining Hamiltonians as Linear Combinations of Pauli Strings<a class="headerlink" href="#defining-hamiltonians-as-linear-combinations-of-pauli-strings" title="Permalink to this headline">¶</a></h1>
+<h1>Defining Hamiltonians as Linear Combinations of Pauli Strings<a class="headerlink" href="#defining-hamiltonians-as-linear-combinations-of-pauli-strings" title="Permalink to this headline">#</a></h1>
 <p>This tutorial shows an example of using Hamiltonians defined as <code class="xref py py-class docutils literal notranslate"><span class="pre">PauliSum</span></code> objects or similar objects in other
 supported frontends. The usage of these Hamiltonian-like objects does not change the interface with Mitiq, but we
 show an example for users who prefer these constructions.</p>
@@ -287,7 +285,7 @@ H := 1.5 X_1 Z_2 - 0.7 Y_1
 \]</div>
 <p>on two qubits.</p>
 <div class="section" id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <p>First we import libraries for this example.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
 
@@ -301,7 +299,7 @@ H := 1.5 X_1 Z_2 - 0.7 Y_1
 </div>
 </div>
 <div class="section" id="defining-the-hamiltonian">
-<h2>Defining the Hamiltonian<a class="headerlink" href="#defining-the-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<h2>Defining the Hamiltonian<a class="headerlink" href="#defining-the-hamiltonian" title="Permalink to this headline">#</a></h2>
 <p>Now we define the Hamiltonian as a <code class="xref py py-class docutils literal notranslate"><span class="pre">PauliSum</span></code> by defining the Pauli strings <span class="math notranslate nohighlight">\(X_1 Z_2\)</span> and <span class="math notranslate nohighlight">\(Y_1\)</span> then
 taking a linear combination of these to create the Hamiltonian above.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Qubit register</span>
@@ -323,7 +321,7 @@ taking a linear combination of these to create the Hamiltonian above.</p>
 <p>Note that we could have created the Hamiltonian by directly defining a <code class="xref py py-class docutils literal notranslate"><span class="pre">PauliSum</span></code> with the coefficients.</p>
 </div>
 <div class="section" id="using-the-hamiltonian-in-the-executor">
-<h2>Using the Hamiltonian in the executor<a class="headerlink" href="#using-the-hamiltonian-in-the-executor" title="Permalink to this headline">¶</a></h2>
+<h2>Using the Hamiltonian in the executor<a class="headerlink" href="#using-the-hamiltonian-in-the-executor" title="Permalink to this headline">#</a></h2>
 <p>To interface with Mitiq, we define an <code class="docutils literal notranslate"><span class="pre">executor</span></code> function which maps an input (noisy) circuit to an expectation
 value. In the code block below, we show how to define this function and return the expectation of the Hamiltonian above.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">executor</span><span class="p">(</span>
@@ -357,7 +355,7 @@ value. In the code block below, we show how to define this function and return t
 expectation value of <span class="math notranslate nohighlight">\(H\)</span> with an example ansatz at different noise levels.</p>
 </div>
 <div class="section" id="example-usage">
-<h2>Example usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
+<h2>Example usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">#</a></h2>
 <p>Below we create an example ansatz parameterized by one angle <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ansatz</span><span class="p">(</span><span class="n">gamma</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cirq</span><span class="o">.</span><span class="n">Circuit</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns the ansatz circuit.&quot;&quot;&quot;</span>
@@ -414,7 +412,7 @@ ensures <code class="docutils literal notranslate"><span class="pre">this_execut
 <p>As we can see, the mitigated expectation values are closer, on average, to the true expectation value.</p>
 </div>
 <div class="section" id="sampling">
-<h2>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h2>
+<h2>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">#</a></h2>
 <p>Finally, we note that <span class="math notranslate nohighlight">\(\langle H \rangle\)</span> can be estimated by sampling using the <code class="xref py py-class docutils literal notranslate"><span class="pre">cirq.PauliSumCollector</span></code>. An
 example of a <code class="docutils literal notranslate"><span class="pre">sampling_executor</span></code> which uses this is shown below.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sampling_executor</span><span class="p">(</span>
@@ -515,8 +513,9 @@ to evaluate <span class="math notranslate nohighlight">\(\langle H \rangle\)</sp
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

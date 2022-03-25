@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mitiq with Braket &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -57,7 +55,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -222,7 +220,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -303,13 +301,13 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="mitiq-with-braket">
-<h1>Mitiq with Braket<a class="headerlink" href="#mitiq-with-braket" title="Permalink to this headline">¶</a></h1>
+<h1>Mitiq with Braket<a class="headerlink" href="#mitiq-with-braket" title="Permalink to this headline">#</a></h1>
 <p>This notebook shows improved performance on a mirror circuit benchmark with zero-noise extrapolation on Rigetti Aspen-9 via Amazon Braket.</p>
 <blockquote>
 <div><p>Note: This notebook is intended to be run through the Amazon Web Services (AWS) console - that is, by uploading the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file to https://console.aws.amazon.com/braket/ and running from there. This requires an AWS account. <strong>Without an AWS account, you can still run the notebook on a noisy simulator</strong>.</p>
 </div></blockquote>
 <div class="section" id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -338,7 +336,7 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="choose-a-device-to-run-on">
-<h2>Choose a device to run on<a class="headerlink" href="#choose-a-device-to-run-on" title="Permalink to this headline">¶</a></h2>
+<h2>Choose a device to run on<a class="headerlink" href="#choose-a-device-to-run-on" title="Permalink to this headline">#</a></h2>
 <p>We first choose a device to run on.</p>
 <blockquote>
 <div><p>Note: Verbatim compiling in Braket - a necessary feature to perform zero-noise extrapolation - is currently only available on Rigetti devices.</p>
@@ -359,14 +357,14 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="define-the-circuit">
-<span id="examples-braket-mirror-circuit-define-the-circuit"></span><h2>Define the circuit<a class="headerlink" href="#define-the-circuit" title="Permalink to this headline">¶</a></h2>
+<span id="examples-braket-mirror-circuit-define-the-circuit"></span><h2>Define the circuit<a class="headerlink" href="#define-the-circuit" title="Permalink to this headline">#</a></h2>
 <p>We use mirror circuits to benchmark the performance of the device. Mirror circuits, introduced in https://arxiv.org/abs/2008.11294, are designed such that only one bitstring should be sampled. When run on a device, any other measured bitstrings are due to noise. The frequency of the correct bitstring is our target metric.</p>
 <blockquote>
 <div><p>Note: Mirror circuits build on Loschmidt echo circuits - i.e., circuits of the form <span class="math notranslate nohighlight">\(U U^\dagger\)</span> for some unitary <span class="math notranslate nohighlight">\(U\)</span>. Loschmidt echo circuits are good benchmarks but have shortcomings - e.g., they are unable to detect coherent errors. Mirror circuits add new features to account for these shortcomings. For more background, see https://arxiv.org/abs/2008.11294.</p>
 </div></blockquote>
 <p>To define a mirror circuit, we need the device graph. We will use a subgraph of the device, and our first step is picking a subgraph with good qubits.</p>
 <div class="section" id="pick-good-qubits">
-<h3>Pick good qubits<a class="headerlink" href="#pick-good-qubits" title="Permalink to this headline">¶</a></h3>
+<h3>Pick good qubits<a class="headerlink" href="#pick-good-qubits" title="Permalink to this headline">#</a></h3>
 <p>The full device graph is shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -423,7 +421,7 @@ in the top right corner -->
 </div>
 </div>
 <div class="section" id="generate-mirror-circuit">
-<h3>Generate mirror circuit<a class="headerlink" href="#generate-mirror-circuit" title="Permalink to this headline">¶</a></h3>
+<h3>Generate mirror circuit<a class="headerlink" href="#generate-mirror-circuit" title="Permalink to this headline">#</a></h3>
 <p>Now that we have the device (sub)graph, we can generate a mirror circuit and the bitstring it should sample as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -456,7 +454,7 @@ Should sample: [0, 1]
 </div>
 </div>
 <div class="section" id="compilation">
-<h3>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h3>
+<h3>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">#</a></h3>
 <p>When using verbatim compiling on Braket, every gate must be a native hardware gate. Some single-qubit gates in the above circuit are not natively supported by Rigetti. We account for this with the quick-and-dirty compiler below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -496,7 +494,7 @@ Should sample: [0, 1]
 </div>
 </div>
 <div class="section" id="define-the-executor">
-<h2>Define the executor<a class="headerlink" href="#define-the-executor" title="Permalink to this headline">¶</a></h2>
+<h2>Define the executor<a class="headerlink" href="#define-the-executor" title="Permalink to this headline">#</a></h2>
 <p>Now that we have a circuit, we define the <code class="docutils literal notranslate"><span class="pre">execute</span></code> function which inputs a circuit and returns an expectation value - here, the frequency of sampling the correct bitstring.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -521,7 +519,7 @@ Should sample: [0, 1]
 </div>
 </div>
 <div class="section" id="noisy-value">
-<h2>Noisy value<a class="headerlink" href="#noisy-value" title="Permalink to this headline">¶</a></h2>
+<h2>Noisy value<a class="headerlink" href="#noisy-value" title="Permalink to this headline">#</a></h2>
 <p>The result of running the example mirror circuit without zero-noise extrapolation is shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -531,14 +529,14 @@ Should sample: [0, 1]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Noisy value: 0.964
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Noisy value: 0.957
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="mitigated-value">
-<h2>Mitigated value<a class="headerlink" href="#mitigated-value" title="Permalink to this headline">¶</a></h2>
+<h2>Mitigated value<a class="headerlink" href="#mitigated-value" title="Permalink to this headline">#</a></h2>
 <p>The result of running the example mirror circuit with zero-noise extrapolation is shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -553,7 +551,7 @@ Should sample: [0, 1]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ZNE value: 1.0064999999999986
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ZNE value: 0.9957499999999997
 </pre></div>
 </div>
 </div>
@@ -561,7 +559,7 @@ Should sample: [0, 1]
 <p>In this simple example, we see that zero-noise extrapolation improves the result. (Recall that the noiseless value is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.)</p>
 </div>
 <div class="section" id="survival-probability-vs-depth">
-<h2>Survival probability vs. depth<a class="headerlink" href="#survival-probability-vs-depth" title="Permalink to this headline">¶</a></h2>
+<h2>Survival probability vs. depth<a class="headerlink" href="#survival-probability-vs-depth" title="Permalink to this headline">#</a></h2>
 <p>Now we run the same experiment above but varying the depth (<code class="docutils literal notranslate"><span class="pre">nlayers</span></code>) of the mirror circuit. We also average over several mirror circuits at each depth.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -693,8 +691,9 @@ Should sample: [0, 1]
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -10,21 +10,18 @@ in the top right corner -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontends and Backends &#8212; Mitiq 0.14.0dev documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/styles/pydata-sphinx-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
@@ -33,8 +30,9 @@ in the top right corner -->
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -55,7 +53,7 @@ in the top right corner -->
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -318,7 +316,7 @@ in the top right corner -->
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -374,9 +372,9 @@ in the top right corner -->
               <div>
                 
   <div class="section" id="frontends-and-backends">
-<h1>Frontends and Backends<a class="headerlink" href="#frontends-and-backends" title="Permalink to this headline">¶</a></h1>
+<h1>Frontends and Backends<a class="headerlink" href="#frontends-and-backends" title="Permalink to this headline">#</a></h1>
 <div class="section" id="mitiq-specific-types">
-<h2>Mitiq-specific types<a class="headerlink" href="#mitiq-specific-types" title="Permalink to this headline">¶</a></h2>
+<h2>Mitiq-specific types<a class="headerlink" href="#mitiq-specific-types" title="Permalink to this headline">#</a></h2>
 <p>There are a number of types that are specific to Mitiq defined in <code class="docutils literal notranslate"><span class="pre">mitiq._typing</span></code>, the most important being <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumResult</span></code>.
 These types are both unions of a number of other types that make it easier to annotate other functions in Mitiq, independent of the user choice of frameworks.
 The Mitiq-defined type <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> uses any of the program types from the supported platforms that are installed on the system.
@@ -390,7 +388,7 @@ For example, for hardware, the result can be a list of bitstrings (representing 
 For simulators, more information can be made available like the resulting density matrix, which is a valid object of the <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumResult</span></code> type.</p>
 </div>
 <div class="section" id="frontends">
-<h2>Frontends<a class="headerlink" href="#frontends" title="Permalink to this headline">¶</a></h2>
+<h2>Frontends<a class="headerlink" href="#frontends" title="Permalink to this headline">#</a></h2>
 <p>Mitiq can accept quantum circuit representations in a variety of formats from different tools or platforms.
 These input formats are referred to here as <em>frontends</em>.
 The frameworks currently supported are:</p>
@@ -421,18 +419,18 @@ For example, you can use <a class="reference internal" href="../apidoc.html#miti
 </ul>
 </div>
 <div class="section" id="backends">
-<h2>Backends<a class="headerlink" href="#backends" title="Permalink to this headline">¶</a></h2>
+<h2>Backends<a class="headerlink" href="#backends" title="Permalink to this headline">#</a></h2>
 <p>A <em>backend</em> is any simulator or hardware device that can be used to execute programs that are valid <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> objects.
 These backends are usually installed separately as needed by the user.
 Backends are used by Mitiq in the <a class="reference internal" href="../apidoc.html#mitiq.executor.executor.Executor" title="mitiq.executor.executor.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> class to run the mitigated <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> objects.</p>
 </div>
 <div class="section" id="executing-programs">
-<h2>Executing programs<a class="headerlink" href="#executing-programs" title="Permalink to this headline">¶</a></h2>
+<h2>Executing programs<a class="headerlink" href="#executing-programs" title="Permalink to this headline">#</a></h2>
 <p>Once you have selected a frontend and backend combination that are compatible, the next step is to set up the execution of a quantum program.
 The <a class="reference internal" href="../apidoc.html#mitiq.executor.executor.Executor" title="mitiq.executor.executor.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> class is used to execute quantum programs, and is constructed by providing a function with the following signature: <code class="docutils literal notranslate"><span class="pre">mitiq.QPROGRAM</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumResult</span></code>.
 For more information on executors, see the <a class="reference internal" href="executors.html"><span class="doc">Executors</span></a> section of this guide.</p>
 <div class="section" id="batch-execution-of-programs">
-<h3>Batch execution of programs<a class="headerlink" href="#batch-execution-of-programs" title="Permalink to this headline">¶</a></h3>
+<h3>Batch execution of programs<a class="headerlink" href="#batch-execution-of-programs" title="Permalink to this headline">#</a></h3>
 <p>You can also use the <a class="reference internal" href="../apidoc.html#mitiq.executor.executor.Executor" title="mitiq.executor.executor.Executor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Executor</span></code></a> class to execute a batch of quantum programs all in one go.
 To perform batched execution, you can use the same mitiq.Executor class constructor and pass a function with the following signature: <code class="docutils literal notranslate"><span class="pre">T[mitiq.QPROGRAM]</span> <span class="pre">-&gt;</span> <span class="pre">T[{class}&quot;.QuantumResult&quot;]</span></code> where T is <code class="docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="docutils literal notranslate"><span class="pre">List</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuple</span></code>, or <code class="docutils literal notranslate"><span class="pre">Iterable</span></code>.</p>
 <p>For more information on batched executors and example code, see the <a class="reference internal" href="executors.html"><span class="doc">Executors</span></a> section of this guide.</p>
@@ -508,8 +506,9 @@ To perform batched execution, you can use the same mitiq.Executor class construc
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
