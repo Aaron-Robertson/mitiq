@@ -716,9 +716,9 @@ This means that a <a class="reference internal" href="../apidoc.html#mitiq.zne.i
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="overflow: auto; white-space: pre;">0: ───X^0.5───Y^0.5───────────@───Y^0.5────@───Y^0.5────Y^0.5───X^-0.5───@───Y^0.5────@───X^-0.5───Y^-0.5───X^0.5────X^-0.5───Y^0.5───@───X^0─────
-                              │            │                             │            │                                               │
-1: ───Y^0.5───X^0.5───Y^0.5───@───X^-0.5───@───Y^-0.5───Y^0.5───X^0.5────@───X^-0.5───@───Y^-0.5───Y────────X^-0.5────────────────────@───Y^0.5───</pre></div></div>
+<div class="output text_html"><pre style="overflow: auto; white-space: pre;">0: ───Y^0.5────X^0.5────Y^0.5───@───Y^0.5────@───Y────────X^0.5───Y^-0.5───X^-0.5───Y^0.5───@───Y^0.5────X^0.5────Y^-0.5───X^-0.5───Y^0.5───@───X^0───────────────────────
+                                │            │                                              │                                               │
+1: ───Y^-0.5───X^-0.5───────────@───X^-0.5───@───Y^-0.5───X^0.5───Y^0.5─────────────────────@───X^-0.5───Y^-0.5───X^0.5────Y────────X^0.5───@───X^-0.5───Y^-0.5───X^0.5───</pre></div></div>
 </div>
 <p>Typically the noise of single-qubit gates is negligible with respect to the noise of two-qubit gates.
 To simulate this fact, we define an executor that simulates the effect of depolarizing noise acting on two-qubit gates only.</p>
@@ -783,7 +783,7 @@ To simulate this fact, we define an executor that simulates the effect of depola
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9992712105622004
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999992976330754
 </pre></div>
 </div>
 </div>
@@ -811,15 +811,15 @@ To simulate this fact, we define an executor that simulates the effect of depola
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.67670625,
- 0.67670625,
- 0.67670625,
- 0.52175856,
- 0.52175874,
- 0.5217585,
- 0.38812268,
- 0.38812268,
- 0.38812268]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.727656,
+ 0.727656,
+ 0.727656,
+ 0.55420727,
+ 0.5542069,
+ 0.5542069,
+ 0.44374216,
+ 0.44374216,
+ 0.44374216]
 </pre></div>
 </div>
 </div>
@@ -832,7 +832,7 @@ To simulate this fact, we define an executor that simulates the effect of depola
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.67670625, 0.5217586 , 0.38812268], dtype=float32)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.72765607, 0.554207  , 0.44374216], dtype=float32)
 </pre></div>
 </div>
 </div>

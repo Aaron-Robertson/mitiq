@@ -589,7 +589,7 @@ in the basis of the noisy implementable gates (<code class="docutils literal not
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimal representation:
-q_0: ───H─── = -0.091*(q_0: ───H───Z───)-0.091*(q_0: ───H───Y───)-0.091*(q_0: ───H───X───)+1.273*(q_0: ───H───)
+q_0: ───H─── = -0.091*(q_0: ───H───Z───)+1.273*(q_0: ───H───)-0.091*(q_0: ───H───X───)-0.091*(q_0: ───H───Y───)
 </pre></div>
 </div>
 </div>
@@ -682,7 +682,7 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5454545145454566
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.545454514545456
 </pre></div>
 </div>
 </div>
@@ -696,7 +696,7 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0.09090908909090833, -0.09090908909090956, -0.09090908909090956, 1.2727272472727291)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0.09090908909090978, 1.2727272472727265, -0.09090908909091022, -0.09090908909090978)
 </pre></div>
 </div>
 </div>
@@ -709,7 +709,7 @@ The associated coefficient is 1.27273, whose sign is 1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.05882353, 0.05882353, 0.05882353, 0.82352941])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.05882353, 0.82352941, 0.05882353, 0.05882353])
 </pre></div>
 </div>
 </div>
@@ -858,26 +858,26 @@ mitigation technique.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>During the previous PEC process, 130  circuits have been executed.
 The first 5 circuits are:
-     ┌───┐┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ H ├┤ H ├┤ Y ├
-     └───┘└───┘└───┘└───┘└───┘
-     ┌───┐┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ H ├┤ Y ├┤ H ├
-     └───┘└───┘└───┘└───┘└───┘
-     ┌───┐┌───┐┌───┐┌───┐┌───┐┌───┐
-q_0: ┤ H ├┤ H ├┤ X ├┤ H ├┤ Z ├┤ H ├
-     └───┘└───┘└───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
+     └───┘└───┘└───┘└───┘
      ┌───┐┌───┐┌───┐┌───┐
 q_0: ┤ H ├┤ H ├┤ H ├┤ H ├
      └───┘└───┘└───┘└───┘
      ┌───┐┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ Z ├┤ H ├
+     └───┘└───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐┌───┐
+q_0: ┤ H ├┤ H ├┤ H ├┤ X ├┤ H ├
+     └───┘└───┘└───┘└───┘└───┘
+     ┌───┐┌───┐┌───┐┌───┐┌───┐
 q_0: ┤ H ├┤ H ├┤ H ├┤ H ├┤ Z ├
      └───┘└───┘└───┘└───┘└───┘
 The corresponding noisy expectation values are:
-0.33615999999999974
-0.3361599999999998
-0.6310719999999994
 0.7047999999999993
+0.7047999999999993
+0.3361599999999998
+0.6638399999999994
 0.6638399999999994
 </pre></div>
 </div>
@@ -921,11 +921,11 @@ For example, the first 5 unbiased samples are:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.9176570667226724,
- -1.9176570667226727,
- 3.6000109483900826,
- 4.020599418806935,
- -3.7869391574642393]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.020599418806928,
+ 4.020599418806928,
+ -1.9176570667226691,
+ -3.7869391574642326,
+ -3.7869391574642326]
 </pre></div>
 </div>
 </div>
@@ -940,7 +940,7 @@ the standard deviation of the unbiased samples, i.e., the square root of the mea
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.28246682762115466
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2671273061899557
 </pre></div>
 </div>
 </div>
