@@ -199,7 +199,7 @@ in the top right corner -->
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">FrozenSet</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">cirq</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">InsertStrategy</span><span class="p">,</span> <span class="n">inverse</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">has_unitary</span>
+<span class="kn">from</span> <span class="nn">cirq</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">InsertStrategy</span><span class="p">,</span> <span class="n">inverse</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">has_unitary</span><span class="p">,</span> <span class="n">Moment</span>
 
 <span class="kn">from</span> <span class="nn">mitiq.interface</span> <span class="kn">import</span> <span class="n">noise_scaling_converter</span>
 <span class="kn">from</span> <span class="nn">mitiq.utils</span> <span class="kn">import</span> <span class="p">(</span>
@@ -447,10 +447,6 @@ in the top right corner -->
 <span class="sd">        scale_factor: Factor to scale the circuit by.</span>
 
 <span class="sd">    Keyword Args:</span>
-<span class="sd">        squash_moments (bool): If True, all gates (including folded gates) are</span>
-<span class="sd">            placed as early as possible in the circuit. If False, new moments</span>
-<span class="sd">            are created for folded gates. This option only applies to QPROGRAM</span>
-<span class="sd">            types which have a &quot;moment&quot; or &quot;time&quot; structure. Default is True.</span>
 <span class="sd">        return_mitiq (bool): If True, returns a Mitiq circuit instead of</span>
 <span class="sd">            the input circuit type (if different). Default is False.</span>
 
@@ -477,13 +473,24 @@ in the top right corner -->
     <span class="n">num_to_fold</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">fraction_scale</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">operations</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">num_to_fold</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">folded</span> <span class="o">+=</span> <span class="n">Circuit</span><span class="p">(</span>
-            <span class="p">[</span><span class="n">inverse</span><span class="p">(</span><span class="n">operations</span><span class="p">[</span><span class="o">-</span><span class="n">num_to_fold</span><span class="p">:])],</span> <span class="p">[</span><span class="n">operations</span><span class="p">[</span><span class="o">-</span><span class="n">num_to_fold</span><span class="p">:]]</span>
-        <span class="p">)</span>
+
+        <span class="c1"># Create the inverse of the final partial circuit</span>
+        <span class="n">inverse_partial</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">()</span>
+        <span class="n">num_partial</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">moment</span> <span class="ow">in</span> <span class="n">base_circuit</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">new_moment</span> <span class="o">=</span> <span class="n">Moment</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">moment</span><span class="o">.</span><span class="n">operations</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">new_moment</span> <span class="o">=</span> <span class="n">new_moment</span><span class="o">.</span><span class="n">with_operation</span><span class="p">(</span><span class="n">inverse</span><span class="p">(</span><span class="n">op</span><span class="p">))</span>
+                <span class="n">num_partial</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">num_partial</span> <span class="o">==</span> <span class="n">num_to_fold</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="n">inverse_partial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_moment</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">num_partial</span> <span class="o">==</span> <span class="n">num_to_fold</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="c1"># Append partially folded circuit</span>
+        <span class="n">folded</span> <span class="o">+=</span> <span class="n">inverse_partial</span> <span class="o">+</span> <span class="n">inverse</span><span class="p">(</span><span class="n">inverse_partial</span><span class="p">)</span>
 
     <span class="n">_append_measurements</span><span class="p">(</span><span class="n">folded</span><span class="p">,</span> <span class="n">measurements</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;squash_moments&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="n">folded</span> <span class="o">=</span> <span class="n">_squash_moments</span><span class="p">(</span><span class="n">folded</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">folded</span></div>
 
 

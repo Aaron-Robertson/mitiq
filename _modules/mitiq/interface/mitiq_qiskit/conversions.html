@@ -198,7 +198,7 @@ in the top right corner -->
 <span class="sd">Qiskit&#39;s circuit representation.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Set</span>
 <span class="kn">import</span> <span class="nn">re</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -285,8 +285,8 @@ in the top right corner -->
 <span class="sd">        qubits: A list of qubits to map.</span>
 <span class="sd">        new_register_sizes: The size(s) of the new registers to map to.</span>
 <span class="sd">            Note: These can be determined from ``new_registers``, but this</span>
-<span class="sd">            helper function is only called from ``_map_qubits`` where the sizes</span>
-<span class="sd">            are already computed.</span>
+<span class="sd">            helper function is only called from ``_transform_registers`` where</span>
+<span class="sd">            the sizes are already computed.</span>
 <span class="sd">        new_registers: The new registers to map the ``qubits`` to.</span>
 
 <span class="sd">    Returns:</span>
@@ -297,6 +297,58 @@ in the top right corner -->
     <span class="k">return</span> <span class="p">[</span>
         <span class="n">qiskit</span><span class="o">.</span><span class="n">circuit</span><span class="o">.</span><span class="n">Qubit</span><span class="p">(</span><span class="n">new_registers</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">mapped_indices</span>
     <span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_add_identity_to_idle</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Adds identities to idle qubits in the circuit and returns the altered</span>
+<span class="sd">    indices. Used to preserve idle qubits and indices in conversion.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Qiskit circuit to have identities added to idle qubits</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        An unordered set of the indices that were altered</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">circuit</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+    <span class="n">bit_indices</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">idle_bit_indices</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">gate</span><span class="p">,</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">cbits</span> <span class="o">=</span> <span class="n">op</span>
+        <span class="n">bit_indices</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bit</span><span class="o">.</span><span class="n">index</span> <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">qubits</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">circuit</span><span class="o">.</span><span class="n">num_qubits</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bit_indices</span><span class="p">:</span>
+            <span class="n">idle_bit_indices</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">circuit</span><span class="o">.</span><span class="n">i</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">idle_bit_indices</span>
+
+
+<span class="k">def</span> <span class="nf">_remove_identity_from_idle</span><span class="p">(</span>
+    <span class="n">circuit</span><span class="p">:</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">,</span>
+    <span class="n">idle_indices</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Removes identities from the circuit corresponding to the set of indices.</span>
+<span class="sd">    Used in conjunction with _add_identity_to_idle to preserve idle qubits and</span>
+<span class="sd">    indices in conversion.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        circuit: Qiskit circuit to have identities removed</span>
+<span class="sd">        idle_indices: Set of altered idle qubit indices</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">index_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">circuit</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">target_index</span><span class="p">,</span> <span class="n">op</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">bit_indices</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">gate</span><span class="p">,</span> <span class="n">qubits</span><span class="p">,</span> <span class="n">cbits</span> <span class="o">=</span> <span class="n">op</span>
+        <span class="n">bit_indices</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bit</span><span class="o">.</span><span class="n">index</span> <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">qubits</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">gate</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;id&quot;</span> <span class="ow">and</span> <span class="n">bit_indices</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">idle_indices</span><span class="p">):</span>
+            <span class="c1"># Reverse index list order for data index preservation</span>
+            <span class="n">index_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">target_index</span><span class="p">)</span>
+    <span class="c1"># Traverse data from list end to preserve index</span>
+    <span class="k">for</span> <span class="n">target_index</span> <span class="ow">in</span> <span class="n">index_list</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="n">target_index</span><span class="p">]</span>
+    <span class="n">circuit</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">data</span>
 
 
 <span class="k">def</span> <span class="nf">_measurement_order</span><span class="p">(</span>
@@ -347,8 +399,8 @@ in the top right corner -->
 <span class="sd">    Raises:</span>
 <span class="sd">        ValueError:</span>
 <span class="sd">            * If the input circuit has more than one quantum register.</span>
-<span class="sd">            * If the number of qubits in the new quantum registers does not</span>
-<span class="sd">            match the number of qubits in the circuit.</span>
+<span class="sd">            * If the number of qubits in the new quantum registers is</span>
+<span class="sd">            greater than the number of qubits in the circuit.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">new_qregs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span>
@@ -360,7 +412,7 @@ in the top right corner -->
         <span class="p">)</span>
 
     <span class="n">qreg_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">qreg</span><span class="o">.</span><span class="n">size</span> <span class="k">for</span> <span class="n">qreg</span> <span class="ow">in</span> <span class="n">new_qregs</span><span class="p">]</span>
-    <span class="n">nqubits_in_circuit</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">qreg</span><span class="o">.</span><span class="n">size</span> <span class="k">for</span> <span class="n">qreg</span> <span class="ow">in</span> <span class="n">circuit</span><span class="o">.</span><span class="n">qregs</span><span class="p">)</span>
+    <span class="n">nqubits_in_circuit</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">num_qubits</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">qreg_sizes</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">sum</span><span class="p">(</span><span class="n">qreg_sizes</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">nqubits_in_circuit</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
